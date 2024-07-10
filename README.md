@@ -1,3 +1,6 @@
+# christopherbermudez.com
+Welcome to the official repository for Christopher Bermudez's portfolio website. This project showcases my professional skills and services using the Nuxt 3 framework with TypeScript, Tailwind CSS, and advanced SEO practices.
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
