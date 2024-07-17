@@ -1,7 +1,7 @@
 <template>
   <section class="bg-white dark:bg-[#1d1d1d]">
     <div class="mx-auto w-11/12">
-      <h2 class="text-6xl font-bold">Popular Products & Services</h2>
+      <h2 class="text-6xl text-center font-bold">Popular Products & Services</h2>
 
       <!-- Featured Products/Services -->
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
@@ -18,22 +18,20 @@
       </div>
 
       <!-- Additional Details -->
-      <div class="grid grid-cols-1 col-span-4 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <DetailCard iconClass="fas fa-tools text-red-500" title="Hardware"
+      <div class="grid grid-cols-1 col-span-4 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <DetailCard iconClass="m23.121,18.879l-7.68-7.681-1.411,1.398-5.01-5.01V3.422L3.129.025.044,3.109l3.398,5.891h4.164l5.003,5.003-1.431,1.417,7.7,7.701c.567.566,1.32.879,2.122.879s1.555-.312,2.121-.879c1.17-1.17,1.17-3.072,0-4.242Zm-14.768-3.455l1.424-1.424-2.009-2.009L.879,18.879c-1.17,1.17-1.17,3.072,0,4.242.567.566,1.32.879,2.122.879s1.555-.312,2.121-.879l5.465-5.465-2.233-2.233Zm14.766-11.366c.558,1.077.841,2.235.841,3.442,0,2.549-1.281,4.803-3.231,6.158l-5.281-5.281-1.412,1.397-3.017-3.017V2.355c1.368-1.446,3.297-2.355,5.44-2.355,1.181,0,2.318.272,3.381.811l.319.162-3.574,3.614c-.781.781-.781,2.047,0,2.828.781.781,2.047.781,2.828,0l3.573-3.612.132.256Z" title="Hardware"
           description="From cutting-edge engine components to stylish body kits, we’ve got the perfect accessories to take your vehicle to the next level. Explore our diverse range of hardware options and give your car the upgrade it deserves. Visit us now and experience automotive excellence!" />
-        <DetailCard iconClass="fas fa-car text-red-500" title="Accessories"
+        <DetailCard iconClass="M21,5h3a3.488,3.488,0,0,1-6.31,0H6.31A3.488,3.488,0,0,1,0,5H3V2H0A3.488,3.488,0,0,1,6.31,2H17.69A3.488,3.488,0,0,1,24,2H21Zm.757,7.832A12.58,12.58,0,0,1,23,18.267V22H21v2H16V22H8v2H3V22H1V18.267a12.58,12.58,0,0,1,1.243-5.435L4.1,8.979A3.517,3.517,0,0,1,7.255,7h9.49A3.517,3.517,0,0,1,19.9,8.979ZM5.5,16h0A1.5,1.5,0,0,0,4,17.5H4A1.5,1.5,0,0,0,5.5,19h0A1.5,1.5,0,0,0,7,17.5H7A1.5,1.5,0,0,0,5.5,16Zm13.007-3L17.2,10.283a.5.5,0,0,0-.45-.283H7.255a.5.5,0,0,0-.45.283L5.493,13ZM18.5,16h0A1.5,1.5,0,0,0,17,17.5h0A1.5,1.5,0,0,0,18.5,19h0A1.5,1.5,0,0,0,20,17.5h0A1.5,1.5,0,0,0,18.5,16Z" title="Accessories"
           description="Discover an extensive selection of high-quality automotive accessories to enhance your driving experience. From performance upgrades to eye-catching aesthetics, we offer everything you need to customize your vehicle and make it truly yours. Browse our wide range of accessories and unlock the full potential of your car today!" />
-        <DetailCard iconClass="fas fa-clipboard-check text-red-500" title="Inspections"
+        <DetailCard iconClass="m11,23c0,.553-.448,1-1,1h-5c-2.757,0-5-2.243-5-5V5.001C0,2.244,2.242,0,4.999,0h10.001c2.757,0,5,2.242,5,4.999v2c0,.553-.448,1-1,1s-1-.447-1-1v-2c0-1.654-1.346-3-3-3H4.999c-1.654,0-3,1.347-3,3.001v13.999c0,1.654,1.346,3,3,3h5c.552,0,1,.447,1,1Zm12.553.553c-.195.195-.451.293-.707.293s-.512-.098-.707-.293l-2.666-2.666c-.981.698-2.177,1.113-3.473,1.113-3.314,0-6-2.686-6-6s2.686-6,6-6,6,2.686,6,6c0,1.296-.415,2.492-1.113,3.473l2.666,2.666c.391.391.391,1.023,0,1.414Zm-6.573-5.227l2.703-2.614c.398-.383.412-1.016.029-1.414-.382-.399-1.015-.41-1.414-.029l-2.713,2.624c-.143.142-.378.143-.522,0l-1.132-1.108c-.395-.386-1.028-.379-1.414.016-.387.395-.38,1.027.015,1.414l1.132,1.108c.459.449,1.062.674,1.664.674s1.201-.225,1.653-.671ZM7,5h-2c-.552,0-1,.447-1,1s.448,1,1,1h2c.552,0,1-.447,1-1s-.448-1-1-1Zm0,10h-2c-.552,0-1,.447-1,1s.448,1,1,1h2c.552,0,1-.447,1-1s-.448-1-1-1Zm4-10c-.552,0-1,.447-1,1s.448,1,1,1h4c.552,0,1-.447,1-1s-.448-1-1-1h-4Zm-4,5h-2c-.552,0-1,.447-1,1s.448,1,1,1h2c.552,0,1-.447,1-1s-.448-1-1-1Z" title="Inspections"
           description="Discover our wide range of accessories that will elevate your driving experience to new heights. From stylish exterior upgrades to cutting-edge technology enhancements, we have everything you need to personalize and enhance your European car." />
-        <DetailCard iconClass="fas fa-car-battery text-red-500" title="Batteries"
+        <DetailCard iconClass="M21,5.127V4a2,2,0,0,0-2-2H15a2,2,0,0,0-2,2V5H11V4A2,2,0,0,0,9,2H5A2,2,0,0,0,3,4V5.127A4.006,4.006,0,0,0,0,9v8a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V9A4.006,4.006,0,0,0,21,5.127ZM9,13H5a1,1,0,0,1,0-2H9A1,1,0,0,1,9,13Zm10,0H18v1a1,1,0,0,1-2,0V13H15a1,1,0,0,1,0-2h1V10a1,1,0,0,1,2,0v1h1A1,1,0,0,1,19,13Z" title="Batteries"
           description="Experience our meticulous approach in checking batteries, tires, and other essential components to ensure optimal performance and safety. Trust us to go above and beyond to keep your vehicle running smoothly." />
       </div>
 
-      <div class="flex items-center justify-between gap-4">
-        <h2 class="text-6xl font-semibold text-gray-900 dark:text-white">
+        <h2 class="text-6xl text-center font-semibold text-gray-900 dark:text-white">
           More Automotive Tech Services
         </h2>
-      </div>
 
       <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         <AllServicesSection v-for="(service, index) in services" :key="index" :title="service.title"

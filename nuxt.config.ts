@@ -1,3 +1,5 @@
+import Aura from '@primevue/themes/aura';
+
 // nuxt.config.ts
 export default defineNuxtConfig({
   modules: [
@@ -5,9 +7,17 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@dargmuesli/nuxt-cookie-control",
     "@nuxt/eslint",
-    "@nuxtjs/supabase"
-  ],
+    "@nuxtjs/supabase",
+    '@primevue/nuxt-module'
 
+  ],
+  primevue: {
+    options: {
+      theme: {
+          preset: Aura
+      }
+  }  
+},
   runtimeConfig: {
     public: {
       gtagId: "G-3CC4904P02", // Replace with your Google Analytics ID

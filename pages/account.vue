@@ -1,6 +1,6 @@
 <template>
-  <div class="space-y-4">
-    <h1 class="text-3xl font-bold ml-4">My Profile</h1>
+  <section class="space-y-4 bg-white dark:bg-[#1d1d1d]">
+    <h1 class="text-5xl font-bold ml-4">My Profile</h1>
 
     <!-- Profile Picture and Edit Card -->
     <BaseCard>
@@ -15,8 +15,8 @@
           />
           <div class="mt-4 sm:mt-0">
             <h2 class="text-xl font-semibold">{{ personalInfo.fullName }}</h2>
-            <p class="text-gray-600">{{ personalInfo.email }}</p>
-            <p class="text-gray-500">{{ addressInfo.city }}, {{ addressInfo.state }} </p>
+            <p>{{ personalInfo.email }}</p>
+            <p>{{ addressInfo.city }}, {{ addressInfo.state }} </p>
           </div>
         </div>
         <div class="mt-4 sm:mt-0">
@@ -24,7 +24,7 @@
             <!-- Edit Button -->
             <button
               v-if="!editMode"
-              class="flex items-center text-blue-black"
+              class="flex items-center"
               @click="editMode = true"
             >
               <PencilSquareIcon class="h-5 w-5" />
@@ -90,7 +90,7 @@
         />
       </div>
     </BaseCard>
-  </div>
+  </section>
 </template>
 
 <script setup>

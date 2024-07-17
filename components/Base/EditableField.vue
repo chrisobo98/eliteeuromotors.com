@@ -1,6 +1,6 @@
 <template>
     <div>
-      <label :for="field" class="block mb-2 text-sm font-medium text-gray-900">{{ label }}</label>
+      <label :for="field" class="block mb-2 text-sm font-medium">{{ label }}</label>
       <div v-if="!editMode" class="py-1">{{ value }}</div>
       <div v-else>
         <input

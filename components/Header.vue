@@ -330,10 +330,10 @@
           class="flex flex-col p-4 border border-gray-100 rounded-lg lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:border-0">
           <NavLink class="nav-item-bounce delay-300" href="/" :text="$t('home.navbar.home')" />
           <NavLink class="nav-item-bounce delay-500" href="/contact" :text="$t('home.navbar.contact')" />
-          <NavLink class="nav-item-bounce delay-500" href="#" :text="$t('home.navbar.services')" />
-          <NavLink class="nav-item-bounce delay-500" href="#" :text="$t('home.navbar.about')" />
-          <NavLink class="nav-item-bounce delay-500" href="#" :text="$t('home.navbar.careers')" />
-          <NavLink class="nav-item-bounce delay-500" href="#" :text="$t('home.navbar.blog')" />
+          <NavLink class="nav-item-bounce delay-500" href="/services" :text="$t('home.navbar.services')" />
+          <NavLink class="nav-item-bounce delay-500" href="/about" :text="$t('home.navbar.about')" />
+          <NavLink class="nav-item-bounce delay-500" href="/careers" :text="$t('home.navbar.careers')" />
+          <NavLink class="nav-item-bounce delay-500" href="/blog" :text="$t('home.navbar.blog')" />
 
           <!-- Appointment Button Mobile -->
           <NuxtLink to="/appointments"
@@ -343,7 +343,7 @@
 
           <!-- Account & Cart -->
           <div class="flex items-center space-x-4 mt-4 lg:mt-0">
-            <a href="#" class="flex items-center">
+            <a href="/cart" class="flex items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" class="mr-2" d="Layer_1"
                 data-name="Layer 1" viewBox="0 0 24 24">
                 <path fill="#ff0000"

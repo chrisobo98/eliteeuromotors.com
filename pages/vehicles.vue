@@ -1,6 +1,6 @@
 <template>
   <div class="my-vehicles">
-    <h1 class="text-3xl font-bold ml-4">My Vehicles</h1>
+    <h1 class="text-3xl font-bold ml-4 text-center">My Vehicles</h1>
     <div class="grid grid-cols-1 lg:grid-cols-3">
       <!-- Vehicle Model and VIN Entry -->
       <BaseCard class="space-y-4 col-span-1">
@@ -12,10 +12,9 @@
             class="col-span-3"
           />
           <BaseButton
-            label="Check VIN"
             @click="checkVIN"
-            class="col-span-3 sm:col-start-2 my-3"
-          />
+            class="col-span-3 sm:col-start-2"
+          >Check VIN </BaseButton>
         </div>
         <img
           class="rounded-3xl"
@@ -32,10 +31,9 @@
           <InputText placeholder="Model" v-model="vehicleDetails.Model" />
           <InputText placeholder="Year" v-model="vehicleDetails.ModelYear" />
           <BaseButton
-            label="Save Vehicle"
             @click="saveVehicle"
             class="md:col-span-2"
-          />
+          >Save Vehicle</BaseButton> 
         </div>
       </BaseCard>
 
@@ -118,7 +116,7 @@
 
 <script setup>
 import { ref, reactive, onMounted } from "vue";
-import BaseButton from "~/components/Base/BaseButton.vue";
+import BaseButton from "~/components/ui/BaseButton.vue";
 import BaseCard from "~/components/Base/BaseCard.vue";
 import Dialog from "primevue/dialog";
 import InputText from "primevue/inputtext";

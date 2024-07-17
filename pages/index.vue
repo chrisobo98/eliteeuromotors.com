@@ -3,11 +3,10 @@
       <Sidenav />
       <HeroSection id="hero-section" />
       <ServicesSection id="services-section" />
+      <ServiceIcons />
       <FamilyOwned />
       <TestimonialSection />
       <GoogleMap />
-
-      
     </div>
   </template>
   
@@ -17,7 +16,7 @@
   import GoogleMap from '../components/homepage/GoogleMap.vue'
   import FamilyOwned from '../components/homepage/FamilyOwned.vue'
   import TestimonialSection from '../components/homepage/TestimonialSection.vue'
-
+  import ServiceIcons from '../components/homepage/ServiceIcons.vue'
 
 
   import Sidenav from '../components/effects/Sidenav.vue'
