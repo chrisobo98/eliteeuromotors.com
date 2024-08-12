@@ -1,4 +1,4 @@
-import Aura from '@primevue/themes/aura';
+import Aura from "@primevue/themes/aura";
 
 // nuxt.config.ts
 export default defineNuxtConfig({
@@ -8,16 +8,15 @@ export default defineNuxtConfig({
     "@dargmuesli/nuxt-cookie-control",
     "@nuxt/eslint",
     "@nuxtjs/supabase",
-    '@primevue/nuxt-module'
-
+    "@primevue/nuxt-module",
   ],
   primevue: {
     options: {
       theme: {
-          preset: Aura
-      }
-  }  
-},
+        preset: Aura,
+      },
+    },
+  },
   runtimeConfig: {
     public: {
       gtagId: "G-3CC4904P02", // Replace with your Google Analytics ID
@@ -46,9 +45,7 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  css: [
-    "~/assets/css/main.css"
-  ],
+  css: ["~/assets/css/main.css"],
   supabase: {
     redirectOptions: {
       login: "/login",

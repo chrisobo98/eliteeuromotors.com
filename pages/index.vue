@@ -4,7 +4,7 @@
       <HeroSection id="hero-section" />
       <ServicesSection id="services-section" />
       <ServiceIcons />
-      <FeaturedProducts />
+      <!-- <FeaturedProducts /> -->
       <FamilyOwned />
       <TestimonialSection />
       <GoogleMap />
@@ -18,7 +18,7 @@
   import FamilyOwned from '../components/homepage/FamilyOwned.vue'
   import TestimonialSection from '../components/homepage/TestimonialSection.vue'
   import ServiceIcons from '../components/homepage/ServiceIcons.vue'
-  import FeaturedProducts from '~/components/Products/FeaturedProducts.vue'
+  // import FeaturedProducts from '~/components/Products/FeaturedProducts.vue'
 
 
 
