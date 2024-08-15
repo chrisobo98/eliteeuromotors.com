@@ -1,6 +1,6 @@
 <template>
   <div
-    class="p-6 border border-gray-200 rounded-lg shadow dark:border-gray-700"
+    class="p-6 border border-gray-200 rounded-2xl shadow-md dark:border-gray-700"
   >
     <svg
       class="w-10 h-10 text-gray-500 dark:text-gray-400 mb-2"

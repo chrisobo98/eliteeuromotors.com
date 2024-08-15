@@ -1,12 +1,12 @@
 <template>
   <div
-    class="border border-gray-200 rounded-lg shadow dark:border-gray-700"
+    class="border border-gray-200 rounded-2xl shadow-md dark:border-gray-700"
   >
     <a href="#">
       <img
         :src="imgSrc"
         :alt="imgAlt"
-        class="w-full h-64 object-cover rounded-lg"
+        class="w-full h-64 object-cover rounded-t-2xl"
       />
     </a>
     <div class="p-5">
