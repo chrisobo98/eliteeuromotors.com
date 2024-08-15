@@ -1,6 +1,5 @@
 <template>
-  <BaseCard class="appointments">
-    <h2 class="text-lg font-semibold mb-2">Appointments</h2>
+    <h2 class="text-lg font-semibold mb-2">Scheduled Appointments</h2>
     <Accordion>
       <AccordionTab header="Future Appointments">
         <Accordion v-model="futureActiveIndex">
@@ -11,7 +10,7 @@
             <AppointmentDetails :appointment="appointment" :showImage="showImage" />
           </AccordionTab>
         </Accordion>
-        <div v-if="futureAppointments.length === 0">
+        <div class="mt-4" v-if="futureAppointments.length === 0">
           <p>No future appointments.</p>
         </div>
       </AccordionTab>
@@ -21,10 +20,10 @@
             v-for="(appointment, index) in pastAppointments"
             :key="appointment.id"
             :header="'Appointment on ' + appointment.date">
-            <AppointmentDetails :appointment="appointment" :showImage="showImage" />
+            <AppointmentDetails :appointment="appointment" class="mt-8" :showImage="showImage" />
           </AccordionTab>
         </Accordion>
-        <div v-if="pastAppointments.length === 0">
+        <div class="mt-4" v-if="pastAppointments.length === 0">
           <p>No past appointments.</p>
         </div>
       </AccordionTab>
@@ -35,7 +34,6 @@
       :imgs="[selectedImage]"
       @hide="visible = false"
     />
-  </BaseCard>
 </template>
 
 <script setup>
