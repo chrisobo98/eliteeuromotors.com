@@ -211,13 +211,13 @@ const sections = [
     ],
   },
   {
-    title: "Order & Purchases",
+    title: "Your Garage",
     links: [
-      { text: "Order Status", href: "#", title: "Order Status" },
-      { text: "Track Your Order", href: "#", title: "Track Your Order" },
-      { text: "Purchase History", href: "#", title: "Purchase History" },
-      { text: "Returns & Refunds", href: "#", title: "Returns & Refunds" },
-      { text: "Payment Methods", href: "#", title: "Payment Methods" },
+      { text: "My Vehicle", href: "#", title: "Order Status" },
+      { text: "Maintenance", href: "#", title: "Track Your Order" },
+      { text: "Notifications", href: "#", title: "Purchase History" },
+      { text: "Profile", href: "#", title: "Returns & Refunds" },
+      { text: "Garage", href: "#", title: "Payment Methods" },
     ],
   },
   // Add other sections here following the same structure

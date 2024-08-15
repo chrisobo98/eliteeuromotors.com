@@ -61,7 +61,7 @@
     <h1 class="text-6xl font-bold ml-4 mt-12 text-center md:text-left">
         Maintenance Scheduling
       </h1>
-      <hr class="my-6 mx-24 md:mx-2 border-gray-200 dark:border-gray-600" />
+      <hr class="my-6 mx-24 md:mx-0 border-gray-200 dark:border-gray-600" />
     <div class="gap-8 lg:flex">
       <!-- Sidenav -->
       <aside
