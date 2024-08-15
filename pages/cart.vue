@@ -1,8 +1,10 @@
 <template>
     <section class="bg-white dark:bg-[#1d1d1d] py-8">
       <div class="mx-auto max-w-screen-xl px-4">
-        <h2 class="text-6xl font-semibold text-gray-900 dark:text-white">Shopping Cart</h2>
+        <h2 class="text-6xl font-semibold text-gray-900 dark:text-white text-center md:text-left">Shopping Cart</h2>
   
+        <hr class='my-6 mx-24 md:mx-2 border-gray-200 dark:border-gray-600' />
+
         <div class="mt-6 sm:mt-8 md:gap-6 lg:flex lg:items-start xl:gap-4">
           <div class="mx-auto w-full flex-auto">
             <div class="space-y-6">

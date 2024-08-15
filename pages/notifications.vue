@@ -1,60 +1,65 @@
 <template>
-  <div class="container mx-auto">
-    <div class="px-4">
-      <h1 class="text-3xl font-bold">Notifications</h1>
-      <div class="flex justify-between items-center mb-4">
-        <span>You have {{ notifications.length }} unviewed notification(s)</span>
-        <BaseButton label="Mark all as read" />
+  <section class="space-y-4 bg-white dark:bg-[#1d1d1d]">
+    <div class="w-full md:w-8/12 mx-auto">
+      <div class="px-4">
+        <h1 class="text-6xl font-bold mt-8">Notifications</h1>
+        <div class="flex justify-between items-center mb-4">
+          <span
+            >You have {{ notifications.length }} unviewed notification(s)</span
+          >
+          <BaseButton label="Mark all as read" />
+        </div>
       </div>
-    </div>
+      <hr class='my-6 mx-24 md:mx-2 border-gray-200 dark:border-gray-600' />
 
-    <!-- <div class="card my-5 mx-5">
+      <!-- <div class="card my-5 mx-5">
         <TabMenu class="rounded-lg" :model="items" />
     </div> -->
 
-    <div class="space-y-4">
-      <BaseCard
-        v-for="notification in notifications"
-        :key="notification.id"
-        class="p-4"
-      >
-        <div
-          class="flex flex-col md:flex-row justify-between items-start md:items-center"
+      <div class="space-y-4">
+        <BaseCard
+          v-for="notification in notifications"
+          :key="notification.id"
+          class="p-4"
         >
-          <div class="flex items-center space-x-3 mb-2 md:mb-0">
-            <!-- Use different icons based on notification type -->
-            <span class="icon">
-              <component :is="notification.icon"></component>
-            </span>
-            <div>
-              <p class="font-bold">{{ notification.title }}</p>
-              <p class="text-sm">{{ notification.description }}</p>
-              <p class="text-xs text-gray-500">
-                {{ new Date(notification.date).toLocaleString() }}
-              </p>
+          <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-center"
+          >
+            <div class="flex items-center space-x-3 mb-2 md:mb-0">
+              <!-- Use different icons based on notification type -->
+              <span class="icon">
+                <component :is="notification.icon"></component>
+              </span>
+              <div>
+                <p class="font-bold">{{ notification.title }}</p>
+                <p class="text-sm">{{ notification.description }}</p>
+                <p class="text-xs text-gray-500">
+                  {{ new Date(notification.date).toLocaleString() }}
+                </p>
+              </div>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <BaseButton
+                v-if="notification.state === 'reschedule'"
+                label="Reschedule"
+                class="bg-blue-500 hover:bg-blue-700"
+              />
+              <BaseButton
+                v-if="notification.state === 'reply'"
+                label="Reply"
+                class="bg-green-500 hover:bg-green-700"
+              />
+              <BaseButton
+                label="Delete"
+                class="col-span-1 bg-red-500 hover:bg-red-700"
+                @click="deleteNotification(notification.id)"
+              />
             </div>
           </div>
-          <div class="grid grid-cols-2 gap-2">
-            <BaseButton
-              v-if="notification.state === 'reschedule'"
-              label="Reschedule"
-              class="bg-blue-500 hover:bg-blue-700"
-            />
-            <BaseButton
-              v-if="notification.state === 'reply'"
-              label="Reply"
-              class="bg-green-500 hover:bg-green-700"
-            />
-            <BaseButton
-              label="Delete"
-              class="col-span-1 bg-red-500 hover:bg-red-700"
-              @click="deleteNotification(notification.id)"
-            />
-          </div>
-        </div>
-      </BaseCard>
+        </BaseCard>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -70,10 +75,10 @@ import {
 } from "@heroicons/vue/24/solid";
 
 const items = ref([
-    { label: 'Dashboard', icon: 'pi pi-home' },
-    { label: 'Transactions', icon: 'pi pi-chart-line' },
-    { label: 'Products', icon: 'pi pi-list' },
-    { label: 'Messages', icon: 'pi pi-inbox' }
+  { label: "Dashboard", icon: "pi pi-home" },
+  { label: "Transactions", icon: "pi pi-chart-line" },
+  { label: "Products", icon: "pi pi-list" },
+  { label: "Messages", icon: "pi pi-inbox" },
 ]);
 
 const notifications = ref([
@@ -95,7 +100,7 @@ const notifications = ref([
     date: "2022-01-27T17:30:00Z",
     state: "reschedule",
     type: "session",
-    icon: "CalendarIcon", 
+    icon: "CalendarIcon",
   },
   {
     id: 3,
@@ -105,7 +110,7 @@ const notifications = ref([
     date: "2022-04-01T12:00:00Z",
     state: "unread",
     type: "error",
-    icon: "ExclamationCircleIcon", 
+    icon: "ExclamationCircleIcon",
   },
   {
     id: 4,

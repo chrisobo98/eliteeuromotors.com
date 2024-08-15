@@ -58,11 +58,10 @@
         </li>
       </ol>
     </nav>
-    <h2
-      class="mb-4 font-semibold text-gray-900 dark:text-white text-4xl md:mb-6"
-    >
-      Maintenance Scheduling
-    </h2>
+    <h1 class="text-6xl font-bold ml-4 mt-12 text-center md:text-left">
+        Maintenance Scheduling
+      </h1>
+      <hr class="my-6 mx-24 md:mx-2 border-gray-200 dark:border-gray-600" />
     <div class="gap-8 lg:flex">
       <!-- Sidenav -->
       <aside

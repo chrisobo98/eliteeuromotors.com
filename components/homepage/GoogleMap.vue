@@ -1,5 +1,5 @@
 <template>
-    <div class="map-container bg-white dark:bg-[#1d1d1d] flex justify-between items-center">
+    <div class="bg-white dark:bg-[#1d1d1d] flex justify-between items-center">
       <iframe
         :src="mapSrc"
         class="w-full"
@@ -26,11 +26,6 @@
   </script>
   
   <style scoped>
-  .map-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-  }
+
   </style>
   

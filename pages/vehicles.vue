@@ -1,117 +1,121 @@
 <template>
-  <div class="my-vehicles">
-    <h1 class="text-3xl font-bold ml-4 text-center">My Vehicles</h1>
-    <div class="grid grid-cols-1 lg:grid-cols-3">
-      <!-- Vehicle Model and VIN Entry -->
-      <BaseCard class="space-y-4 col-span-1">
-        <h2 class="text-lg font-semibold">Add Vehicle</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-3">
-          <InputText
-            placeholder="Vehicle VIN"
-            v-model="vehicleVIN"
-            class="col-span-3"
+  <section class="bg-white dark:bg-[#1d1d1d]">
+    <div class="w-full md:w-9/12 mx-auto">
+      <h1 class="text-6xl font-bold ml-4 mt-12 text-center md:text-left">My Vehicles</h1>
+      <hr class='my-6 mx-24 md:mx-2 border-gray-200 dark:border-gray-600' />
+      <div class="grid grid-cols-1 lg:grid-cols-3">
+        <!-- Vehicle Model and VIN Entry -->
+        <BaseCard class="space-y-4 col-span-1">
+          <h2 class="text-lg font-semibold">Add Vehicle</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-3">
+            <InputText
+              placeholder="Vehicle VIN"
+              v-model="vehicleVIN"
+              class="col-span-3"
+            />
+            <BaseButton @click="checkVIN" class="col-span-3 sm:col-start-2"
+              >Check VIN
+            </BaseButton>
+          </div>
+          <img
+            class="rounded-3xl"
+            :src="vehicleDetails.vehicle_image"
+            alt="image description"
           />
-          <BaseButton
-            @click="checkVIN"
-            class="col-span-3 sm:col-start-2"
-          >Check VIN </BaseButton>
-        </div>
-        <img
-          class="rounded-3xl"
-          :src="vehicleDetails.vehicle_image"
-          alt="image description"
-        />
-      </BaseCard>
+        </BaseCard>
 
-      <!-- Manually Add Vehicle Details -->
-      <BaseCard class="space-y-4 col-span-1 lg:col-span-2">
-        <h2 class="text-lg font-semibold">Vehicle Details</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <InputText placeholder="Make" v-model="vehicleDetails.Make" />
-          <InputText placeholder="Model" v-model="vehicleDetails.Model" />
-          <InputText placeholder="Year" v-model="vehicleDetails.ModelYear" />
-          <BaseButton
-            @click="saveVehicle"
-            class="md:col-span-2"
-          >Save Vehicle</BaseButton> 
-        </div>
-      </BaseCard>
-
-      <!-- Existing Vehicles List -->
-      <BaseCard class="space-y-4 col-span-1 lg:col-span-3">
-        <h2 class="text-lg font-semibold mb-4">Existing Vehicles</h2>
-        <ul>
-          <li
-            v-for="vehicle in vehicles"
-            :key="vehicle.id"
-            class="flex justify-between items-center p-4 border rounded-lg my-2 py-2"
-          >
-            <span @click="selectVehicle(vehicle)" style="cursor: pointer;">{{ vehicle.make }} {{ vehicle.model }} - {{ vehicle.year }}</span>
-            <button
-              @click="confirmDelete(vehicle.id)"
-              class="rounded bg-red-500 hover:bg-red-700 text-white p-1"
+        <!-- Manually Add Vehicle Details -->
+        <BaseCard class="space-y-4 col-span-1 lg:col-span-2">
+          <h2 class="text-lg font-semibold">Vehicle Details</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <InputText placeholder="Make" v-model="vehicleDetails.Make" />
+            <InputText placeholder="Model" v-model="vehicleDetails.Model" />
+            <InputText placeholder="Year" v-model="vehicleDetails.ModelYear" />
+            <BaseButton @click="saveVehicle" class="md:col-span-2"
+              >Save Vehicle</BaseButton
             >
-              <span class="pi pi-times"></span>
-            </button>
-          </li>
-        </ul>
-      </BaseCard>
+          </div>
+        </BaseCard>
 
-      <!-- Vehicle Details Modal -->
-      <Dialog
-        v-model:visible="vehicleModalVisible"
-        :modal="true"
-        header="Vehicle Details"
-      >
-        <div v-if="selectedVehicle">
+        <!-- Existing Vehicles List -->
+        <BaseCard class="space-y-4 col-span-1 lg:col-span-3">
+          <h2 class="text-lg font-semibold mb-4">Existing Vehicles</h2>
           <ul>
-            <li v-for="(value, key) in selectedVehicle" :key="key">
-              <strong
-                >{{
-                  key.replace(/_/g, " ").replace(/(?:^|\s)\S/g, function (a) {
-                    return a.toUpperCase();
-                  })
-                }}:</strong
+            <li
+              v-for="vehicle in vehicles"
+              :key="vehicle.id"
+              class="flex justify-between items-center p-4 border rounded-lg my-2 py-2"
+            >
+              <span @click="selectVehicle(vehicle)" style="cursor: pointer"
+                >{{ vehicle.make }} {{ vehicle.model }} -
+                {{ vehicle.year }}</span
               >
-              {{ value || "N/A" }}
+              <button
+                @click="confirmDelete(vehicle.id)"
+                class="rounded bg-red-500 hover:bg-red-700 text-white p-1"
+              >
+                <span class="pi pi-times"></span>
+              </button>
             </li>
           </ul>
-        </div>
-      </Dialog>
+        </BaseCard>
 
-      <!-- Delete Confirmation Dialog -->
-      <Dialog
-        v-model:visible="deleteDialogVisible"
-        :modal="true"
-        :style="{ width: '25rem' }"
-        header="Confirm Delete"
-      >
-        <span class="p-text-secondary block mb-5"
-          >Type 'Delete' to confirm</span
+        <!-- Vehicle Details Modal -->
+        <Dialog
+          v-model:visible="vehicleModalVisible"
+          :modal="true"
+          header="Vehicle Details"
         >
-        <div class="flex align-items-center gap-3 mb-3">
-          <InputText v-model="deleteConfirmationText" class="flex-auto" />
-        </div>
-
-        <template #footer>
-          <div class="flex justify-content-end gap-2">
-            <Button
-              type="button"
-              label="Cancel"
-              severity="secondary"
-              @click="cancelDelete"
-            ></Button>
-            <Button
-              label="Delete"
-              type="button"
-              :disabled="deleteConfirmationText.toLowerCase() !== 'delete'"
-              @click="performDelete"
-            ></Button>
+          <div v-if="selectedVehicle">
+            <ul>
+              <li v-for="(value, key) in selectedVehicle" :key="key">
+                <strong
+                  >{{
+                    key.replace(/_/g, " ").replace(/(?:^|\s)\S/g, function (a) {
+                      return a.toUpperCase();
+                    })
+                  }}:</strong
+                >
+                {{ value || "N/A" }}
+              </li>
+            </ul>
           </div>
-        </template>
-      </Dialog>
+        </Dialog>
+
+        <!-- Delete Confirmation Dialog -->
+        <Dialog
+          v-model:visible="deleteDialogVisible"
+          :modal="true"
+          :style="{ width: '25rem' }"
+          header="Confirm Delete"
+        >
+          <span class="p-text-secondary block mb-5"
+            >Type 'Delete' to confirm</span
+          >
+          <div class="flex align-items-center gap-3 mb-3">
+            <InputText v-model="deleteConfirmationText" class="flex-auto" />
+          </div>
+
+          <template #footer>
+            <div class="flex justify-content-end gap-2">
+              <Button
+                type="button"
+                label="Cancel"
+                severity="secondary"
+                @click="cancelDelete"
+              ></Button>
+              <Button
+                label="Delete"
+                type="button"
+                :disabled="deleteConfirmationText.toLowerCase() !== 'delete'"
+                @click="performDelete"
+              ></Button>
+            </div>
+          </template>
+        </Dialog>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
