@@ -1,7 +1,7 @@
 <template>
     <a
       href="#"
-      class="flex items-center rounded-lg border border-gray-200 px-4 py-2 hover:bg-red-600 dark:border-gray-700"
+      class="flex items-center rounded-full border border-gray-200 px-4 py-2 hover:bg-red-600 dark:border-gray-700"
     >
       <svg
         class="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white"

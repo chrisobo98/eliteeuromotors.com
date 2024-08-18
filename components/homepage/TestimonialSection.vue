@@ -2,7 +2,7 @@
     <section class="bg-white dark:bg-[#1d1d1d]">
       <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
         <div class="mx-auto max-w-screen-sm">
-          <h2 class="mb-4 text-6xl tracking-tight font-extrabold text-gray-900 dark:text-white">Testimonials</h2>
+          <h2 class="mb-4 text-4xl md:text-5xl text-center tracking-tight font-extrabold text-gray-900 dark:text-white">Testimonials</h2>
           <p class="mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400">Explore the whole collection of open-source web components and elements built with the utility classes from Tailwind</p>
         </div> 
         <div class="flex flex-col lg:flex-row">

@@ -3,8 +3,8 @@
 @import "tailwindcss/utilities";
 @import 'flowbite';
 
-/* Import Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Abel&family=Metrophobic&family=Russo+One&display=swap");
+/* Import Typekit Fonts */
+@import url("https://use.typekit.net/rpb6jlf.css");
 
 /* Set global styles */
 body {
@@ -12,7 +12,7 @@ body {
   color: #1d1d1d; /* Default light mode text color */
   margin: 0;
   padding: 0;
-  font-family: "Metrophobic", sans-serif;
+  font-family: "Metrophobic", sans-serif; /* Default font for body text */
   font-display: swap; /* Ensure font-display swap */
   scrollbar-width: thin;
   scrollbar-color: #EE0405 transparent; /* Thumb color and track color for Firefox */
@@ -99,32 +99,84 @@ html {
 }
 
 /* Custom font styles */
-.russo-one-regular {
-  font-family: "Russo One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+h1, h2, h3 {
+  font-family: "ethnocentric", sans-serif;
 }
 
-.abel-regular {
-  font-family: "Abel", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+h4, h5, h6 {
+  font-family: "jaf-bernino-sans-comp", sans-serif;
 }
 
-.metrophobic-regular {
+p, span {
   font-family: "Metrophobic", sans-serif;
+}
+
+/* Ethnocentric Font Weights */
+.ethnocentric-ultralight {
+  font-weight: 100;
+}
+
+.ethnocentric-ultralight-italic {
+  font-weight: 100;
+  font-style: italic;
+}
+
+.ethnocentric-extralight {
+  font-weight: 200;
+}
+
+.ethnocentric-extralight-italic {
+  font-weight: 200;
+  font-style: italic;
+}
+
+.ethnocentric-light {
+  font-weight: 300;
+}
+
+.ethnocentric-light-italic {
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ethnocentric-regular {
   font-weight: 400;
-  font-style: normal;
 }
 
-/* Apply Bayon font to headers */
-h1,
-h2 {
-  font-family: "Russo One", sans-serif;
+.ethnocentric-italic {
+  font-weight: 400;
+  font-style: italic;
 }
 
-h3, 
-h4,
-h5 {
-  font-family: "Abel", sans-serif;
+.ethnocentric-bold {
+  font-weight: 700;
 }
+
+.ethnocentric-bold-italic {
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Bernino Sans Compressed Font Weights */
+.bernino-sans-comp-regular {
+  font-weight: 400;
+}
+
+.bernino-sans-comp {
+  font-weight: 100;
+}
+
+.bernino-sans-comp-regular-italic {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.bernino-sans-comp-bold {
+  font-weight: 700;
+}
+
+.bernino-sans-comp-bold-italic {
+  font-weight: 700;
+  font-style: italic;
+}
+
