@@ -85,7 +85,7 @@
     <!-- description, responsibilities, etc. -->
     <div class="z-10">
       <div class="block max-w-6xl mx-auto">
-        <h2 class="text-left text-5xl">JOB DESCRIPTION</h2>
+        <h2 class="text-left text-3xl md:text-5xl">JOB DESCRIPTION</h2>
         <p class="mb-3 text-left">
           Elite Euro Motors is seeking a dedicated and experienced Shop Mechanic
           to join our team. As a Shop Mechanic, you will play a crucial role in
@@ -97,7 +97,7 @@
           to excel in your role and advance your career in the automotive
           industry.
         </p>
-        <h2 class="text-left text-5xl">RESPONSIBILITIES</h2>
+        <h2 class="text-left text-3xl md:text-5xl">RESPONSIBILITIES</h2>
         <p class="text-left">
           As a Shop Mechanic, your responsibilities will include performing
           diagnostics, conducting repairs and maintenance, and ensuring that all
@@ -107,7 +107,7 @@
           opportunity to participate in ongoing training and development
           programs to enhance your skills and knowledge.
         </p>
-        <h2 class="text-left text-5xl">QUALIFICATIONS</h2>
+        <h2 class="text-left text-3xl md:text-5xl">QUALIFICATIONS</h2>
         <p class="text-left">
           To be successful in this role, you must have a passion for European
           cars and a strong desire to provide excellent customer service. You

@@ -3,7 +3,7 @@
         <BackgroundImage
             backgroundImage="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/586040af-b4c2-42ef-3991-fce8dadd2200/public" />
         <div class="w-11/12 md:w-9/12 mx-auto">
-            <h2 class="text-6xl text-center font-bold">European Car Services</h2>
+            <h2 class="text-4xl md:text-6xl text-center font-bold">European Car Services</h2>
             <p
                 class="text-center py-4 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
                 Have a question about your vehicle? Need to schedule an appointment or

@@ -2,19 +2,20 @@
   <section class="space-y-4 bg-white dark:bg-[#1d1d1d]">
     <div class="w-full md:w-8/12 mx-auto">
       <div class="px-4">
-        <h1 class="text-6xl font-bold mt-8">Notifications</h1>
-        <div class="flex justify-between items-center mb-4">
-          <span
-            >You have {{ notifications.length }} unviewed notification(s)</span
-          >
-          <BaseButton label="Mark all as read" />
+        <h1 class="text-4xl md:text-6xl text-center md:text-left font-bold mt-8">Notifications</h1>
+        <div v-if="notifications.length > 0" class="flex justify-between items-center mb-4">
+          <span>
+            You have {{ notifications.length }} unviewed notification(s)
+          </span>
+          <BaseButton label="Mark all as read" @click="markAllAsRead" />
+        </div>
+        <div v-else class="text-center text-gray-500 mt-12 dark:text-gray-400">
+          No notifications to display.
         </div>
       </div>
-      <hr class='my-6 mx-24 md:mx-2 border-gray-200 dark:border-gray-600' />
-
-      <!-- <div class="card my-5 mx-5">
-        <TabMenu class="rounded-lg" :model="items" />
-    </div> -->
+      <hr
+        class="my-6 mx-24 md:mx-2 border-gray-200 dark:border-gray-600"
+      />
 
       <div class="space-y-4">
         <BaseCard
@@ -26,15 +27,14 @@
             class="flex flex-col md:flex-row justify-between items-start md:items-center"
           >
             <div class="flex items-center space-x-3 mb-2 md:mb-0">
-              <!-- Use different icons based on notification type -->
               <span class="icon">
                 <component :is="notification.icon"></component>
               </span>
               <div>
                 <p class="font-bold">{{ notification.title }}</p>
-                <p class="text-sm">{{ notification.description }}</p>
+                <p class="text-sm">{{ notification.message }}</p>
                 <p class="text-xs text-gray-500">
-                  {{ new Date(notification.date).toLocaleString() }}
+                  {{ new Date(notification.created_at).toLocaleString() }}
                 </p>
               </div>
             </div>
@@ -63,79 +63,82 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+// Existing imports and setup...
+import { ref, onMounted } from "vue";
 import BaseCard from "@/components/Base/BaseCard.vue";
 import BaseButton from "@/components/Base/BaseButton.vue";
-import {
-  BellIcon,
-  CalendarIcon,
-  ExclamationCircleIcon,
-  EnvelopeIcon,
-  UserIcon,
-} from "@heroicons/vue/24/solid";
 
-const items = ref([
-  { label: "Dashboard", icon: "pi pi-home" },
-  { label: "Transactions", icon: "pi pi-chart-line" },
-  { label: "Products", icon: "pi pi-list" },
-  { label: "Messages", icon: "pi pi-inbox" },
-]);
+const notifications = ref([]);
 
-const notifications = ref([
-  {
-    id: 1,
-    title: "Meeting at 07:30 PM.",
-    description:
-      "You have an upcoming meeting with Alex regarding digital marketing.",
-    date: "2022-04-04T19:30:00Z",
-    state: "reschedule",
-    type: "meeting",
-    icon: "BellIcon",
-  },
-  {
-    id: 2,
-    title: "New Session booked by Anthony M.",
-    description:
-      "New session is booked by Anthony, on 27th January at 05:30 PM.",
-    date: "2022-01-27T17:30:00Z",
-    state: "reschedule",
-    type: "session",
-    icon: "CalendarIcon",
-  },
-  {
-    id: 3,
-    title: "Error processing payment!",
-    description:
-      "Please review the wallet details and fix the error to process your payments.",
-    date: "2022-04-01T12:00:00Z",
-    state: "unread",
-    type: "error",
-    icon: "ExclamationCircleIcon",
-  },
-  {
-    id: 4,
-    title: "You have a new message from Luke.",
-    description: "You have a new message in conversations from Luke Wield.",
-    date: "2022-04-03T15:00:00Z",
-    state: "reply",
-    type: "message",
-    icon: "EnvelopeIcon",
-  },
-  {
-    id: 5,
-    title: "Your vehicle has a broken control arm.",
-    description: "You have a vehicle notification, view in my garage.",
-    date: "2022-03-29T18:45:00Z",
-    state: "read",
-    type: "meeting",
-    icon: "UsersIcon",
-  },
-]);
+const supabase = useSupabaseClient();
+const user = useSupabaseUser().value;
 
-const deleteNotification = (id) => {
-  const index = notifications.value.findIndex((n) => n.id === id);
-  if (index !== -1) {
-    notifications.value.splice(index, 1);
+onMounted(async () => {
+  if (user) {
+    await fetchNotifications();
   }
-};
+});
+
+async function fetchNotifications() {
+  const { data, error } = await supabase
+    .from("notifications")
+    .select("*")
+    .eq("user_id", user.id)
+    .order("created_at", { ascending: false });
+
+  if (error) {
+    console.error("Error fetching notifications:", error);
+  } else {
+    notifications.value = data;
+  }
+}
+
+async function markNotificationAsRead(id) {
+  const { error } = await supabase
+    .from("notifications")
+    .update({ status: "read" })
+    .eq("id", id);
+
+  if (error) {
+    console.error("Error marking notification as read:", error);
+  } else {
+    // Update the local state
+    const notification = notifications.value.find((n) => n.id === id);
+    if (notification) {
+      notification.status = "read";
+    }
+  }
+}
+
+async function deleteNotification(id) {
+  const { error } = await supabase
+    .from("notifications")
+    .delete()
+    .eq("id", id);
+
+  if (error) {
+    console.error("Error deleting notification:", error);
+  } else {
+    notifications.value = notifications.value.filter(
+      (n) => n.id !== id
+    );
+  }
+}
+
+async function markAllAsRead() {
+  const { error } = await supabase
+    .from("notifications")
+    .update({ status: "read" })
+    .eq("user_id", user.id)
+    .eq("status", "unread");
+
+  if (error) {
+    console.error("Error marking all as read:", error);
+  } else {
+    notifications.value = notifications.value.map((n) => ({
+      ...n,
+      status: "read",
+    }));
+  }
+}
 </script>
