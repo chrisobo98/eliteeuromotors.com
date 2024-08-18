@@ -1,7 +1,7 @@
 <template>
   <header :class="{ 'header-scrolled': scrolled }" class="main-header bg-[#ffffff] dark:bg-[#1d1d1d]">
     <!-- Announcement Banner -->
-    <div class="bg-red-600 text-center text-white py-2">
+    <div class="dark:bg-black bg-gray-300 text-center dark:text-white py-2 border-b border-gray-400 dark:border-red-600">
       <p>🔧 Oil Changes only $99 all Summer 2024 for a limited time ⚙️</p>
     </div>
 

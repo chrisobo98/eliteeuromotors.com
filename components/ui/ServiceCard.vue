@@ -1,15 +1,15 @@
 <template>
   <div
-    class="border border-gray-200 rounded-2xl shadow-md dark:border-gray-700"
+    class="rounded-2xl"
   >
     <a href="#">
       <img
         :src="imgSrc"
         :alt="imgAlt"
-        class="w-full h-64 object-cover rounded-t-2xl"
+        class="w-full h-48 object-cover rounded-t-2xl"
       />
     </a>
-    <div class="p-5">
+    <div class="my-5">
       <a href="#">
         <h5
           class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
@@ -21,7 +21,7 @@
       </p>
       <a
         href="#"
-        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
+        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white border border-red-700 rounded-2xl hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:hover:bg-red-700 dark:focus:ring-red-800"
       >
         Read more
         <svg
