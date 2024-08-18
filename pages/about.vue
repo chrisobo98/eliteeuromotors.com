@@ -5,7 +5,7 @@
     />
     <!-- About Us -->
     <div class="w-11/12 md:w-9/12 mx-auto">
-      <h2 class="text-6xl text-center font-bold">About Us</h2>
+      <h2 class="text-4xl md:text-6xl text-center font-bold">About Us</h2>
       <p
         class="text-center py-4 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
       >
