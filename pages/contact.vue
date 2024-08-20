@@ -47,7 +47,7 @@
             v-model="form[field.id as keyof FormData]"
             :placeholder="field.placeholder"
             rows="4"
-            class="block p-2.5 w-full bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded-lg border border-gray-100 dark:border-gray-600 focus:ring-violet-500 focus:border-violet-500"
+            class="block p-2.5 w-full bg-gray-200 dark:bg-gray-700 text-black dark:text-white rounded-lg border border-gray-100 dark:border-gray-600 focus:ring-red-500 focus:border-red-500"
             required
           ></textarea>
         </div>
