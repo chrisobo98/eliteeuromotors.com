@@ -4,19 +4,14 @@
   />
   <section class="bg-white dark:bg-[#1d1d1d]">
     <form @submit.prevent="handleSubmit" class="w-9/12 mx-auto rounded-lg">
-      <!-- Contact Header -->
+      <!-- home.Contact Header -->
       <h2 class="text-6xl text-center font-bold">
         {{ $t("home.contact.header") }}
       </h2>
       <p
         class="text-center py-4 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
       >
-        Have a question about your vehicle? Need to schedule an appointment or
-        get a quote? We're here to help! Fill out the contact form below, and
-        one of our expert technicians will get back to you promptly. Whether
-        you're experiencing issues with your car or just need routine
-        maintenance, we're dedicated to providing top-notch service and ensuring
-        your European vehicle runs smoothly.
+        {{ $t("home.contact.description") }}
       </p>
 
       <!-- Submit Form Fields -->
@@ -83,7 +78,7 @@
             Loading...
           </template>
           <!-- not loading/finished loading -->
-          <template v-else> Submit </template>
+          <template v-else> {{ $t("home.contact.submit") }} </template>
         </BaseButton>
       </div>
     </form>
@@ -104,48 +99,40 @@ import emailjs from "emailjs-com";
 import {
   UserIcon,
   EnvelopeIcon,
-  BuildingOfficeIcon,
-  LinkIcon,
+  PhoneIcon,
+  IdentificationIcon,
+  WrenchIcon,
 } from "@heroicons/vue/24/solid";
 import BaseButton from "@/components/ui/BaseButton.vue";
 import BackgroundImage from "@/components/ui/BackgroundImage.vue";
-
 import Notification from "@/components/effects/MessageSentNotification.vue";
 import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
 
-// Define the type for the notification state
-interface NotificationData {
-  show: boolean;
-  message: string;
-  type: "success" | "error";
-}
-
 interface Field {
-  id: string;
+  id: keyof FormData;
   label: string;
   type: string;
   placeholder: string;
   icon: any;
 }
 
-interface FormData {
-  name: string;
-  email: string;
-  company: string;
-  website: string;
-  content: string;
-  functionality: string;
-  "current-state": string;
-  experience: string;
-  details: string;
-}
-
 interface NotificationData {
   show: boolean;
   message: string;
   type: "success" | "error";
+}
+
+interface FormData {
+  name: string;
+  email: string;
+  phone: string;
+  vin: string;
+  make_model: string;
+  issue_description: string;
+  service_request: string;
+  details: string;
 }
 
 const fields: Field[] = [
@@ -164,45 +151,38 @@ const fields: Field[] = [
     icon: EnvelopeIcon,
   },
   {
-    id: "company",
-    label: t("home.contact.company_header"),
+    id: "phone",
+    label: t("home.contact.phone_header"),
+    type: "tel",
+    placeholder: t("home.contact.phone"),
+    icon: PhoneIcon,
+  },
+  {
+    id: "vin",
+    label: t("home.contact.vin_header"),
     type: "text",
-    placeholder: t("home.contact.company"),
-    icon: BuildingOfficeIcon,
+    placeholder: t("home.contact.vin"),
+    icon: IdentificationIcon,
   },
   {
-    id: "website",
-    label: t("home.contact.website_header"),
-    type: "url",
-    placeholder: t("home.contact.website"),
-    icon: LinkIcon,
+    id: "make_model",
+    label: t("home.contact.make_model_header"),
+    type: "text",
+    placeholder: t("home.contact.make_model"),
+    icon: WrenchIcon,
   },
   {
-    id: "content",
-    label: t("home.contact.content_header"),
+    id: "issue_description",
+    label: t("home.contact.issue_description_header"),
     type: "textarea",
-    placeholder: t("home.contact.content"),
+    placeholder: t("home.contact.issue_description"),
     icon: null,
   },
   {
-    id: "functionality",
-    label: t("home.contact.functionality_header"),
+    id: "service_request",
+    label: t("home.contact.service_request_header"),
     type: "textarea",
-    placeholder: t("home.contact.functionality"),
-    icon: null,
-  },
-  {
-    id: "current-state",
-    label: t("home.contact.state_of_site_header"),
-    type: "textarea",
-    placeholder: t("home.contact.state_of_site"),
-    icon: null,
-  },
-  {
-    id: "experience",
-    label: t("home.contact.site_experience_header"),
-    type: "textarea",
-    placeholder: t("home.contact.site_experience"),
+    placeholder: t("home.contact.service_request"),
     icon: null,
   },
   {
@@ -217,12 +197,11 @@ const fields: Field[] = [
 const form = ref<FormData>({
   name: "",
   email: "",
-  company: "",
-  website: "",
-  content: "",
-  functionality: "",
-  "current-state": "",
-  experience: "",
+  phone: "",
+  vin: "",
+  make_model: "",
+  issue_description: "",
+  service_request: "",
   details: "",
 });
 
@@ -239,12 +218,11 @@ const handleSubmit = () => {
   const templateParams = {
     name: form.value.name,
     email: form.value.email,
-    company: form.value.company,
-    website: form.value.website,
-    content: form.value.content,
-    functionality: form.value.functionality,
-    currentState: form.value["current-state"],
-    experience: form.value.experience,
+    phone: form.value.phone,
+    vin: form.value.vin,
+    make_model: form.value.make_model,
+    issue_description: form.value.issue_description,
+    service_request: form.value.service_request,
     details: form.value.details,
   };
 
@@ -280,16 +258,16 @@ const clearForm = () => {
   form.value = {
     name: "",
     email: "",
-    company: "",
-    website: "",
-    content: "",
-    functionality: "",
-    "current-state": "",
-    experience: "",
+    phone: "",
+    vin: "",
+    make_model: "",
+    issue_description: "",
+    service_request: "",
     details: "",
   };
 };
 </script>
+
 
 <style scoped>
 /* No additional styles needed as Tailwind handles everything */
