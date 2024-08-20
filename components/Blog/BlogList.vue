@@ -5,7 +5,7 @@
       :key="post.slug"
       class="flex flex-col gap-y-5 text-primary"
     >
-      <a :href="`/blog/${post.slug}`">
+      <NuxtLink :href="`/blog/${post.slug}`">
         <img
           :alt="post.title"
           :src="post.image"
@@ -16,7 +16,7 @@
           <h3 class="text-3xl">{{ post.title }}</h3>
           <p class="my-2 text-base text-secondary">{{ post.excerpt }}</p>
         </div>
-      </a>
+      </NuxtLink>
     </div>
   </section>
 </template>

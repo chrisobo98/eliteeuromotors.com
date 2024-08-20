@@ -47,12 +47,7 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/main.css"],
   supabase: {
-    redirectOptions: {
-      login: "/login",
-      callback: "/confirm",
-      include: undefined,
-      exclude: ["/register", "/login"],
-    },
+    redirect: false
   },
 
   postcss: {
@@ -68,26 +63,6 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en",
       },
-      link: [
-        // Preconnect to Google Fonts
-        { rel: "preconnect", href: "https://fonts.googleapis.com" },
-        {
-          rel: "preconnect",
-          href: "https://fonts.gstatic.com",
-          crossorigin: "anonymous",
-        },
-        // Preload critical fonts
-        {
-          rel: "preload",
-          href: "https://fonts.googleapis.com/css2?family=Abel&family=Metrophobic&family=Russo+One&display=swap",
-          as: "style",
-        },
-        // Link to the fonts' stylesheets
-        {
-          rel: "stylesheet",
-          href: "https://fonts.googleapis.com/css2?family=Abel&family=Metrophobic&family=Russo+One&display=swap",
-        },
-      ],
       script: [
         {
           innerHTML: `

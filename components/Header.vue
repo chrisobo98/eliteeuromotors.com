@@ -41,7 +41,7 @@
         </span>
 
         <!-- Appointment Button Desktop -->
-        <NuxtLink to="/appointments"
+        <NuxtLink to="/contact"
           class="nav-item-bounce hidden lg:inline delay-200 text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
           {{ $t('home.navbar.appointment') }}
         </NuxtLink>
@@ -135,7 +135,7 @@
         <LanguageSelector />
 
         <!-- Support Link -->
-        <a href="#" class="flex items-center">
+        <NuxtLink href="#" class="flex items-center">
           Support
           <svg class="ml-2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
             width="20" height="20" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512"
@@ -146,7 +146,7 @@
                 fill="#9da1b3" opacity="1" data-original="#000000" />
             </g>
           </svg>
-        </a>
+        </NuxtLink>
       </div>
     </div>
 
@@ -181,31 +181,13 @@
           <NavLink class="nav-item-bounce delay-500" href="/about" :text="$t('home.navbar.about')" />
           <NavLink class="nav-item-bounce delay-500" href="/careers" :text="$t('home.navbar.careers')" />
           <NavLink class="nav-item-bounce delay-500" href="/blog" :text="$t('home.navbar.blog')" />
+          <NavLink class="nav-item-bounce delay-500" href="/account" text="Account" />
 
           <!-- Appointment Button Mobile -->
-          <NuxtLink to="/appointments"
+          <NuxtLink to="/contact"
             class="nav-item-bounce mt-4 delay-200 lg:hidden text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 text-center">
             {{ $t('home.navbar.appointment') }}
           </NuxtLink>
-
-          <!-- Account & Cart -->
-          <div class="flex items-center space-x-4 mt-4 lg:mt-0">
-            <div class="relative">
-              <button @click="toggleDropdown('account')" class="flex items-center focus:outline-none">
-                Account
-                <svg class="w-4 h-4 ml-1" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                  stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div v-if="isDropdownOpen.account"
-                class="absolute lg:right-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg z-50">
-                <NuxtLink to="/account" class="block px-4 py-2 hover:bg-gray-200">Profile</NuxtLink>
-                <NuxtLink to="/account" class="block px-4 py-2 hover:bg-gray-200">Settings</NuxtLink>
-                <NuxtLink to="/account" class="block px-4 py-2 hover:bg-gray-200">Logout</NuxtLink>
-              </div>
-            </div>
-          </div>
         </ul>
       </div>
     </div>

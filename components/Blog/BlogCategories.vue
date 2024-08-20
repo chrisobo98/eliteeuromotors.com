@@ -1,6 +1,6 @@
 <template>
     <div class="categories">
-      <a v-for="category in categories" :key="category" @click="selectCategory(category)" :class="{ selected: category === selectedCategory }">{{ category }}</a>
+      <NuxtLink v-for="category in categories" :key="category" @click="selectCategory(category)" :class="{ selected: category === selectedCategory }">{{ category }}</NuxtLink>
     </div>
   </template>
   

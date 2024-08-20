@@ -1,9 +1,15 @@
 <template>
-  <section class="bg-white hover:border border-gray-700 dark:bg-black rounded-xl shadow-xl my-12">
+  <section class="bg-white border border-gray-700 dark:bg-black rounded-xl shadow-xl my-12">
     <div
       class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-12"
     >
+    <img
+        class="rounded-3xl object-cover my-12 mx-12 md:mx-2"
+        src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/7b0bd7e5-b353-4e56-1eff-5ad6ac333a00/public"
+        alt="dashboard image"
+      />
       <div class="mt-4 md:mt-0">
+        
         <h2
           class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
         >
@@ -30,11 +36,7 @@
           Create an Account
         </a>
       </div>
-      <img
-        class="rounded-3xl object-cover my-12 mx-12 md:mx-2"
-        src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/7b0bd7e5-b353-4e56-1eff-5ad6ac333a00/public"
-        alt="dashboard image"
-      />
+
     </div>
   </section>
 </template>

@@ -189,8 +189,8 @@
           </ul>
 
           <p class="text-sm text-gray-500 dark:text-gray-400">
-            © 2024 <a href="#" class="hover:underline">Elite Euro Motors</a>,
-            Made by Christopher Bermudez
+            © 2024 Elite Euro Motors,
+            Made by <a href="https://christopherbermudez.com/" class="hover:underline">Christopher Bermudez</a>
           </p>
         </div>
       </div>
