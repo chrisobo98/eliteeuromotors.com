@@ -59,8 +59,8 @@
       <div
         class="flex flex-col mx-5 md:mx-0 mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
       >
-        <a
-          href="#"
+        <NuxtLink
+          href="/contact"
           class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900"
         >
           Schedule an Appointment
@@ -76,13 +76,13 @@
               clip-rule="evenodd"
             ></path>
           </svg>
-        </a>
-        <a
-          href="#"
+        </NuxtLink>
+        <NuxtLink
+          href="/login"
           class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-white text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-black focus:ring-4 focus:ring-red-500 dark:text-white"
         >
           Create an Account
-        </a>
+        </NuxtLink>
       </div>
     </div>
   </section>
