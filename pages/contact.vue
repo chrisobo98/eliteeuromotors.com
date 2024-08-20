@@ -4,14 +4,14 @@
   />
   <section class="bg-white dark:bg-[#1d1d1d]">
     <form @submit.prevent="handleSubmit" class="w-9/12 mx-auto rounded-lg">
-      <!-- home.Contact Header -->
+      <!-- contact.Contact Header -->
       <h2 class="text-6xl text-center font-bold">
-        {{ $t("home.contact.header") }}
+        {{ $t("contact.contact.header") }}
       </h2>
       <p
         class="text-center py-4 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
       >
-        {{ $t("home.contact.description") }}
+        {{ $t("contact.contact.description") }}
       </p>
 
       <!-- Submit Form Fields -->
@@ -78,7 +78,7 @@
             Loading...
           </template>
           <!-- not loading/finished loading -->
-          <template v-else> {{ $t("home.contact.submit") }} </template>
+          <template v-else> {{ $t("contact.contact.submit") }} </template>
         </BaseButton>
       </div>
     </form>
@@ -138,58 +138,58 @@ interface FormData {
 const fields: Field[] = [
   {
     id: "name",
-    label: t("home.contact.name_header"),
+    label: t("contact.contact.name_header"),
     type: "text",
-    placeholder: t("home.contact.name"),
+    placeholder: t("contact.contact.name"),
     icon: UserIcon,
   },
   {
     id: "email",
-    label: t("home.contact.email_header"),
+    label: t("contact.contact.email_header"),
     type: "email",
-    placeholder: t("home.contact.email"),
+    placeholder: t("contact.contact.email"),
     icon: EnvelopeIcon,
   },
   {
     id: "phone",
-    label: t("home.contact.phone_header"),
+    label: t("contact.contact.phone_header"),
     type: "tel",
-    placeholder: t("home.contact.phone"),
+    placeholder: t("contact.contact.phone"),
     icon: PhoneIcon,
   },
   {
     id: "vin",
-    label: t("home.contact.vin_header"),
+    label: t("contact.contact.vin_header"),
     type: "text",
-    placeholder: t("home.contact.vin"),
+    placeholder: t("contact.contact.vin"),
     icon: IdentificationIcon,
   },
   {
     id: "make_model",
-    label: t("home.contact.make_model_header"),
+    label: t("contact.contact.make_model_header"),
     type: "text",
-    placeholder: t("home.contact.make_model"),
+    placeholder: t("contact.contact.make_model"),
     icon: WrenchIcon,
   },
   {
     id: "issue_description",
-    label: t("home.contact.issue_description_header"),
+    label: t("contact.contact.issue_description_header"),
     type: "textarea",
-    placeholder: t("home.contact.issue_description"),
+    placeholder: t("contact.contact.issue_description"),
     icon: null,
   },
   {
     id: "service_request",
-    label: t("home.contact.service_request_header"),
+    label: t("contact.contact.service_request_header"),
     type: "textarea",
-    placeholder: t("home.contact.service_request"),
+    placeholder: t("contact.contact.service_request"),
     icon: null,
   },
   {
     id: "details",
-    label: t("home.contact.other_details_header"),
+    label: t("contact.contact.other_details_header"),
     type: "textarea",
-    placeholder: t("home.contact.other_details"),
+    placeholder: t("contact.contact.other_details"),
     icon: null,
   },
 ];
