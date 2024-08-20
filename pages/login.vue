@@ -1,8 +1,8 @@
 <template>
   <div class="login-container">
     <BaseCard>
-      <h1 class="text-3xl text-center font-bold">Elite Euro Motors App</h1>
-      <h2 class="text-2xl text-center mb-4">Welcome back! Log In below</h2>
+      <h1 class="text-2xl text-center font-bold">Elite Euro Motors App</h1>
+      <p class="text-2xl text-center mb-4">Welcome back! Log In below</p>
       <form @submit.prevent="signInNewUser">
         <div class="grid grid-cols-3 gap-4">
           <!-- Password Input -->
