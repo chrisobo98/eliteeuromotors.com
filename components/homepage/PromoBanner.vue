@@ -29,12 +29,12 @@
           <li>Streamlined appointment scheduling for quick service</li>
           <li>Personalized vehicle insights and recommendations</li>
         </ul>
-        <a
-          href="#"
+        <NuxtLink
+          href="/login"
           class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-white text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-red-600 focus:ring-4 focus:ring-red-500 dark:text-white"
         >
           Create an Account
-        </a>
+        </NuxtLink>
       </div>
 
     </div>
