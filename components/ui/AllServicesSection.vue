@@ -1,5 +1,5 @@
 <template>
-    <a
+    <p
       href="#"
       class="flex items-center rounded-full border border-gray-200 px-4 py-2 hover:bg-red-600 dark:border-gray-700"
     >
@@ -23,7 +23,7 @@
       <span class="text-sm font-medium text-gray-900 dark:text-white">
         {{ title }}
       </span>
-    </a>
+    </p>
   </template>
   
   <script setup lang="ts">

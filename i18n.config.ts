@@ -4,11 +4,65 @@ export default defineI18nConfig(() => ({
   messages: {
     en: {
       home: {
+        home: {
+          new: "New",
+          specials_on_oil_changes: "Specials on oil changes when booking online",
+          elite_euro_motors: "Elite Euro Motors",
+          ocoee_premier: "Ocoee's premier destination for European auto care.",
+          nestled_in_florida: "Nestled in the heart of Florida, our family-owned business specializes in servicing prestigious brands like BMW, Mercedes, and other European classics.",
+          schedule_appointment: "Schedule an Appointment",
+          create_account: "Create an Account",
+          servicing_since_2007: "Servicing your favorite European car models since 2007",
+          popular_products_services: "Popular Products & Services",
+          general_inspections: "General Inspections",
+          general_inspections_description: "At Elite Euro Motors, we offer a comprehensive range of top-tier automotive services and products tailored to European vehicles. From routine maintenance and inspections to specialized repairs and high-quality OEM and aftermarket parts, our team ensures your luxury car receives the expert care it deserves. Explore our offerings and experience why we're Ocoee's trusted choice for European auto care.",
+          read_more: "Read more",
+          regular_service: "Regular Service",
+          regular_service_description: "Ensure your European car stays in peak condition with our regular service packages at Elite Euro Motors. Our experienced technicians provide meticulous care, using state-of-the-art diagnostic tools and premium parts to maintain your vehicle's performance and reliability. Whether it's an oil change, brake inspection, or comprehensive tune-up, our regular service keeps your car running smoothly, prolonging its life and protecting your investment.",
+          hardware: "Hardware",
+          oem_parts: "OEM & aftermarket parts available",
+          accessories: "Accessories",
+          oem_accessories: "Selection of OEM accessories",
+          inspections: "Inspections",
+          pre_purchase_inspections: "Pre-Purchase & General Inspections",
+          batteries: "Batteries",
+          voltage_replacements: "Voltage and battery replacements",
+          parts_sales: "Parts Sales",
+          fuel_system_services: "Fuel System Services",
+          electrical_system_services: "Electrical System Services",
+          transmission_services: "Transmission Services",
+          diagnostic_services: "Diagnostic Services",
+          maintenance_services: "Maintenance Services",
+          repair_services: "Repair Services",
+          battery_services: "Battery Services",
+          family_owned_since_2014: "FAMILY OWNED AND OPERATED SINCE 2014",
+          family_owned_description: "At Elite Euro Motors, we provide specialized care for your European car models. Our team of experts ensures that your vehicle receives the highest quality service, keeping it running smoothly and efficiently.",
+          specialize_in_servicing: "WE SPECIALIZE IN SERVICING YOUR BELOVED EUROPEAN CAR MODELS",
+          specialize_in_servicing_description: 'As a family-owned and operated business, we take great pride in serving our valued customers with exceptional automotive solutions. At Elite Euro Motors, we understand the importance of providing top-notch service that exceeds expectations. With our expert team and dedication to excellence, you can trust us to deliver the highest quality workmanship for all your European car needs. Experience the difference of a family-owned business that truly cares about your satisfaction – visit us today!',
+          unlock_full_potential: "Unlock the Full Potential of Your Vehicle",
+          unlock_description: "Create an account today to take full advantage of our app’s powerful features. Track your vehicle’s maintenance history, schedule service appointments with ease, and receive real-time updates and notifications on your vehicle’s status.",
+          comprehensive_service_history: "Comprehensive service history at your fingertips",
+          exclusive_access: "Exclusive access to maintenance reminders and updates",
+          streamlined_scheduling: "Streamlined appointment scheduling for quick service",
+          personalized_insights: "Personalized vehicle insights and recommendations",
+          testimonials: "Testimonials",
+          testimonials_subtitle: "See what our satisfied customers have to say about our exceptional service",
+          see_more: "Show more..."
+        },
         hero: {
           title: "Elite Euro Motors",
           description:
             "Where Tradition Meets Excellence",
           button: "Schedule an Appointment",
+        },
+        garageDropdown: {
+          your_garage: "Your Garage",
+          my_vehicle: "My Vehicle",
+          maintenance: "Maintenance",
+          notifications: "Notifications",
+          profile: "Profile",
+          garage: "Garage",
+          logout: "Logout"
         },
         navbar: {
           appointment: "Set up Appointment",
@@ -17,42 +71,36 @@ export default defineI18nConfig(() => ({
           services: "Services",
           about: "About",
           careers: "Careers",
-          blog: "Blog"
+          blog: "Blog",
+          account: "Account",
+          support: "Support",
+          banner_text: "🔧 Oil Changes only $99 all Summer 2024 for a limited time ⚙️"
         },
-        mystory: {
-          journey: "A LONG JOURNEY",
-          storyheader: "MY STORY",
-          storytext:
-            "A seasoned front-end software developer with a proven track record in both the corporate sphere and the startup ecosystem. With a passion for crafting user-centric solutions, I ensure that every project not only meets but exceeds expectations.",
-          storyButton: "See Resume",
-        },
-        services: {
-          subheader: "MY SERVICES",
-          header: "PROFESSIONAL SERVICES",
-          consultation: "Small Business Consultation",
-          consultation_text:
-            "Empowering small businesses to establish a robust online footprint.",
-          softwaredev: "Website & Software Development",
-          softwaredev_text:
-            "From concept to creation, crafting websites tailored to your brand’s needs.",
-          maintenance_and_support: "Maintenance & Training",
-          maintenance_and_support_text:
-            "Ensuring sustainability through comprehensive maintenance and hands-on training.",
-          seo_marketing_ads: "Advanced SEO, Marketing, & Ads",
-          seo_marketing_ads_text:
-            "SEO-optimiziation, implementing targeted digital marketing campaigns, and creating impactful advertisements",
-        },
-        portfolio: {
-          subheader: "PORTFOLIO",
-          header: "Showcase of Excellence",
-          portfolio_elite_header: "Elite Euro Motors",
-          portfolio_elite_text:
-            "Website Design, SEO, Marketing with a big emphasis on Email Marketing, Consulting, and overhaul of online presence.",
-          portfolio_4star_header: "4 Star Customs",
-          portfolio_4star_text:
-            "Website design and implementation done for 4StarCustoms, a body shop in Ocoee, Florida.",
-          button_text: "View Site",
-        },
+        footer: {
+          company: "Company",
+          about: "About",
+          premium: "Premium",
+          blog: "Blog",
+          affiliate_program: "Affiliate Program",
+          get_coupon: "Get Coupon",
+          your_garage: "Your Garage",
+          my_vehicle: "My Vehicle",
+          maintenance: "Maintenance",
+          notifications: "Notifications",
+          profile: "Profile",
+          garage: "Garage",
+          sign_in_or_create_account: "Sign In or Create Account",
+          get_latest_deals: "Get the latest deals and more.",
+          enter_email: "Enter your email address",
+          subscribe: "Subscribe",
+          elite_euro_logo: "Elite Euro Logo",
+          legal_notice: "Legal Notice",
+          product_listing_policy: "Product Listing Policy",
+          terms_of_use: "Terms of Use",
+          copyright: "© 2024 Elite Euro Motors, Made by"
+        }
+      },
+      contact: {
         contact: {
           header: "Contact Us",
           description: "Have a question about your vehicle? Need to schedule an appointment or get a quote? We're here to help! Fill out the contact form below, and one of our expert technicians will get back to you promptly. Whether you're experiencing issues with your car or just need routine maintenance, we're dedicated to providing top-notch service and ensuring your European vehicle runs smoothly.",
@@ -73,71 +121,102 @@ export default defineI18nConfig(() => ({
           other_details: "Leave additional details or questions...",
           other_details_header: "Additional Details",
           submit: "Submit"
-        },          
-        footer: {
-          resources: "Resources",
-          follow: "Follow Me",
-          legal: "Legal",
-          textarea:
-            "2024, Elite Euro Motors™ Made with ❤️ in Orlando, Florida by Christopher Bermudez",
-        },
+        }
       }
     },
     es: {
       home: {
-        hero: {
-          title: "Christopher Bermudez",
-          subtitle1: "Desarrollo de Sitios Web",
-          subtitle2: "Desarrollo de Programas",
-          subtitle3: "Publicidad y Mercadeo",
-          subtitle4: "Servicios de SEO",
-          description:
-            "Uniendo Diseño y Funcionalidad para el Éxito de su Negocio",
-          button: "Descubra Cómo",
+        home: {
+          new: "Nuevo",
+          specials_on_oil_changes: "Ofertas especiales en cambios de aceite al reservar en línea",
+          elite_euro_motors: "Elite Euro Motors",
+          ocoee_premier: "El destino principal de Ocoee para el cuidado y mantenimiento de autos europeos.",
+          nestled_in_florida: "Ubicado en el corazón de Florida, nuestro negocio familiar se especializa en el servicio de marcas prestigiosas como BMW, Mercedes y otros clásicos europeos.",
+          schedule_appointment: "Programar una Cita",
+          create_account: "Crear una Cuenta",
+          servicing_since_2007: "Sirviendo tus modelos de autos europeos favoritos desde el 2007",
+          popular_products_services: "Productos y Servicios Populares",
+          general_inspections: "Inspecciones Generales",
+          general_inspections_description: "En Elite Euro Motors, ofrecemos una gama completa de servicios y productos automotrices de primera calidad, especialmente diseñados para vehículos europeos. Desde el mantenimiento rutinario y las inspecciones hasta reparaciones especializadas y piezas OEM y aftermarket de alta calidad, nuestro equipo garantiza que su automóvil de lujo reciba el cuidado experto que merece. Explore nuestras ofertas y descubra por qué somos la opción de confianza en Ocoee para el cuidado de autos europeos.",
+          read_more: "Leer más",
+          regular_service: "Servicio Regular",
+          regular_service_description: "Asegúrese de que su automóvil europeo se mantenga en condiciones óptimas con nuestros paquetes de servicio regular en Elite Euro Motors. Nuestros técnicos experimentados brindan un cuidado meticuloso, utilizando herramientas de diagnóstico de última generación y piezas de primera calidad para mantener el rendimiento y la fiabilidad de su vehículo. Ya sea un cambio de aceite, una inspección de frenos o una puesta a punto completa, nuestro servicio regular mantiene su automóvil funcionando sin problemas, prolongando su vida útil y protegiendo su inversión.",
+          hardware: "Componentes",
+          oem_parts: "Piezas OEM del manufacturero",
+          accessories: "Accesorios",
+          oem_accessories: "Selección de accesorios OEM",
+          inspections: "Inspecciones",
+          pre_purchase_inspections: "Inspecciones Generales y de Compra",
+          batteries: "Baterías",
+          voltage_replacements: "Reemplazos de voltaje y batería",
+          parts_sales: "Ventas de Piezas",
+          fuel_system_services: "Servicios de Combustible",
+          electrical_system_services: "Servicios del Sistema Eléctrico",
+          transmission_services: "Servicios de Transmisión",
+          diagnostic_services: "Servicios de Diagnóstico",
+          maintenance_services: "Servicios de Mantenimiento",
+          repair_services: "Servicios de Reparación",
+          battery_services: "Servicios de Batería",
+          family_owned_since_2014: "NEGOCIO FAMILIAR DESDE 2014",
+          family_owned_description: "Como un negocio familiar, nos enorgullece servir a nuestros valiosos clientes con soluciones automotrices excepcionales. En Elite Euro Motors, entendemos la importancia de ofrecer un servicio de primera categoría que supere las expectativas. Con nuestro equipo de expertos y dedicación a la excelencia, puedes confiar en nosotros para entregar el trabajo de la más alta calidad para todas tus necesidades de autos europeos. Experimenta la diferencia de un negocio familiar que realmente se preocupa por tu satisfacción – ¡visítanos hoy!",
+          specialize_in_servicing: "EXPERTOS EN EL SERVICIO DE TUS MODELOS DE AUTOS EUROPEOS FAVORITOS",
+          specialize_in_servicing_description: "En Elite Euro Motors, ofrecemos un cuidado especializado para tus modelos de autos europeos. Nuestro equipo de expertos se asegura de que tu vehículo reciba el servicio de más alta calidad, manteniéndolo en óptimas condiciones.",
+          unlock_full_potential: "Desbloquea Todo el Potencial de Tu Vehículo",
+          unlock_description: "Crea una cuenta hoy para aprovechar al máximo las potentes funciones de nuestra aplicación. Rastrea el historial de mantenimiento de tu vehículo, programa citas de servicio con facilidad y recibe actualizaciones y notificaciones en tiempo real sobre el estado de tu vehículo.",
+          comprehensive_service_history: "Historial de servicio integral al alcance de tu mano",
+          exclusive_access: "Acceso exclusivo a recordatorios y actualizaciones de mantenimiento",
+          streamlined_scheduling: "Programación de citas simplificada para un servicio rápido",
+          personalized_insights: "Información y recomendaciones personalizadas sobre el vehículo",
+          testimonials: "Testimonios",
+          testimonials_subtitle: "Descubre lo que nuestros clientes satisfechos dicen sobre nuestro servicio excepcional",
+          see_more: "Ver mas..."
+        },
+        garageDropdown: {
+          your_garage: "Tu Garaje",
+          my_vehicle: "Mi Vehículo",
+          maintenance: "Mantenimiento",
+          notifications: "Notificaciones",
+          profile: "Perfil",
+          garage: "Garaje",
+          logout: "Cerrar Sesión"
         },
         navbar: {
-          appointment: "Set up Appointment",
-          home: "Home",
-          contact: "Contact",
-          services: "Services",
-          about: "About",
-          careers: "Careers",
-          blog: "Blog"
-        },
-        mystory: {
-          journey: "UN VIAJE LARGO",
-          storyheader: "MI HISTORIA",
-          storytext:
-            "Un desarrollador de software front-end experimentado con un historial comprobado tanto en el ámbito corporativo como en el ecosistema de empresas recientemente creadas. Con una pasión por crear soluciones centradas en el usuario, me aseguro de que cada proyecto no solo cumpla, sino que supere las expectativas.",
-          storyButton: "Ver Resume",
-        },
-        services: {
-          subheader: "MIS SERVICIOS",
-          header: "SERVICIOS PROFESIONALES",
-          consultation: "Consultoría para Empresas",
-          consultation_text:
-            "Empoderando a las pequeñas empresas para establecer una presencia en el internet robusta.",
-          softwaredev: "Desarrollo de Sitios Web y Software",
-          softwaredev_text:
-            "Desde el concepto hasta la creación, diseñando sitios web a medida de las necesidades de tu marca.",
-          maintenance_and_support: "Mantenimiento y Capacitación",
-          maintenance_and_support_text:
-            "Garantizando la sostenibilidad a través de un mantenimiento integral y capacitación práctica.",
-          seo_marketing_ads: "SEO Avanzado, Mercadeo y Publicidad",
-          seo_marketing_ads_text:
-            "Estrategias de optimización en motores de búsqueda, mercadeo digital y publicidad efectiva.",
-        },
-        portfolio: {
-          subheader: "PORTAFOLIO",
-          header: "Muestra de Excelencia",
-          portfolio_elite_header: "Elite Euro Motors",
-          portfolio_elite_text:
-            "Diseño de sitios web, SEO, marketing con gran énfasis en marketing por correo electrónico, consultoría y renovación de la presencia en línea.",
-          portfolio_4star_header: "4 Star Customs",
-          portfolio_4star_text:
-            "Diseño e implementación de sitios web para 4StarCustoms, un taller de carrocería en Ocoee, Florida.",
-          button_text: "Ver Sitio",
-        },
+          appointment: "Programar una Cita",
+          home: "Inicio",
+          contact: "Contacto",
+          services: "Servicios",
+          about: "Sobre Nosotros",
+          careers: "Carreras",
+          blog: "Blog",
+          account: "Cuenta",
+          support: "Apoyo",
+          banner_text: "🔧 Cambios de aceite solo $99 todo el verano de 2024 por tiempo limitado ⚙️"
+        },       
+        footer: {
+          company: "Compañía",
+          about: "Acerca de",
+          premium: "Premium",
+          blog: "Blog",
+          affiliate_program: "Programa de Afiliados",
+          get_coupon: "Obtener Cupón",
+          your_garage: "Tu Garaje",
+          my_vehicle: "Mi Vehículo",
+          maintenance: "Mantenimiento",
+          notifications: "Notificaciones",
+          profile: "Perfil",
+          garage: "Garaje",
+          sign_in_or_create_account: "Iniciar Sesión o Crear Cuenta",
+          get_latest_deals: "Recibe las últimas ofertas y más.",
+          enter_email: "Introduce tu dirección de correo electrónico",
+          subscribe: "Suscribirse",
+          elite_euro_logo: "Logo de Elite Euro",
+          legal_notice: "Aviso Legal",
+          product_listing_policy: "Política de Listado de Productos",
+          terms_of_use: "Términos de Uso",
+          copyright: "© 2024 Elite Euro Motors, Hecho por"
+        } 
+      },
+      contact: {
         contact: {
           header: "Contáctanos",
           description: "¿Tienes alguna pregunta sobre tu vehículo? ¿Necesitas programar una cita o obtener una cotización? ¡Estamos aquí para ayudarte! Llena el formulario de contacto a continuación, y uno de nuestros técnicos expertos te responderá de inmediato.",
@@ -158,14 +237,7 @@ export default defineI18nConfig(() => ({
           other_details: "Deja detalles o preguntas adicionales...",
           other_details_header: "Detalles Adicionales",
           submit: "Entregar"
-        },        
-        footer: {
-          resources: "Recursos",
-          follow: "Sígueme",
-          legal: "Legal",
-          textarea:
-            "2024, Christopher Bermudez™. Hecho con ❤️ en Orlando, Florida",
-        },
+        }, 
       }
     },
   },

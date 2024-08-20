@@ -7,7 +7,7 @@
       <h3
         class="font-semibold text-4xl md:text-lg uppercase text-left md:text-center mx-12 md:mx-0"
       >
-        Servicing your favorite european car models since 2007
+      {{ $t("home.home.servicing_since_2007") }}
   </h3>
       <div class="slider">
         <div class="slide-track">

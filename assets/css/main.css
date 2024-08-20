@@ -1,7 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
-@import 'flowbite';
+@import "flowbite";
 
 /* Import Typekit Fonts */
 @import url("https://use.typekit.net/rpb6jlf.css");
@@ -15,19 +15,26 @@ body {
   font-family: "Metrophobic", sans-serif; /* Default font for body text */
   font-display: swap; /* Ensure font-display swap */
   scrollbar-width: thin;
-  scrollbar-color: #EE0405 transparent; /* Thumb color and track color for Firefox */
+  scrollbar-color: #ee0405 transparent; /* Thumb color and track color for Firefox */
 }
 
 /* From http://lea.verou.me/css3patterns/ */
 /* Playing with CSS */
 .carbon-fibers {
-  background:
-    linear-gradient(27deg, #151515 2px, transparent 5px) 0 5px,
+  background: linear-gradient(27deg, #151515 2px, transparent 5px) 0 5px,
     linear-gradient(207deg, #151515 2px, transparent 5px) 2px 0px,
     linear-gradient(27deg, #222 2px, transparent 5px) 0px 2px,
     linear-gradient(207deg, #222 2px, transparent 5px) 2px 5px,
     linear-gradient(90deg, #1b1b1b 2px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    linear-gradient(
+      #1d1d1d 25%,
+      #1a1a1a 25%,
+      #1a1a1a 50%,
+      transparent 50%,
+      transparent 75%,
+      #242424 75%,
+      #242424
+    );
   background-color: #131313;
   background-size: 20px 20px;
 }
@@ -41,14 +48,14 @@ body {
 }
 
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(-5px);
   }
 }
-
 
 /* Webkit browsers */
 ::-webkit-scrollbar {
@@ -61,7 +68,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #EE0405; /* Scrollbar thumb color */
+  background-color: #ee0405; /* Scrollbar thumb color */
   border-radius: 10px; /* Rounded corners for the scrollbar thumb */
   border: 3px solid transparent; /* Border around the scrollbar thumb */
 }
@@ -84,7 +91,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #EE0405; /* Scrollbar thumb color */
+  background-color: #ee0405; /* Scrollbar thumb color */
   border-radius: 20px; /* Rounded corners for the scrollbar thumb */
   border: 3px solid transparent; /* Border around the scrollbar thumb */
 }
@@ -99,15 +106,20 @@ html {
 }
 
 /* Custom font styles */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: "ethnocentric", sans-serif;
 }
 
-h4, h5, h6 {
+h4,
+h5,
+h6 {
   font-family: "jaf-bernino-sans-comp", sans-serif;
 }
 
-p, span {
+p,
+span {
   font-family: "Metrophobic", sans-serif;
 }
 
@@ -179,4 +191,3 @@ p, span {
   font-weight: 700;
   font-style: italic;
 }
-

@@ -1,10 +1,12 @@
 <template>
-  <section class="relative bg-white dark:bg-[#171717] h-screen flex items-center justify-center overflow-hidden">
+  <section
+    class="relative bg-white dark:bg-[#171717] h-screen flex items-center justify-center overflow-hidden"
+  >
     <!-- Video Background -->
     <div class="absolute inset-0">
       <video
-      src="/static/background-video.mp4"        
-      class="w-full h-full object-cover"
+        src="/static/background-video.mp4"
+        class="w-full h-full object-cover"
         autoplay
         loop
         muted
@@ -12,7 +14,9 @@
       <div class="absolute inset-0 bg-black opacity-60"></div>
     </div>
 
-    <div class="relative z-10 py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12">
+    <div
+      class="relative z-10 py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12"
+    >
       <!-- Oil Change span -->
       <a
         href="#"
@@ -21,10 +25,11 @@
       >
         <span
           class="text-xs bg-red-600 rounded-full text-white px-4 py-1.5 mr-3"
-          >New</span
         >
-        <span class="text-sm font-medium"
-          >Specials on oil changes when booking online</span
+          {{ $t("home.home.new") }}</span
+        >
+        <span class="text-sm font-medium">
+          {{ $t("home.home.specials_on_oil_changes") }}</span
         >
         <svg
           class="ml-2 w-5 h-5"
@@ -44,15 +49,13 @@
       <h1
         class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl"
       >
-        Elite Euro Motors
+        {{ $t("home.home.elite_euro_motors") }}
       </h1>
-      <h2 class="text-2xl text-white">Ocoee's premier destination for European auto care.</h2>
+      <h2 class="text-2xl text-white">{{ $t("home.home.ocoee_premier") }}</h2>
       <p
         class="mb-8 text-lg font-normal text-gray-200 lg:text-xl sm:px-16 xl:px-48"
       >
-        Nestled in the heart of Florida, our family-owned business
-        specializes in servicing prestigious brands like BMW, Mercedes, and
-        other European classics.
+        {{ $t("home.home.nestled_in_florida") }}
       </p>
 
       <!-- Appointment and account buttons -->
@@ -60,10 +63,10 @@
         class="flex flex-col mx-5 md:mx-0 mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
       >
         <NuxtLink
-          href="/contact"
+          :to="localePath('/contact')"
           class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900"
         >
-          Schedule an Appointment
+          {{ $t("home.home.schedule_appointment") }}
           <svg
             class="ml-2 -mr-1 w-5 h-5"
             fill="currentColor"
@@ -78,14 +81,17 @@
           </svg>
         </NuxtLink>
         <NuxtLink
-          href="/login"
+          :to="localePath('/login')"
           class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-white text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-black focus:ring-4 focus:ring-red-500 dark:text-white"
         >
-          Create an Account
+          {{ $t("home.home.create_account") }}
         </NuxtLink>
       </div>
     </div>
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+const localePath = useLocalePath();
+</script>
