@@ -1,13 +1,13 @@
 <template>
-  <BackgroundImage
-    backgroundImage="https://eliteeuromotors.com/wp-content/uploads/2024/04/pexels-maria-geller-2127038-scaled.jpg"
-  />
   <section class="bg-white dark:bg-[#1d1d1d]">
-    <!-- We're hiring text -->
-    <div class="max-w-6xl mx-auto">
-      <h2 class="mb-5 text-6xl text-center">We're Hiring</h2>
+    <BackgroundImage
+      backgroundImage="https://eliteeuromotors.com/wp-content/uploads/2024/04/pexels-maria-geller-2127038-scaled.jpg"
+    />
+    <div class="w-11/12 md:w-9/12 mx-auto">
+      <!-- We're hiring text -->
+      <h2 class="text-4xl md:text-6xl text-center">We're Hiring</h2>
       <p
-        class="text-center text-lg font-normal text-gray-500 lg:text-xl px-16 dark:text-gray-400"
+        class="text-center py-4 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
       >
         Join our team at Elite Euro Motors as a Shop Mechanic and be part of a
         dynamic and passionate family-owned business dedicated to providing
@@ -26,67 +26,67 @@
         a dedicated and experienced mechanic with a passion for European cars,
         we want to hear from you!
       </p>
-    </div>
-    <!-- <BaseButton
+      <!-- <BaseButton
         target="_blank"
         rel="noreferrer"
         href="https://jobs.lever.co/clearbit"
         >View Openings</BaseButton
       > -->
 
-    <!-- We're a family owned business -->
-    <div
-      class="md:grid-cols-2 lg:gap-x-16 grid items-center grid-cols-1 gap-4 max-w-6xl mx-auto"
-    >
+      <!-- We're a family owned business -->
       <div
-        class="grid px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+        class="md:grid-cols-2 lg:gap-x-16 grid items-center grid-cols-1 gap-4"
       >
-        <div class="mr-auto place-self-center lg:col-span-12">
-          <h2 class="text-3xl mb-8">
-            We’re a family owned business in Ocoee, Florida
-          </h2>
-          <a
-            class="group block no-underline transition-all duration-200 ease-in-out"
-            href="https://www.google.com/maps/place/548+Market+St,+San+Francisco,+CA+94104"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <GoogleMap />
+        <div
+          class="grid px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12"
+        >
+          <div class="mr-auto place-self-center lg:col-span-12">
+            <h2 class="text-3xl mb-8">
+              We’re a family owned business in Ocoee, Florida
+            </h2>
+            <a
+              class="group block no-underline transition-all duration-200 ease-in-out"
+              href="https://www.google.com/maps/place/548+Market+St,+San+Francisco,+CA+94104"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <GoogleMap />
 
-            <span class="block h-auto pt-8"
-              ><h3
-                class="text-navy-400 mb-2 text-xs font-semibold leading-none tracking-wider uppercase"
-              >
-                Elite Euro HQ - Located in the Ocoee Industrial Zone
-              </h3>
-              <address class="mb-3 not-italic">
-                <span class="block">505 L F Roper Pkwy</span
-                ><span class="block">Ocoee, FL</span>
-              </address>
-              <span class="block ml-auto"
-                ><BaseButton
-                  class="group-hover text-white font-medium transition-all duration-200 ease-in-out"
-                  >Directions →</BaseButton
+              <span class="block h-auto pt-8"
+                ><h3
+                  class="text-navy-400 mb-2 text-lg font-semibold leading-none tracking-wider uppercase"
+                >
+                  Elite Euro HQ - Located in the Ocoee Industrial Zone
+                </h3>
+                <address class="mb-3 not-italic">
+                  <span class="block">505 L F Roper Pkwy</span
+                  ><span class="block">Ocoee, FL</span>
+                </address>
+                <span class="block ml-auto"
+                  ><BaseButton
+                    class="group-hover text-white font-medium transition-all duration-200 ease-in-out"
+                    >Directions →</BaseButton
+                  ></span
                 ></span
-              ></span
-            ></a
-          >
+              ></a
+            >
+          </div>
+        </div>
+        <div class="max-w-lg mx-auto overflow-hidden rounded-lg shadow-xl">
+          <img
+            src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/5a33f575-c0f2-477a-e3f5-89c2ccf3ee00/public"
+            alt="office photo"
+            class="w-auto"
+          />
         </div>
       </div>
-      <div class="max-w-lg mx-auto overflow-hidden rounded-lg shadow-xl">
-        <img
-          src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/5a33f575-c0f2-477a-e3f5-89c2ccf3ee00/public"
-          alt="office photo"
-          class="w-auto"
-        />
-      </div>
-    </div>
 
-    <!-- description, responsibilities, etc. -->
-    <div class="z-10">
-      <div class="block max-w-6xl mx-auto">
-        <h2 class="text-left text-3xl md:text-5xl">JOB DESCRIPTION</h2>
-        <p class="mb-3 text-left">
+      <!-- description, responsibilities, etc. -->
+      <div class="block w-11/12 mx-auto">
+        <h2 class="text-left text-3xl md:text-5xl my-3 mt-8">
+          JOB DESCRIPTION
+        </h2>
+        <p class="mb-3 text-left font-light text-gray-500 sm:text-lg dark:text-gray-400 my-4">
           Elite Euro Motors is seeking a dedicated and experienced Shop Mechanic
           to join our team. As a Shop Mechanic, you will play a crucial role in
           providing top-notch service to European car enthusiasts. From
@@ -97,8 +97,10 @@
           to excel in your role and advance your career in the automotive
           industry.
         </p>
-        <h2 class="text-left text-3xl md:text-5xl">RESPONSIBILITIES</h2>
-        <p class="text-left">
+        <h2 class="text-left text-3xl md:text-5xl my-3 mt-8">
+          RESPONSIBILITIES
+        </h2>
+        <p class="text-left font-light text-gray-500 sm:text-lg dark:text-gray-400 my-4">
           As a Shop Mechanic, your responsibilities will include performing
           diagnostics, conducting repairs and maintenance, and ensuring that all
           work is completed to the highest standard. You will work alongside a
@@ -107,8 +109,8 @@
           opportunity to participate in ongoing training and development
           programs to enhance your skills and knowledge.
         </p>
-        <h2 class="text-left text-3xl md:text-5xl">QUALIFICATIONS</h2>
-        <p class="text-left">
+        <h2 class="text-left text-3xl md:text-5xl my-3 mt-8">QUALIFICATIONS</h2>
+        <p class="text-left font-light text-gray-500 sm:text-lg dark:text-gray-400 my-4">
           To be successful in this role, you must have a passion for European
           cars and a strong desire to provide excellent customer service. You
           should have previous experience as a mechanic, with a strong knowledge
@@ -130,7 +132,7 @@
 
       <!-- Benefits -->
       <div
-        class="md:grid md:grid-cols-2 items-center max-w-6xl mx-auto gap-10 mt-8"
+        class="md:grid md:grid-cols-2 items-center mx-auto gap-10 mt-12"
       >
         <div>
           <div

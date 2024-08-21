@@ -29,13 +29,13 @@
           <!-- Email Section -->
           <div class="mt-6 w-full md:mt-8 lg:mt-0 lg:max-w-lg">
             <div class="space-y-5 rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
-              <a
-                href="#"
-                title=""
-                class="text-base font-medium text-primary-700 underline hover:no-underline dark:text-primary-500"
+              <NuxtLink
+                href="/login"
+                title="Login or Sign Up"
+                class="text-base font-medium text-red-700 underline hover:no-underline dark:text-red-500"
               >
                 {{ $t("home.footer.sign_in_or_create_account") }}
-              </a>
+              </NuxtLink>
 
               <hr class="border-gray-200 dark:border-gray-600" />
 
@@ -49,7 +49,7 @@
                       {{ $t("home.footer.get_latest_deals") }}
                     </label>
                     <input
-                      class="block w-full rounded-lg border border-gray-300 bg-white p-3 text-sm text-gray-900 focus:border-primary-500 focus:ring-primary-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-primary-500 dark:focus:ring-primary-500 sm:w-96 lg:w-full"
+                      class="block w-full rounded-lg border border-gray-300 bg-white p-3 text-sm text-gray-900 focus:border-red-500 focus:ring-red-500 dark:border-gray-500 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400 dark:focus:border-red-500 dark:focus:ring-red-500 sm:w-96 lg:w-full"
                       :placeholder="$t('home.footer.enter_email')"
                       type="email"
                       id="email"
@@ -58,7 +58,7 @@
                   <div>
                     <button
                       type="submit"
-                      class="w-full cursor-pointer border border-gray-500 rounded-lg bg-primary-700 px-5 py-3 text-center text-sm font-medium text-white hover:bg-red-600 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                      class="w-full cursor-pointer border border-gray-500 rounded-lg bg-red-700 px-5 py-3 text-center text-sm font-medium text-white hover:bg-red-600 focus:ring-4 focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                     >
                       {{ $t("home.footer.subscribe") }}
                     </button>
@@ -69,8 +69,8 @@
               <hr class="border-gray-200 dark:border-gray-600" />
 
               <div class="flex space-x-4">
-                <a
-                  href="#"
+                <NuxtLink
+                  to="https://www.facebook.com/eliteeuromotors"
                   class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
                 >
                   <svg
@@ -85,7 +85,7 @@
                       clip-rule="evenodd"
                     />
                   </svg>
-                </a>
+                </NuxtLink>
                 <!-- Add more social media icons if needed -->
               </div>
             </div>

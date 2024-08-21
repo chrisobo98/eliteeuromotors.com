@@ -114,7 +114,7 @@
         </NuxtLink>
         <NuxtLink
           href="/garage"
-          class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
+          class="block p-4 col-span-2 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
         >
           <svg
             class="mx-auto mb-2 w-5 h-5 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
@@ -129,29 +129,6 @@
           </svg>
           <div class="text-sm font-medium text-gray-900 dark:text-white">
             {{ $t("home.garageDropdown.garage") }}
-          </div>
-        </NuxtLink>
-        <NuxtLink
-          href="/account"
-          class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
-        >
-          <svg
-            class="mx-auto mb-2 w-5 h-5 text-gray-400 group-hover:text-gray-500 dark:text-gray-400 dark:group-hover:text-gray-400"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 16 16"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 8h11m0 0-4-4m4 4-4 4m-5 3H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h3"
-            />
-          </svg>
-          <div class="text-sm font-medium text-gray-900 dark:text-white">
-            {{ $t("home.garageDropdown.logout") }}
           </div>
         </NuxtLink>
       </div>

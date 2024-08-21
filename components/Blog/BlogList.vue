@@ -12,8 +12,8 @@
           class="object-cover h-48 w-96 rounded-lg shadow-2xl"
         />
         <div class="flex h-full flex-col my-5">
-          <p class="text-red-600 text-2xl font-bold">{{ post.category }}</p>
-          <h3 class="text-3xl">{{ post.title }}</h3>
+          <p class="text-red-600 text-xl font-bold">{{ post.category }}</p>
+          <h3 class="text-2xl">{{ post.title }}</h3>
           <p class="my-2 text-base text-secondary">{{ post.excerpt }}</p>
         </div>
       </NuxtLink>

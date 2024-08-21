@@ -1,71 +1,28 @@
 <template>
-  <div class="login-container">
-    <BaseCard>
-      <h1 class="text-2xl text-center font-bold">Elite Euro Motors App</h1>
-      <p class="text-2xl text-center mb-4">Welcome back! Log In below</p>
-      <form @submit.prevent="signInNewUser">
-        <div class="grid grid-cols-3 gap-4">
-          <!-- Password Input -->
-          <InputText
-            class="inputField col-span-3"
-            type="email"
-            placeholder="Your email"
-            v-model="email"
-          />
-
-          <InputText
-            class="inputField col-span-3"
-            type="password"
-            placeholder="Your password"
-            v-model="password"
-          />
-
-          <!-- Login Button -->
-          <BaseButton
-            type="submit"
-            class="col-span-3"
-            :label="loading ? 'Loading' : 'Log In'"
-            :disabled="loading"
-          />
-        </div>
-
-        <div class="text-center mt-4">
-          <p>
-            Don't have an account?
-            <NuxtLink to="/register" class="text-red-600">Register</NuxtLink>
-          </p>
-        </div>
-      </form>
-    </BaseCard>
-  </div>
+  <AuthForm
+    title="Customer Login"
+    subtitle="Welcome back! Log In below"
+    buttonText="Log In"
+    promptText="Don't have an account?"
+    linkText="Register"
+    linkTo="/register"
+    linkClass="text-red-500"
+    :onSubmit="signInNewUser"
+  />
 </template>
 
 <script setup>
-import { ref } from "vue";
-import BaseButton from "../components/Base/BaseButton.vue";
-import BaseCard from "../components/Base/BaseCard.vue";
-import InputText from "primevue/inputtext";
+import { useRouter } from "vue-router";
+import AuthForm from "../components/ui/AuthForm.vue";
 
 const supabase = useSupabaseClient();
+const router = useRouter();
 
-const loading = ref(false);
-const email = ref("");
-const password = ref("");
+const signInNewUser = async (email, password) => {
+  const { error } = await supabase.auth.signInWithPassword({ email, password });
 
-async function signInNewUser() {
-  const { data, error } = await supabase.auth.signInWithPassword({
-    email: email.value,
-    password: password.value,
-  });
-
-  await navigateTo({ path: "/account" });
+  if (!error) {
+    await router.push("/account");
+  }
 }
 </script>
-
-<style scoped>
-.login-container {
-  max-width: 600px;
-  margin: auto;
-  padding-top: 5rem;
-}
-</style>

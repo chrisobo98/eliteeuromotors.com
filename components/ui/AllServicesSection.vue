@@ -1,26 +1,31 @@
 <template>
     <p
       href="#"
-      class="flex items-center rounded-full border border-gray-200 px-4 py-2 hover:bg-red-600 dark:border-gray-700"
+      class="flex items-center rounded-full border border-gray-200 px-4 py-2 hover:bg-red-600 dark:border-gray-700 "
     >
+    <div class="h-5 w-5 bg-red-600 rounded-full mx-2">
+
       <svg
-        class="me-2 h-4 w-4 shrink-0 text-gray-900 dark:text-white"
+        class="h-4 w-4 shrink-0 text-gray-900 dark:text-white"
+        style="margin-top: 2px; margin-left: 1px"
         aria-hidden="true"
         xmlns="http://www.w3.org/2000/svg"
         width="24"
         height="24"
         fill="none"
-        viewBox="0 0 24 24"
+        viewBox="0 0 20 24"
       >
         <path
           :d="iconPath"
-          stroke="currentColor"
+          stroke="white"
           stroke-linecap="round"
           stroke-linejoin="round"
           stroke-width="2"
         />
       </svg>
-      <span class="text-sm font-medium text-gray-900 dark:text-white">
+    </div>
+
+      <span class="text-sm hover:text-white font-medium text-gray-900 dark:text-white">
         {{ title }}
       </span>
     </p>

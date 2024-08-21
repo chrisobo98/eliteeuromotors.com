@@ -6,7 +6,7 @@ export default defineI18nConfig(() => ({
       home: {
         home: {
           new: "New",
-          specials_on_oil_changes: "Specials on oil changes when booking online",
+          specials_on_oil_changes: "Special offers when booking online",
           elite_euro_motors: "Elite Euro Motors",
           ocoee_premier: "Ocoee's premier destination for European auto care.",
           nestled_in_florida: "Nestled in the heart of Florida, our family-owned business specializes in servicing prestigious brands like BMW, Mercedes, and other European classics.",
@@ -128,7 +128,7 @@ export default defineI18nConfig(() => ({
       home: {
         home: {
           new: "Nuevo",
-          specials_on_oil_changes: "Ofertas especiales en cambios de aceite al reservar en línea",
+          specials_on_oil_changes: "Ofertas especiales exclusivos de web",
           elite_euro_motors: "Elite Euro Motors",
           ocoee_premier: "El destino principal de Ocoee para el cuidado y mantenimiento de autos europeos.",
           nestled_in_florida: "Ubicado en el corazón de Florida, nuestro negocio familiar se especializa en el servicio de marcas prestigiosas como BMW, Mercedes y otros clásicos europeos.",

@@ -3,36 +3,31 @@
         <BackgroundImage
             backgroundImage="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/586040af-b4c2-42ef-3991-fce8dadd2200/public" />
         <div class="w-11/12 md:w-9/12 mx-auto">
-            <h2 class="text-4xl md:text-6xl text-center font-bold">European Car Services</h2>
+            <h2 class="text-4xl md:text-6xl text-center font-bold">Our Services</h2>
             <p
                 class="text-center py-4 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
-                Have a question about your vehicle? Need to schedule an appointment or
-                get a quote? We're here to help! Fill out the contact form below, and
-                one of our expert technicians will get back to you promptly. Whether
-                you're experiencing issues with your car or just need routine
-                maintenance, we're dedicated to providing top-notch service and ensuring
-                your European vehicle runs smoothly.
+                Explore Elite Euro Motors’ comprehensive services tailored to meet your vehicle’s needs. From general
+                repairs, tune-ups, and oil changes to precise wheel alignments and flexible maintenance plans, our
+                expert technicians utilize cutting-edge diagnostic tools and OEM parts. Experience unparalleled quality
+                and reliability as we restore your vehicle to optimal performance, ensuring smooth rides, even tire
+                wear, and efficient fuel economy. Trust Elite Euro Motors for all your automotive service needs.
+
+
             </p>
             <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                 <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
                     <h2
                         class="mb-4 text-4xl text-center md:text-left tracking-tight font-extrabold text-gray-900 dark:text-white">
-                        Our Story
+                        Our Comprehensive Auto Care Services
                     </h2>
                     <p class="mb-4">
-                        Under new ownership since 2013, EEM has significantly evolved to offer
-                        comprehensive services. These services notably include vehicle
-                        alignment and programming, coupled with a reduced turnaround time.
-                        This evolution is supported by substantial investments in equipment, a
-                        robust OEM parts inventory, and the recruitment of a team of highly
-                        skilled mechanics. As a result, our service range has become more
-                        extensive than ever.
-                    </p>
-                    <p class="mb-4">
-                        At EEM, we’re more than just a car shop – we’re a closely-knit family
-                        of car enthusiasts. We take immense pride in our work and consistently
-                        strive to exceed expectations with every vehicle that graces our
-                        doors.
+                        At Elite Euro Motors, we offer a full spectrum of auto care services designed to maintain and
+                        enhance the performance of your European vehicle. From routine oil changes and detailed
+                        inspections to specialized services like wheel alignments and brake system maintenance, our
+                        experienced technicians use cutting-edge diagnostic tools and genuine OEM parts. Whether your
+                        vehicle needs a minor tune-up or comprehensive repair, trust us to deliver exceptional service
+                        that ensures your car runs smoothly, efficiently, and reliably. Experience the Elite Euro Motors
+                        difference – where your vehicle's health and performance are our top priority.
                     </p>
                 </div>
                 <div class="grid grid-cols-2 gap-4 mt-8">
@@ -50,22 +45,22 @@
                     <div class="mx-auto">
                         <div class="mx-auto grid grid-cols-1">
                             <div class="flex flex-col px-3 gap-16">
-                                <article v-for="article in articles" :key="article.title"
+                                <div v-for="article in articles" :key="article.title"
                                     class="group relative flex flex-col items-start">
                                     <h2 class="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
                                         <div
                                             class="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-red-50 opacity-0 transition group-hover:scale-100 sm:-inset-x-6 sm:rounded-2xl dark:bg-zinc-800/50">
                                         </div>
-                                        <a :href="article.link">
+                                        <p :href="article.link">
                                             <span
                                                 class="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl"></span>
-                                            <h2 class="relative text-4xl z-10">{{ article.title }}</h2>
-                                        </a>
+                                        <h2 class="relative text-4xl z-10">{{ article.title }}</h2>
+                                        </p>
                                     </h2>
                                     <img :src="article.icon"
                                         class="object-cover h-60 rounded-2xl object-center w-full z-10 order-first mb-3 flex items-center text-sm text-zinc-400 dark:text-zinc-500">
                                     </img>
-                                    <p class="relative z-10 mt-2 text-lg text-zinc-600 dark:text-zinc-400">
+                                    <p class="relative z-10 my-2 text-lg text-zinc-600 dark:text-zinc-400">
                                         {{ article.description }}
                                     </p>
                                     <ul role="list" class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-5">
@@ -80,16 +75,7 @@
                                             <span class="ml-2">{{ service }}</span>
                                         </li>
                                     </ul>
-                                    <div aria-hidden="true"
-                                        class="relative z-10 mt-4 flex items-center text-sm font-medium text-red-500">
-                                        Read More
-                                        <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"
-                                            class="ml-1 h-4 w-4 stroke-current">
-                                            <path d="M6.75 5.75 9.25 8l-2.5 2.25" stroke-width="1.5"
-                                                stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg>
-                                    </div>
-                                </article>
+                                </div>
                             </div>
                         </div>
                     </div>

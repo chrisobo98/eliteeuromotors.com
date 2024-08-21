@@ -3,7 +3,7 @@
     <img :src="post.image" alt="" class="rounded-lg">
     <div>
       <p class="text-red-600 text-2xl font-bold">{{ post.category }}</p>
-      <h3 class="text-3xl">{{ post.title }}</h3>
+      <h3 class="text-2xl">{{ post.title }}</h3>
       <p>{{ post.excerpt }}</p>
       <p class="author my-2">
         <img :src="post.authorImage" alt="" />
