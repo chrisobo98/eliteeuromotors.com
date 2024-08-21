@@ -9,6 +9,7 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxtjs/supabase",
     "@primevue/nuxt-module",
+    "nuxt-svgo"
   ],
   primevue: {
     options: {

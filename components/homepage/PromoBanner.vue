@@ -6,7 +6,7 @@
       class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-12"
     >
       <img
-        class="rounded-3xl object-cover my-12 mx-12 md:mx-2"
+        class="object-cover my-12 mx-12 md:mx-2 mx-auto"
         src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/7b0bd7e5-b353-4e56-1eff-5ad6ac333a00/public"
         alt="dashboard image"
       />
@@ -29,7 +29,7 @@
         </ul>
         <NuxtLink
           :to="localePath('/login')"
-          class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-white text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-red-600 focus:ring-4 focus:ring-red-500 dark:text-white"
+          class="py-3 px-5 my-5 mx-5 text-base font-medium dark:text-white hover:text-white text-center text-gray-900 rounded-lg border border-gray-300 hover:bg-red-600 focus:ring-4 focus:ring-red-500 dark:text-white"
         >
           {{ $t("home.home.create_account") }}
         </NuxtLink>

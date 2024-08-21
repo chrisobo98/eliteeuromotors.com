@@ -4,11 +4,10 @@
     <div
       class="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-20"
     >
-      <h3
-        class="font-semibold text-4xl md:text-lg uppercase text-left md:text-center mx-12 md:mx-0"
-      >
-      {{ $t("home.home.servicing_since_2007") }}
-  </h3>
+
+      <p class="uppercase sm:text-lg text-gray-600 dark:text-gray-300 my-4">
+        {{ $t("home.home.servicing_since_2007") }}
+      </p>
       <div class="slider">
         <div class="slide-track">
           <div class="slide">

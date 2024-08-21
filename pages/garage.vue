@@ -1,8 +1,10 @@
 <template>
   <section class="bg-white dark:bg-[#1d1d1d]">
-    <div class="w-full md:w-9/12 mx-auto">
-      <h1 class="text-6xl font-bold ml-4 mt-12 text-center md:text-left">Your Garage</h1>
-      <hr class='my-6 mx-24 md:mx-2 border-gray-200 dark:border-gray-600' />
+    <div class="w-full md:w-9/12 mx-auto pt-12">
+      <h1 class="text-6xl font-bold ml-4 text-center md:text-left">
+        Your Garage
+      </h1>
+      <hr class="my-6 mx-24 md:mx-2 border-gray-200 dark:border-gray-600" />
       <div class="grid grid-cols-1 lg:grid-cols-3">
         <!-- Vehicle Model and VIN Entry -->
         <BaseCard class="space-y-4 col-span-1">

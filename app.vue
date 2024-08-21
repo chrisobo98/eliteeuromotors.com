@@ -1,11 +1,11 @@
 <template>
   <CookieControl locale="en" />
   <!-- Only show Header and Footer if the route is not "/login" -->
-  <Header v-if="route.path !== '/login'" />
+  <Header v-if="route.path !== '/login' && route.path !== '/register'" />
   
   <NuxtPage />
   
-  <Footer v-if="route.path !== '/login'" />
+  <Footer v-if="route.path !== '/login' && route.path !== '/register'" />
 </template>
 
 <script setup lang="ts">

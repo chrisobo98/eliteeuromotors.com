@@ -15,12 +15,12 @@
           {{ title }}
         </h5>
       </a>
-      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+      <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400 my-4">
         {{ description }}
       </p>
       <NuxtLink
         :to="localePath('/services')"
-        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white border border-red-700 rounded-2xl hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:hover:bg-red-700 dark:focus:ring-red-800"
+        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center dark:text-white hover:text-white border border-red-700 rounded-2xl hover:bg-red-600 focus:ring-4 focus:outline-none focus:ring-red-300 dark:hover:bg-red-700 dark:focus:ring-red-800"
       >
         {{ $t("home.home.read_more") }}
 
