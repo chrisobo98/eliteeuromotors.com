@@ -1,97 +1,103 @@
 <template>
   <section class="space-y-4 bg-white dark:bg-[#1d1d1d]">
     <div class="w-full md:w-9/12 mx-auto">
-      <h1 class="text-6xl font-bold ml-4 mt-12 text-center md:text-left">My Profile</h1>
-      <hr class='my-6 mx-24 md:mx-2 border-gray-200 dark:border-gray-600' />
-    <!-- Profile Picture and Edit Card -->
-    <BaseCard>
-      <div class="flex flex-col sm:flex-row items-center justify-between">
-        <div
-          class="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-4 text-center sm:text-left"
-        >
-          <img
-            class="inline-block h-24 w-24 rounded-full ring-2 ring-white mx-auto sm:mx-0"
-            src="https://i.ibb.co/TLxgMwW/T03-E1-AWDP-UF2-JJNFRS-f53e19ccd891-512.jpg"
-            alt=""
-          />
+      <h1 class="text-4xl md:text-6xl font-bold ml-4 text-center md:text-left">
+        {{ $t("account.profile") }}
+      </h1>
+      <hr class="my-6 mx-24 md:mx-2 border-gray-200 dark:border-gray-600" />
+      <!-- Profile Picture and Edit Card -->
+      <BaseCard>
+        <div class="flex flex-col sm:flex-row items-center justify-between">
+          <div
+            class="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-4 text-center sm:text-left"
+          >
+            <img
+              class="inline-block h-24 w-24 rounded-full ring-2 ring-white mx-auto sm:mx-0"
+              src="https://i.ibb.co/TLxgMwW/T03-E1-AWDP-UF2-JJNFRS-f53e19ccd891-512.jpg"
+              alt=""
+            />
+            <div class="mt-4 sm:mt-0">
+              <h2 class="text-xl font-semibold">{{ personalInfo.fullName }}</h2>
+              <p>{{ personalInfo.email }}</p>
+              <p>{{ addressInfo.city }}, {{ addressInfo.state }}</p>
+            </div>
+          </div>
           <div class="mt-4 sm:mt-0">
-            <h2 class="text-xl font-semibold">{{ personalInfo.fullName }}</h2>
-            <p>{{ personalInfo.email }}</p>
-            <p>{{ addressInfo.city }}, {{ addressInfo.state }} </p>
+            <div v-if="!editMode" class="grid grid-cols-2">
+              <!-- Edit Button -->
+              <button
+                v-if="!editMode"
+                class="flex items-center"
+                @click="editMode = true"
+              >
+                <PencilSquareIcon class="h-5 w-5" />
+                {{ $t("account.edit_button") }}
+              </button>
+
+              <!-- Sign Out Button -->
+              <BaseButton
+                type="submit"
+                @click="signOut"
+                class="col-span-1 my-3"
+                :label="loading ? 'Loading' : $t('account.logout_button')"
+                :disabled="loading"
+              />
+            </div>
+            <!-- Save and Cancel Buttons -->
+            <div v-else class="grid gap-4 lg:grid-cols-1 grid-cols-2">
+              <BaseButton
+                @click="updateProfile"
+                label="Save"
+                icon="check"
+                type="submit"
+              />
+              <BaseButton
+                @click="editMode = false"
+                label="Cancel"
+                icon="x-mark"
+                type="reset"
+              />
+            </div>
           </div>
         </div>
-        <div class="mt-4 sm:mt-0">
-          <div v-if="!editMode" class="grid grid-cols-2">
-            <!-- Edit Button -->
-            <button
-              v-if="!editMode"
-              class="flex items-center"
-              @click="editMode = true"
-            >
-              <PencilSquareIcon class="h-5 w-5" />
-              Edit
-            </button>
+      </BaseCard>
 
-            <!-- Sign Out Button -->
-            <BaseButton
-              type="submit"
-              @click="signOut"
-              class="col-span-1 my-3"
-              :label="loading ? 'Loading' : 'Logout'"
-              :disabled="loading"
-            />
-          </div>
-          <!-- Save and Cancel Buttons -->
-          <div v-else class="grid gap-4 lg:grid-cols-1 grid-cols-2">
-            <BaseButton
-              @click="updateProfile"
-              label="Save"
-              icon="check"
-              type="submit"
-            />
-            <BaseButton
-              @click="editMode = false"
-              label="Cancel"
-              icon="x-mark"
-              type="reset"
-            />
-          </div>
+      <!-- Personal Information Card -->
+      <BaseCard>
+        <h3 class="text-lg font-semibold mb-4">
+          {{ $t("account.personal_info.header") }}
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <EditableField
+            v-for="(value, key) in personalInfo"
+            :key="key"
+            :field="key"
+            :label="$t(`account.personal_info.${key}`)"
+            :value="value"
+            :editMode="editMode"
+            @updateValue="updatePersonalInfo"
+          />
         </div>
-      </div>
-    </BaseCard>
+      </BaseCard>
 
-    <!-- Personal Information Card -->
-    <BaseCard>
-      <h3 class="text-lg font-semibold mb-4">Personal Information</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <EditableField
-          v-for="(value, key) in personalInfo"
-          :key="key"
-          :field="key"
-          :label="getDisplayName(key)"
-          :value="value"
-          :editMode="editMode"
-          @updateValue="updatePersonalInfo"
-        />
-      </div>
-    </BaseCard>
-
-    <!-- Address Information Card -->
-    <BaseCard>
-      <h3 class="text-lg font-semibold mb-4">Address</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <EditableField
-          v-for="(value, key) in addressInfo"
-          :key="key"
-          :field="key"
-          :label="getDisplayName(key)"
-          :value="value"
-          :editMode="editMode"
-          @updateValue="updateAddressInfo"
-        />
-      </div>
-    </BaseCard>
-  </div>
+      <!-- Address Information Card -->
+      <BaseCard class="mb-0">
+        <h3 class="text-lg font-semibold mb-4">
+          {{ $t("account.personal_info.address.header") }}
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <EditableField
+            v-for="(value, key) in addressInfo"
+            :key="key"
+            :field="key"
+            :label="$t(`account.personal_info.address.${key}`)"
+            :value="value"
+            :editMode="editMode"
+            @updateValue="updateAddressInfo"
+          />
+        </div>
+      </BaseCard>
+    </div>
   </section>
 </template>
 
@@ -142,7 +148,7 @@ async function fetchProfile() {
       personalInfo.fullName = data.full_name || "";
       personalInfo.website = data.website || "";
       personalInfo.avatar_url = data.avatar_url || "";
-      
+
       // Address Info
       addressInfo.country = data.country || "";
       addressInfo.city = data.city || "";

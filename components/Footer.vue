@@ -18,7 +18,7 @@
             <ul class="space-y-3">
               <li v-for="link in section.links" :key="link.text">
                 <NuxtLink
-                  :href="link.href"
+                  :href="localePath(link.href)"
                   :title="link.title"
                   class="dark:hover:text-white"
                   >{{ link.text }}</NuxtLink
@@ -30,7 +30,7 @@
           <div class="mt-6 w-full md:mt-8 lg:mt-0 lg:max-w-lg">
             <div class="space-y-5 rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
               <NuxtLink
-                href="/login"
+                :href="localePath('/login')"
                 title="Login or Sign Up"
                 class="text-base font-medium text-red-700 underline hover:no-underline dark:text-red-500"
               >
@@ -40,7 +40,7 @@
               <hr class="border-gray-200 dark:border-gray-600" />
 
               <form action="#">
-                <div class="items-end space-y-4 sm:flex sm:space-y-0">
+                <div class="items-end">
                   <div class="relative mr-3 w-full sm:w-96 lg:w-full">
                     <label
                       for="email"
@@ -58,7 +58,7 @@
                   <div>
                     <button
                       type="submit"
-                      class="w-full cursor-pointer border border-gray-500 rounded-lg bg-red-700 px-5 py-3 text-center text-sm font-medium text-white hover:bg-red-600 focus:ring-4 focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
+                      class="w-full mt-4 cursor-pointer border border-gray-500 rounded-lg bg-red-700 px-5 py-3 text-center text-sm font-medium text-white hover:bg-red-600 focus:ring-4 focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                     >
                       {{ $t("home.footer.subscribe") }}
                     </button>
@@ -71,6 +71,7 @@
               <div class="flex space-x-4">
                 <NuxtLink
                   to="https://www.facebook.com/eliteeuromotors"
+                  target="_blank"
                   class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
                 >
                   <svg
@@ -121,7 +122,9 @@
 
           <p class="text-sm text-gray-500 dark:text-gray-400">
             {{ $t("home.footer.copyright") }}
-            <a href="https://christopherbermudez.com/" class="hover:underline">Christopher Bermudez</a>
+            <a href="https://christopherbermudez.com/" class="hover:underline"
+              >Christopher Bermudez</a
+            >
           </p>
         </div>
       </div>
@@ -130,38 +133,79 @@
 </template>
 
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n';
-import { computed } from 'vue';
+import { useI18n } from "vue-i18n";
+import { computed } from "vue";
 
 const { t } = useI18n();
+const localePath = useLocalePath();
 
 const sections = computed(() => [
   {
     title: t("home.footer.company"),
     links: [
-      { text: t("home.footer.about"), href: "#", title: t("home.footer.about") },
-      { text: t("home.footer.premium"), href: "#", title: t("home.footer.premium") },
-      { text: t("home.footer.blog"), href: "#", title: t("home.footer.blog") },
-      { text: t("home.footer.affiliate_program"), href: "#", title: t("home.footer.affiliate_program") },
-      { text: t("home.footer.get_coupon"), href: "#", title: t("home.footer.get_coupon") },
+      {
+        text: t("home.footer.about"),
+        href: localePath("/about"),
+        title: t("home.footer.about"),
+      },
+      // { text: t("home.footer.premium"), href: localePath('/about'), title: t("home.footer.premium") },
+      {
+        text: t("home.footer.blog"),
+        href: localePath("/blog"),
+        title: t("home.footer.blog"),
+      },
+      // { text: t("home.footer.affiliate_program"), href: localePath('/about'), title: t("home.footer.affiliate_program") },
+      // { text: t("home.footer.get_coupon"), href:localePath('/about'), title: t("home.footer.get_coupon") },
     ],
   },
   {
     title: t("home.footer.your_garage"),
     links: [
-      { text: t("home.footer.my_vehicle"), href: "#", title: t("home.footer.my_vehicle") },
-      { text: t("home.footer.maintenance"), href: "#", title: t("home.footer.maintenance") },
-      { text: t("home.footer.notifications"), href: "#", title: t("home.footer.notifications") },
-      { text: t("home.footer.profile"), href: "#", title: t("home.footer.profile") },
-      { text: t("home.footer.garage"), href: "#", title: t("home.footer.garage") },
+      {
+        text: t("home.footer.my_vehicle"),
+        href: localePath("/my-vehicle"),
+        title: t("home.footer.my_vehicle"),
+      },
+      {
+        text: t("home.footer.maintenance"),
+        href: localePath("/maintenance"),
+        title: t("home.footer.maintenance"),
+      },
+      {
+        text: t("home.footer.notifications"),
+        href: localePath("/notifications"),
+        title: t("home.footer.notifications"),
+      },
+      {
+        text: t("home.footer.profile"),
+        href: localePath("/account"),
+        title: t("home.footer.profile"),
+      },
+      {
+        text: t("home.footer.garage"),
+        href: localePath("/garage"),
+        title: t("home.footer.garage"),
+      },
     ],
   },
 ]);
 
 const policies = computed(() => [
-  { text: t("home.footer.legal_notice"), href: "#", title: t("home.footer.legal_notice") },
-  { text: t("home.footer.product_listing_policy"), href: "#", title: t("home.footer.product_listing_policy") },
-  { text: t("home.footer.terms_of_use"), href: "#", title: t("home.footer.terms_of_use") },
+  {
+    text: t("home.footer.legal_notice"),
+    href: "#",
+    title: t("home.footer.legal_notice"),
+  },
+  {
+    text: t("home.footer.product_listing_policy"),
+    href: "#",
+    title: t("home.footer.product_listing_policy"),
+  },
+  {
+    text: t("home.footer.terms_of_use"),
+    href: "#",
+    title: t("home.footer.terms_of_use"),
+  },
 ]);
 </script>
 

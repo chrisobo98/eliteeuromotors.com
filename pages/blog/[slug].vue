@@ -2,7 +2,7 @@
   <section v-if="post" class="relative justify-between lg:flex bg-white dark:bg-[#1d1d1d]">
     <article class="w-10/12 mx-auto lg:w-6/12">
       <header class="grid gap-y-3">
-        <h1 class="relative text-3xl font-semibold leading-none lg:text-6xl">
+        <h1 class="relative text-4xl md:text-6xl font-semibold leading-none">
           {{ post.title }}
         </h1>
         <p>{{ post.excerpt }}</p>

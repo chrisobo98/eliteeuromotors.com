@@ -8,7 +8,7 @@
       <p><strong>Info:</strong> {{ appointment.info }}</p>
       <div v-if="appointment.image_url" class="mt-4">
         <p><strong>Image:</strong></p>
-        <button @click="showImage(appointment.image_url)" class="text-blue-500 underline">
+        <button type="button" @click="showImage(appointment.image_url)" class="text-blue-500 underline">
           View Image
         </button>
       </div>

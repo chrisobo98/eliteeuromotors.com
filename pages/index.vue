@@ -2,7 +2,7 @@
   <div class="bg-white dark:bg-[#1d1d1d]">
     <Sidenav />
     <div class="relative bg-[#171717]">
-      <HeroSection id="hero-section" />
+      <HeroSection />
 
       <!-- BrandsSlider positioned over the background on desktop -->
       <div
@@ -23,12 +23,12 @@
       <BrandsSlider class="py-12" />
     </div>
 
-    <div class="w-9/12 mx-auto xl:mt-64">
+    <div class="w-10/12 mx-auto xl:mt-64">
       <ServicesSection id="services-section" />
       <!-- <FeaturedProducts /> -->
       <FamilyOwned />
-      <PromoBanner />
-      <TestimonialSection />
+      <PromoBanner id="promo-banner-section" />
+      <TestimonialSection id="testimonial-section" />
       <GoogleMap />
     </div>
   </div>

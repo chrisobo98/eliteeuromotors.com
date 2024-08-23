@@ -32,7 +32,7 @@
     <div class="flex space-x-2 px-3">
       <!-- Notifications -->
       <NuxtLink
-        to="/notifications"
+        :to="localePath('/notifications')"
         class="bg-white rounded-full shadow-2xl p-2"
       >
         <BellIcon class="h-6 w-6 text-gray-700" alt="Notifications Icon" />
@@ -40,7 +40,7 @@
 
       <!-- User Icon -->
       <NuxtLink
-        to="/account"
+        :to="localePath('/account')"
         class="bg-white rounded-full shadow-2xl p-2"
       >
         <UserCircleIcon class="h-6 w-6 text-gray-700" alt="User Profile Icon" />
@@ -56,4 +56,6 @@ import {
   UserCircleIcon,
   ViewfinderCircleIcon,
 } from "@heroicons/vue/24/solid";
+
+const localePath = useLocalePath();
 </script>

@@ -19,11 +19,11 @@ import { ref, onMounted, onUnmounted } from 'vue';
 
 const sections = ref([
   { id: 'hero-section' },
-  { id: 'my-story-section' },
   { id: 'services-section' },
-  { id: 'portfolio-section' },
-  { id: 'contact-section' },
-  { id: 'footer-section' } // Ensure the footer section is included
+  { id: 'family-owned-section' },
+  { id: 'promo-banner-section' },
+  { id: 'testimonial-section' },
+  { id: 'footer-section' }
 ]);
 
 const currentSection = ref('');
@@ -33,8 +33,8 @@ const scrollToSection = (id) => {
   if (section) {
     section.scrollIntoView({ behavior: 'smooth' });
     setTimeout(() => {
-      currentSection.value = id; // Ensure the current section is updated
-    }, 600); // Delay to match the smooth scroll
+      currentSection.value = id;
+    }, 600);
   }
 };
 
@@ -54,10 +54,9 @@ const onScroll = () => {
 
   if (!foundSection) {
     if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
-      // Near the bottom of the page
       currentSection.value = 'footer-section';
     } else {
-      currentSection.value = sections.value[0].id; // Default to hero section if no other section is found
+      currentSection.value = sections.value[0].id;
     }
   }
 };
@@ -91,7 +90,7 @@ onUnmounted(() => {
   }
   .left-4 {
     left: 0.5rem;
-}
+  }
 }
 .transform {
   transform: translateY(-50%);

@@ -1,11 +1,11 @@
 <template>
   <AuthForm
-    title="Customer Login"
-    subtitle="Welcome back! Log In below"
-    buttonText="Log In"
-    promptText="Don't have an account?"
-    linkText="Register"
-    linkTo="/register"
+    :title="$t('login.header')"
+    :subtitle="$t('login.welcome_message')"
+    :buttonText="$t('login.log_in_button')"
+    :promptText="$t('login.no_account')"
+    :linkText="$t('login.unlock_potential.create_account_button')"
+    :linkTo="localePath('/register')"
     linkClass="text-red-500"
     :onSubmit="signInNewUser"
   />
@@ -22,7 +22,7 @@ const signInNewUser = async (email, password) => {
   const { error } = await supabase.auth.signInWithPassword({ email, password });
 
   if (!error) {
-    await router.push("/account");
+    await router.push(localePath("/account"));
   }
 }
 </script>

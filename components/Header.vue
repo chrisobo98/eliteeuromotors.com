@@ -7,16 +7,23 @@
     <div
       class="dark:bg-black bg-gray-300 text-center dark:text-white py-2 border-b border-gray-400 dark:border-red-600"
     >
-      <p>{{ $t("home.navbar.banner_text") }}</p>
+      <p class="mx-3">{{ $t("home.navbar.banner_text") }}</p>
     </div>
 
     <!-- Top Navigation -->
     <div
       class="flex flex-wrap justify-between items-center px-4 py-2 border-b border-gray-700"
     >
-      <div class="flex flex-wrap space-x-4">
+      <!-- Left Section (Address, Email, Phone) -->
+      <div
+        class="flex flex-wrap items-center justify-center w-full lg:w-auto space-x-2"
+      >
         <!-- Address -->
-        <span class="flex items-center w-full md:w-auto ml-4">
+        <a
+          href="https://maps.app.goo.gl/iZVsVauvrgdb2jUg6"
+          target="_blank"
+          class="flex items-center hover:bg-black px-4 py-2 rounded-full"
+        >
           <svg
             class="w-5 h-5 mr-2"
             xmlns="http://www.w3.org/2000/svg"
@@ -29,11 +36,16 @@
               d="m13.622,15.038c.123-.023.248-.038.378-.038h8c.129,0,.255.015.377.038l-3.67,3.67c-.378.377-1.036.377-1.414,0l-3.671-3.67Zm6.499,5.084c-.585.585-1.353.877-2.121.877s-1.536-.292-2.121-.877l-3.764-3.764c-.069.202-.115.416-.115.641v5c0,1.105.895,2,2,2h8c1.105,0,2-.895,2-2v-5c0-.226-.046-.439-.115-.642l-3.764,3.764Zm-3.05-17.193c-1.888-1.889-4.399-2.929-7.07-2.929S4.818,1.04,2.929,2.929C1.04,4.818,0,7.329,0,10s1.04,5.182,2.955,7.096l5.181,4.833c.708.661,1.864.159,1.864-.81v-4.118c0-.756.222-1.456.587-2.059-.195.023-.386.059-.587.059-2.757,0-5-2.243-5-5s2.243-5,5-5,5,2.243,5,5c0,1.131-.392,2.164-1.028,3.003.01,0,.018-.003.028-.003h5.54c.3-.959.46-1.967.46-3,0-2.671-1.04-5.182-2.929-7.071Zm-7.071,4.071c-1.654,0-3,1.346-3,3s1.346,3,3,3,3-1.346,3-3-1.346-3-3-3Z"
             />
           </svg>
-          505 Roper Pkwy, Ocoee, FL 34761
-        </span>
+          <span class="hidden md:block">505 Roper Pkwy, Ocoee, FL 34761</span>
+          <span class="md:hidden">Directions</span>
+        </a>
 
         <!-- Email -->
-        <span class="flex items-center w-full md:w-auto mt-2 md:mt-0">
+        <a
+          href="mailto:info@eliteeuromotors.com"
+          target="_blank"
+          class="flex items-center hover:bg-black px-4 py-2 rounded-full"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             id="Filled"
@@ -51,11 +63,15 @@
               d="M14.122,12.546l9.134-9.135A4.986,4.986,0,0,0,19,1H5A4.986,4.986,0,0,0,.744,3.411l9.134,9.135A3.007,3.007,0,0,0,14.122,12.546Z"
             />
           </svg>
-          info@eliteeuromotors.com
-        </span>
+          <span class="hidden md:block">info@eliteeuromotors.com</span>
+          <span class="md:hidden">Email</span>
+        </a>
 
         <!-- Phone Number -->
-        <span class="flex items-center w-full md:w-auto mt-2 md:mt-0">
+        <a
+          href="tel:+13215271563"
+          class="flex items-center hover:bg-black px-4 py-2 rounded-full"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             id="Layer_1"
@@ -70,27 +86,31 @@
               d="M23,11a1,1,0,0,1-1-1,8.008,8.008,0,0,0-8-8,1,1,0,0,1,0-2A10.011,10.011,0,0,1,24,10,1,1,0,0,1,23,11Zm-3-1a6,6,0,0,0-6-6,1,1,0,1,0,0,2,4,4,0,0,1,4,4,1,1,0,0,0,2,0Zm2.183,12.164.91-1.049a3.1,3.1,0,0,0,0-4.377c-.031-.031-2.437-1.882-2.437-1.882a3.1,3.1,0,0,0-4.281.006l-1.906,1.606A12.784,12.784,0,0,1,7.537,9.524l1.6-1.9a3.1,3.1,0,0,0,.007-4.282S7.291.939,7.26.908A3.082,3.082,0,0,0,2.934.862l-1.15,1C-5.01,9.744,9.62,24.261,17.762,24A6.155,6.155,0,0,0,22.183,22.164Z"
             />
           </svg>
-          (321) 527-1563
-        </span>
-
+          <span class="hidden md:block">(321) 527-1563</span>
+          <span class="md:hidden">Call</span>
+        </a>
         <!-- Appointment Button Desktop -->
         <NuxtLink
-          to="/contact"
-          class="nav-item-bounce hidden lg:inline delay-200 text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
+          :to="localePath('/contact')"
+          class="nav-item-bounce hidden lg:inline delay-200 text-white bg-black border border-white hover:border-red-800 hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-full text-sm px-4 py-2 text-center"
         >
           {{ $t("home.navbar.appointment") }}
         </NuxtLink>
       </div>
 
-      <!-- Language Dropdown and support -->
-      <div class="flex items-center space-x-4 mt-2 md:mt-0 ml-2">
-        <NotificationsDropdown />
-        <YourGarageDropdown />
-        <DarkModeSwitcher @update:isDark="handleDarkModeUpdate" />
-        <LanguageSelector />
+      <!-- Right Section (Language Selector, Support, etc.) -->
+      <div
+        class="flex items-center justify-between w-full mt-2 md:mt-0 md:w-auto md:ml-2"
+      >
+        <div class="flex items-center space-x-4">
+          <NotificationsDropdown />
+          <YourGarageDropdown />
+          <DarkModeSwitcher @update:isDark="handleDarkModeUpdate" />
+          <LanguageSelector />
+        </div>
 
         <!-- Support Link -->
-        <NuxtLink href="#" class="flex items-center">
+        <NuxtLink href="#" class="flex items-center ml-auto md:ml-4">
           {{ $t("home.navbar.support") }}
           <svg
             class="ml-2"
@@ -201,7 +221,7 @@
 
           <!-- Appointment Button Mobile -->
           <NuxtLink
-            to="/contact"
+            :to="localePath('/contact')"
             class="nav-item-bounce mt-4 delay-200 lg:hidden text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 text-center"
           >
             {{ $t("home.navbar.appointment") }}
@@ -231,6 +251,8 @@ export default defineComponent({
     YourGarageDropdown,
   },
   setup() {
+    const localePath = useLocalePath();
+
     const isDropdownOpen = reactive({
       language: false,
       location: false,
@@ -279,6 +301,7 @@ export default defineComponent({
     });
 
     return {
+      localePath,
       isDropdownOpen,
       scrolled,
       menuOpen,
