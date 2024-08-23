@@ -1,21 +1,28 @@
 <template>
   <section class="space-y-4 bg-white dark:bg-[#1d1d1d]">
     <div class="w-full md:w-8/12 mx-auto">
-      <div class="px-4">
-        <h1 class="text-4xl md:text-6xl text-center md:text-left font-bold mt-8">Notifications</h1>
-        <div v-if="notifications.length > 0" class="flex justify-between items-center mb-4">
+      <div>
+        <h1
+          class="text-4xl md:text-6xl text-center md:text-left font-bold"
+        >
+          {{ $t("notifications.header") }}
+        </h1>
+        <div
+          v-if="notifications.length > 0"
+          class="flex justify-between items-center mb-4"
+        >
           <span>
-            You have {{ notifications.length }} unviewed notification(s)
+            {{ $t("notifications.you_have") }} {{ notifications.length }}
+            {{ $t("notifications.unviewed_notifications") }}
           </span>
           <BaseButton label="Mark all as read" @click="markAllAsRead" />
         </div>
         <div v-else class="text-center text-gray-500 mt-12 dark:text-gray-400">
-          No notifications to display.
+          {{ $t("notifications.no_notifications") }}
         </div>
       </div>
-      <hr
-        class="my-6 mx-24 md:mx-2 border-gray-200 dark:border-gray-600"
-      />
+      
+      <hr class="mt-6 mx-24 md:mx-2 border-gray-200 dark:border-gray-600" />
 
       <div class="space-y-4">
         <BaseCard
@@ -111,17 +118,12 @@ async function markNotificationAsRead(id) {
 }
 
 async function deleteNotification(id) {
-  const { error } = await supabase
-    .from("notifications")
-    .delete()
-    .eq("id", id);
+  const { error } = await supabase.from("notifications").delete().eq("id", id);
 
   if (error) {
     console.error("Error deleting notification:", error);
   } else {
-    notifications.value = notifications.value.filter(
-      (n) => n.id !== id
-    );
+    notifications.value = notifications.value.filter((n) => n.id !== id);
   }
 }
 

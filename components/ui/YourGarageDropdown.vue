@@ -22,7 +22,7 @@
     <!-- Your Garage Dropdown -->
     <div
       v-if="isDropdownOpen"
-      class="absolute right-0 mt-2 w-80 bg-white rounded-lg shadow-lg dark:bg-gray-800 dark:text-gray-200"
+      class="absolute right-100 xl:right-0 mt-2 w-80 bg-white rounded-lg shadow-lg dark:bg-gray-800 dark:text-gray-200"
     >
       <div
         class="py-2 px-4 text-base font-medium text-center text-gray-700 bg-gray-50 dark:bg-gray-700 dark:text-gray-400 rounded-t-lg"
@@ -32,7 +32,7 @@
 
       <div class="grid grid-cols-2 gap-4 p-4">
         <NuxtLink
-          to="/my-vehicle"
+          :to="localePath('/my-vehicle')"
           class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
         >
           <svg
@@ -51,7 +51,7 @@
           </div>
         </NuxtLink>
         <NuxtLink
-          to="/maintenance"
+          :to="localePath('/maintenance')"
           class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
         >
           <svg
@@ -68,11 +68,10 @@
           </svg>
           <div class="text-sm font-medium text-gray-900 dark:text-white">
             {{ $t("home.garageDropdown.maintenance") }}
-
           </div>
         </NuxtLink>
         <NuxtLink
-          href="/notifications"
+          :to="localePath('/notifications')"
           class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
         >
           <svg
@@ -94,7 +93,7 @@
           </div>
         </NuxtLink>
         <NuxtLink
-          href="/account"
+          :to="localePath('/account')"
           class="block p-4 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
         >
           <svg
@@ -113,7 +112,7 @@
           </div>
         </NuxtLink>
         <NuxtLink
-          href="/garage"
+          :to="localePath('/garage')"
           class="block p-4 col-span-2 text-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 group"
         >
           <svg

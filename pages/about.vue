@@ -5,11 +5,13 @@
     />
     <!-- About Us -->
     <div class="w-11/12 md:w-9/12 mx-auto">
-      <h2 class="text-4xl md:text-6xl text-center font-bold">About Us</h2>
+      <h2 class="text-4xl md:text-6xl text-center font-bold">
+        {{ $t("about.header") }}
+      </h2>
       <p
         class="text-center py-4 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400"
       >
-      Initially established in 2007 as Betobenz Auto Mechanic Services in Kissimmee, FL, EEM has impressively grown into a premier European car shop. Subsequently, now located in Ocoee, FL, it is advantageously situated near Mannheim Orlando FL Auto Auction and various independent dealers, thereby offering unparalleled accessibility to our clients
+        {{ $t("about.description") }}
       </p>
       <div
         class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6"
@@ -18,22 +20,13 @@
           <h2
             class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
           >
-            Our Story
+            {{ $t("about.our_story.header") }}
           </h2>
           <p class="mb-4">
-            Under new ownership since 2013, EEM has significantly evolved to
-            offer comprehensive services. These services notably include vehicle
-            alignment and programming, coupled with a reduced turnaround time.
-            This evolution is supported by substantial investments in equipment,
-            a robust OEM parts inventory, and the recruitment of a team of
-            highly skilled mechanics. As a result, our service range has become
-            more extensive than ever.
+            {{ $t("about.our_story.description") }}
           </p>
           <p class="mb-4">
-            At EEM, we’re more than just a car shop – we’re a closely-knit
-            family of car enthusiasts. We take immense pride in our work and
-            consistently strive to exceed expectations with every vehicle that
-            graces our doors.
+            {{ $t("about.our_story.family") }}
           </p>
         </div>
         <div class="grid grid-cols-2 gap-4 mt-8">
@@ -54,38 +47,26 @@
       <div class="py-8 px-4 mx-auto sm:py-16 lg:px-6">
         <div class="mx-auto px-4 text-center md:text-left">
           <h2 class="text-4xl font-bold mb-4">
-            Focus on customer satisfaction
+            {{ $t("about.focus_customer_satisfaction.header") }}
           </h2>
           <p
             class="font-light text-gray-500 sm:text-lg dark:text-gray-400 my-4"
           >
-            Furthermore, with a steadfast focus on customer satisfaction and a
-            commitment to quality, we persistently continue to grow and evolve.
-            Meanwhile, we’re building lasting relationships within our community
-            and beyond, one customer at a time.
+            {{ $t("about.focus_customer_satisfaction.description") }}
           </p>
           <div class="flex flex-col md:flex-row gap-4">
             <div>
-              <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400 my-4">
-                With a legacy of serving thousands of satisfied customers, EEM
-                European Auto Services is passionately fueled by a relentless
-                pursuit of automotive perfection. Indeed, our unwavering
-                commitment to excellence is evident in every facet of our
-                operations. For instance, from hand-selecting the finest quality
-                parts to delivering unparalleled service experiences, our valued
-                clientele can always expect the best.
+              <p
+                class="font-light text-gray-500 sm:text-lg dark:text-gray-400 my-4"
+              >
+                {{ $t("about.legacy.description") }}
               </p>
             </div>
             <div>
-              <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400 my-4">
-                Celebrating over three decades of operation, EEM European Auto
-                Services proudly traces its roots back to a modest family-owned
-                enterprise. Throughout this extensive journey, not only have we
-                flourished into a premier destination for premium auto parts and
-                accessories, but we have also steadfastly maintained our
-                dedication to quality and customer satisfaction. In doing so, we
-                have solidified our position as a trusted authority in the
-                automotive industry.
+              <p
+                class="font-light text-gray-500 sm:text-lg dark:text-gray-400 my-4"
+              >
+                {{ $t("about.legacy.history") }}
               </p>
             </div>
           </div>
@@ -119,7 +100,7 @@
           <h2
             class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
           >
-            Why Choose Us
+            {{ $t("about.why_choose_us.header") }}
           </h2>
           <div
             class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-4 md:gap-12 md:space-y-0"
@@ -142,13 +123,10 @@
                 </svg>
               </div>
               <h3 class="mb-2 text-xl font-bold dark:text-white">
-                Wide Selection
+                {{ $t("about.why_choose_us.wide_selection_header") }}
               </h3>
               <p class="text-gray-500 dark:text-gray-400">
-                At our shop, we boast a wide selection of services tailored to
-                meet all your automotive needs, from routine maintenance to
-                complex repairs, ensuring that we can address any issue your
-                vehicle may encounter.
+                {{ $t("about.why_choose_us.wide_selection") }}
               </p>
             </div>
             <div>
@@ -169,13 +147,10 @@
                 </svg>
               </div>
               <h3 class="mb-2 text-xl font-bold dark:text-white">
-                Family Owned
+                {{ $t("about.why_choose_us.family_owned_header") }}
               </h3>
               <p class="text-gray-500 dark:text-gray-400">
-                As a family-owned business, we prioritize building long-lasting
-                relationships with our customers, providing personalized service
-                and attention to detail that you won’t find at larger corporate
-                establishments.
+                {{ $t("about.why_choose_us.family_owned") }}
               </p>
             </div>
             <div>
@@ -194,13 +169,10 @@
                 </svg>
               </div>
               <h3 class="mb-2 text-xl font-bold dark:text-white">
-                Satisfaction Guaranteed
+                {{ $t("about.why_choose_us.satisfaction_guaranteed_header") }}
               </h3>
               <p class="text-gray-500 dark:text-gray-400">
-                Your satisfaction is our top priority. We strive to exceed your
-                expectations with every service we provide, ensuring that you
-                leave our shop feeling confident and satisfied with the quality
-                of our work.
+                {{ $t("about.why_choose_us.satisfaction_guaranteed") }}
               </p>
             </div>
             <div>
@@ -224,13 +196,10 @@
                 </svg>
               </div>
               <h3 class="mb-2 text-xl font-bold dark:text-white">
-                Fair Prices
+                {{ $t("about.why_choose_us.fair_prices_header") }}
               </h3>
               <p class="text-gray-500 dark:text-gray-400">
-                We believe in transparency and fairness, which is why we offer
-                competitive and transparent pricing for all our services. You
-                can trust that you’ll receive honest and upfront pricing without
-                any hidden fees or surprises.
+                {{ $t("about.why_choose_us.fair_prices") }}
               </p>
             </div>
           </div>

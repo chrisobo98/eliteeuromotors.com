@@ -1,5 +1,6 @@
 <template>
   <section
+  id="hero-section"
     class="relative bg-white dark:bg-[#171717] h-screen flex items-center justify-center overflow-hidden"
   >
     <!-- Video Background -->
@@ -47,7 +48,7 @@
 
       <!-- Hero Text -->
       <h1
-        class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-white md:text-5xl lg:text-6xl"
+        class="mb-4 text-5xl font-extrabold tracking-tight leading-none text-white md:text-6xl lg:text-6xl"
       >
         {{ $t("home.home.elite_euro_motors") }}
       </h1>

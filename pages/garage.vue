@@ -1,22 +1,23 @@
 <template>
   <section class="bg-white dark:bg-[#1d1d1d]">
     <div class="w-full md:w-9/12 mx-auto pt-12">
-      <h1 class="text-6xl font-bold ml-4 text-center md:text-left">
-        Your Garage
+      <h1 class="text-4xl md:text-6xl font-bold ml-4 text-center md:text-left">
+        {{ $t("garagePage.your_garage") }}
       </h1>
       <hr class="my-6 mx-24 md:mx-2 border-gray-200 dark:border-gray-600" />
       <div class="grid grid-cols-1 lg:grid-cols-3">
         <!-- Vehicle Model and VIN Entry -->
         <BaseCard class="space-y-4 col-span-1">
-          <h2 class="text-lg font-semibold">Add Vehicle</h2>
+          <h2 class="text-lg font-semibold">{{ $t("garagePage.add_vehicle") }}</h2>
           <div class="grid grid-cols-1 sm:grid-cols-3">
             <InputText
-              placeholder="Vehicle VIN"
+              :placeholder="$t('garagePage.vehicle_vin')"
               v-model="vehicleVIN"
               class="col-span-3"
             />
             <BaseButton @click="checkVIN" class="col-span-3 sm:col-start-2"
-              >Check VIN
+              >        {{ $t("garagePage.check_vin") }}
+
             </BaseButton>
           </div>
           <img
@@ -28,20 +29,21 @@
 
         <!-- Manually Add Vehicle Details -->
         <BaseCard class="space-y-4 col-span-1 lg:col-span-2">
-          <h2 class="text-lg font-semibold">Vehicle Details</h2>
+          <h2 class="text-lg font-semibold"> {{ $t("garagePage.vehicle_details") }}
+</h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <InputText placeholder="Make" v-model="vehicleDetails.Make" />
-            <InputText placeholder="Model" v-model="vehicleDetails.Model" />
-            <InputText placeholder="Year" v-model="vehicleDetails.ModelYear" />
+            <InputText :placeholder="$t('garagePage.make')" v-model="vehicleDetails.Make" />
+            <InputText :placeholder="$t('garagePage.model')" v-model="vehicleDetails.Model" />
+            <InputText :placeholder="$t('garagePage.year')" v-model="vehicleDetails.ModelYear" />
             <BaseButton @click="saveVehicle" class="md:col-span-2"
-              >Save Vehicle</BaseButton
+              >{{ $t("garagePage.save_vehicle") }}</BaseButton
             >
           </div>
         </BaseCard>
 
         <!-- Existing Vehicles List -->
         <BaseCard class="space-y-4 col-span-1 lg:col-span-3">
-          <h2 class="text-lg font-semibold mb-4">Existing Vehicles</h2>
+          <h2 class="text-lg font-semibold mb-4">{{ $t("garagePage.existing_vehicles") }}</h2>
           <ul>
             <li
               v-for="vehicle in vehicles"
@@ -89,10 +91,10 @@
           v-model:visible="deleteDialogVisible"
           :modal="true"
           :style="{ width: '25rem' }"
-          header="Confirm Delete"
+          :header="$t('confirmDelete.confirm_delete')"
         >
           <span class="p-text-secondary block mb-5"
-            >Type 'Delete' to confirm</span
+            >{{ $t("confirmDelete.type_delete_to_confirm") }}</span
           >
           <div class="flex align-items-center gap-3 mb-3">
             <InputText v-model="deleteConfirmationText" class="flex-auto" />
@@ -102,12 +104,12 @@
             <div class="flex justify-content-end gap-2">
               <Button
                 type="button"
-                label="Cancel"
+                :label="$t('confirmDelete.cancel')"
                 severity="secondary"
                 @click="cancelDelete"
               ></Button>
               <Button
-                label="Delete"
+              :label="$t('confirmDelete.delete')"
                 type="button"
                 :disabled="deleteConfirmationText.toLowerCase() !== 'delete'"
                 @click="performDelete"

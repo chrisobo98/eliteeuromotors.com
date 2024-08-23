@@ -5,7 +5,7 @@
   <section class="bg-white dark:bg-[#1d1d1d]">
     <form @submit.prevent="handleSubmit" class="w-9/12 mx-auto rounded-lg">
       <!-- contact.Contact Header -->
-      <h2 class="text-6xl text-center font-bold">
+      <h2 class="text-4xl md:text-6xl text-center font-bold">
         {{ $t("contact.contact.header") }}
       </h2>
       <p

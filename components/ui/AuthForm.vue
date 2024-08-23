@@ -34,7 +34,7 @@
             <div class="text-center mt-4">
               <p class="text-sm text-white">
                 {{ promptText }}
-                <NuxtLink :to="linkTo" class="text-red-300 underline">{{
+                <NuxtLink :to="localePath(linkTo)" class="text-red-300 underline">{{
                   linkText
                 }}</NuxtLink>
               </p>
@@ -43,10 +43,10 @@
           <!-- Back to Home Link -->
           <div class="text-center mt-auto">
             <NuxtLink
-              to="/"
+              :to="localePath('/')"
               class="text-white text-sm underline hover:text-red-300"
             >
-              Back to homepage
+            {{ $t("login.back_to_homepage") }}
             </NuxtLink>
           </div>
         </div>
@@ -56,7 +56,7 @@
           class="bg-gradient-to-r from-red-600 p-6 rounded-xl to-red-800 border border-gray-200 p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800 sm:p-6 text-white p-8 rounded-lg shadow-md"
         >
           <h2 class="text-2xl font-bold mb-4">
-            Create an account and use our premium features for free
+            {{ $t("login.create_account_message") }}
           </h2>
           <ul class="space-y-4">
             <li class="flex items-center">
@@ -74,7 +74,7 @@
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              Comprehensive service history at your fingertips
+              {{ $t("login.features.service_history") }}
             </li>
             <li class="flex items-center">
               <svg
@@ -91,7 +91,7 @@
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              Exclusive access to maintenance reminders and updates
+              {{ $t("login.features.maintenance_reminders") }}
             </li>
             <li class="flex items-center">
               <svg
@@ -108,7 +108,7 @@
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              Streamlined appointment scheduling for quick service
+              {{ $t("login.features.appointment_scheduling") }}
             </li>
             <li class="flex items-center">
               <svg
@@ -125,7 +125,7 @@
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              Personalized vehicle insights and recommendations
+              {{ $t("login.features.vehicle_insights") }}
             </li>
             <li class="flex items-center">
               <svg
@@ -142,7 +142,7 @@
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              No credit/debit card required
+              {{ $t("login.features.no_credit_card") }}
             </li>
           </ul>
           <div class="mt-8">
@@ -154,8 +154,8 @@
               <Star class="mx-2" />
               <HalfStar class="mx-2" />
             </div>
-            <p class="text-lg font-bold mb-2">4.6 Rating</p>
-            <p class="text-sm">Based on 50+ reviews</p>
+            <p class="text-lg font-bold mb-2">{{ $t("login.features.rating") }}</p>
+            <p class="text-sm">{{ $t("login.features.reviews_based_on") }}</p>
           </div>
         </div>
       </div>
@@ -170,6 +170,8 @@ import BaseCard from "~/components/Base/BaseCard.vue";
 import Star from "~/assets/svg/Star.svg";
 import HalfStar from "~/assets/svg/HalfStar.svg";
 import InputText from "primevue/inputtext";
+
+const localePath = useLocalePath();
 
 interface AuthFormProps {
   title: string;

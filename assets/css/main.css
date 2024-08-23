@@ -16,6 +16,12 @@ body {
   font-display: swap; /* Ensure font-display swap */
   scrollbar-width: thin;
   scrollbar-color: #ee0405 transparent; /* Thumb color and track color for Firefox */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 /* From http://lea.verou.me/css3patterns/ */
@@ -57,52 +63,22 @@ body {
   }
 }
 
-/* Webkit browsers */
-::-webkit-scrollbar {
-  width: 16px; /* Width of the scrollbar */
-  height: 16px; /* Height for horizontal scrollbar */
+/* Prevent horizontal overflow throughout the entire app */
+html, body {
+  overflow-x: hidden;
 }
 
-::-webkit-scrollbar-track {
-  background: transparent; /* Background color of the track */
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #ee0405; /* Scrollbar thumb color */
-  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
-  border: 3px solid transparent; /* Border around the scrollbar thumb */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #ad0505; /* Darker shade on hover */
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-/* Webkit browsers */
-::-webkit-scrollbar {
-  width: 8px; /* Width of the scrollbar */
-}
-
-::-webkit-scrollbar-track {
-  background: transparent; /* Background color of the track */
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #ee0405; /* Scrollbar thumb color */
-  border-radius: 20px; /* Rounded corners for the scrollbar thumb */
-  border: 3px solid transparent; /* Border around the scrollbar thumb */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #ad0505; /* Darker shade on hover */
-}
-
+/* Dark mode styles */
 .dark body {
   background-color: #1d1d1d; /* Dark mode background color */
   color: #ffffff; /* Dark mode text color */
+}
+
+/* Apply to common text elements globally */
+p, h1, h2, h3, h4, h5, h6, span, div {
+  hyphens: auto;
+  word-wrap: break-word;
+  word-break: break-word;
 }
 
 /* Custom font styles */

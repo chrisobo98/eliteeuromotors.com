@@ -1,11 +1,11 @@
 <template>
   <AuthForm
-    title="Unlock the Full Potential of Your Vehicle"
-    subtitle="Register for an account below"
-    buttonText="Create an Account"
-    promptText="Already have an account?"
-    linkText="Log in"
-    linkTo="/login"
+    :title="$t('login.unlock_potential.header')"
+    :subtitle="$t('login.unlock_potential.register_message')"
+    :buttonText="$t('login.unlock_potential.create_account_button')"
+    :promptText="$t('login.unlock_potential.already_have_account')"
+    :linkText="$t('login.log_in_button')"
+    :linkTo="localePath('/login')"
     linkClass="text-red-500"
     :onSubmit="signUpNewUser"
   />
@@ -25,7 +25,7 @@ async function signUpNewUser() {
   });
 
   if (!error) {
-    await router.push('/login');
+    await router.push(localePath('/login'));
   }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   <section class="bg-white dark:bg-[#1d1d1d]">
-    <div class="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
-      <div class="mx-auto max-w-screen-sm">
+    <div class="py-8 px-4 mx-auto text-center">
+      <div class="mx-auto">
         <h2
           class="mb-4 text-4xl md:text-5xl text-center tracking-tight font-extrabold text-gray-900 dark:text-white"
         >
