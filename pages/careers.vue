@@ -63,11 +63,11 @@
             >
           </div>
         </div>
-        <div class="max-w-lg mx-auto overflow-hidden rounded-lg shadow-xl">
+        <div class="mx-auto overflow-hidden rounded-lg mb-8 shadow-xl">
           <img
-            src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/5a33f575-c0f2-477a-e3f5-89c2ccf3ee00/public"
+            src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/f14cb177-4ccf-4adf-da06-daadf361d100/public"
             alt="office photo"
-            class="w-auto"
+            class="object-cover h-[40rem] w-auto"
           />
         </div>
       </div>
@@ -116,7 +116,7 @@
           >
             <div
               style="
-                background-image: url('https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/5a33f575-c0f2-477a-e3f5-89c2ccf3ee00/public');
+                background-image: url('https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/63065ec5-e658-4e8d-6dc7-588ff2277100/public');
               "
               class="bg-about-seminar bg-center hover:scale-105 hover:-translate-y-1 w-full col-span-2 transition-all duration-200 ease-in-out bg-cover rounded-lg h-0 pb-[50%]"
             >
@@ -124,7 +124,7 @@
             </div>
             <div
               style="
-                background-image: url('https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/5a33f575-c0f2-477a-e3f5-89c2ccf3ee00/public');
+                background-image: url('https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/0178863f-62c6-4269-62d4-5342ec6ab200/public');
               "
               class="bg-about-dog bg-center hover:scale-105 hover:-translate-y-1 transition-all duration-200 ease-in-out bg-cover rounded-lg h-0 pb-[100%]"
             >
@@ -132,7 +132,7 @@
             </div>
             <div
               style="
-                background-image: url('https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/5a33f575-c0f2-477a-e3f5-89c2ccf3ee00/public');
+                background-image: url('https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/5c1331ea-c430-40c5-af19-97ea560bf500/public');
               "
               class="bg-about-team bg-center hover:scale-105 hover:-translate-y-1 pb-[100%] h-0 transition-all duration-200 ease-in-out bg-cover rounded-lg"
             >

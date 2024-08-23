@@ -20,7 +20,7 @@
                 </div>
                 <div class="grid grid-cols-2 gap-4 mt-8">
                     <img class="w-full rounded-lg"
-                        src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/ddb514c3-8821-4767-9489-913a300f0d00/public"
+                        src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/7e16e5c3-584c-4067-14e1-ee943527f300/public"
                         alt="office content 1" />
                     <img class="mt-4 w-full lg:mt-10 rounded-lg"
                         src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/184e2808-840e-4dd0-7b5a-9358a9466f00/public"

@@ -32,12 +32,12 @@
         <div class="grid grid-cols-2 gap-4 mt-8">
           <img
             class="w-full rounded-lg"
-            src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/5a33f575-c0f2-477a-e3f5-89c2ccf3ee00/public"
+            src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/73b71263-7b57-4a79-e63f-da49b2fbd400/public"
             alt="office content 1"
           />
           <img
-            class="mt-4 w-full lg:mt-10 rounded-lg"
-            src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/17b42c84-455d-45f5-cdc9-86ddabb75a00/public"
+            class="mt-4 object-none w-full lg:mt-10 rounded-lg"
+            src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/45413a42-f9f0-4415-8d3e-7fc9d6153300/public"
             alt="office content 2"
           />
         </div>
@@ -214,25 +214,28 @@ import BackgroundImage from "../components/ui/BackgroundImage.vue";
 
 const images = [
   {
-    src: "https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/5a33f575-c0f2-477a-e3f5-89c2ccf3ee00/public",
+    src: "https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/3a586acb-8b2a-4c26-e0a6-defd653dd800/public",
     rotateClass: "rotate-2",
   },
   {
-    src: "https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/5a33f575-c0f2-477a-e3f5-89c2ccf3ee00/public",
+    src: "https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/f4f21ef9-b7f3-4230-4a7a-f3ad2da70900/public",
     rotateClass: "-rotate-2",
   },
   {
-    src: "https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/5a33f575-c0f2-477a-e3f5-89c2ccf3ee00/public",
+    src: "https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/34a1fc28-6fa4-44eb-2a38-2946b9c15b00/public",
     rotateClass: "rotate-2",
   },
+
   {
-    src: "https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/5a33f575-c0f2-477a-e3f5-89c2ccf3ee00/public",
+    src: "https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/48582808-6153-4ce1-d728-d19c61a6b800/public",
     rotateClass: "-rotate-2",
   },
+
   {
-    src: "https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/5a33f575-c0f2-477a-e3f5-89c2ccf3ee00/public",
+    src: "https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/8d1e916e-a070-4421-1434-4b9fe26a0500/public",
     rotateClass: "rotate-2",
   },
+
 ];
 </script>
 
