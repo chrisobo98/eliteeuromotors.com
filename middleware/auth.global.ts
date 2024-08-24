@@ -3,8 +3,6 @@ export default defineNuxtRouteMiddleware((to) => {
 
   const localePath = useLocalePath();
 
-  console.log(user.value);
-
   // Define the protected routes in both English and Spanish
   const protectedRoutes = [
     '/my-vehicle', '/maintenance', '/notifications', '/profile', '/garage', '/account',

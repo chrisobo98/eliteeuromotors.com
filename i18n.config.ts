@@ -111,7 +111,7 @@ export default defineI18nConfig(() => ({
           description: "Have a question about your vehicle? Need to schedule an appointment or get a quote? We're here to help! Fill out the contact form below, and one of our expert technicians will get back to you promptly. Whether you're experiencing issues with your car or just need routine maintenance, we're dedicated to providing top-notch service and ensuring your European vehicle runs smoothly.",
           name: "Your Name",
           name_header: "Name",
-          email: "name@example.com",
+          email: "name.example.com",
           email_header: "Email Address",
           phone: "555-555-5555",
           phone_header: "Phone Number",

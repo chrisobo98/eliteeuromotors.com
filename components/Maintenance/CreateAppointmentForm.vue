@@ -477,7 +477,6 @@ const serviceTypes = ref([
 
 watch(selectedVehicleId, (newValue) => {
   const vehicle = vehicles.value.find((v) => v.id === newValue.id || "");
-  console.log(vehicle);
   appointmentData.value.vehicleVin = vehicle ? vehicle.vin : "";
   console.log("Selected VIN:", appointmentData.value.vehicleVin);
 });

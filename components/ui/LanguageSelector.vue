@@ -63,7 +63,6 @@
   
   const toggleLanguageDropdown = () => {
     languageDropdownOpen.value = !languageDropdownOpen.value;
-    console.log('Dropdown toggled:', languageDropdownOpen.value);
   };
   </script>
   
