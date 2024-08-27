@@ -17,6 +17,7 @@ import AuthForm from "../components/ui/AuthForm.vue";
 
 const supabase = useSupabaseClient();
 const router = useRouter();
+const localePath = useLocalePath();
 
 async function signUpNewUser() {
   const { data, error } = await supabase.auth.signUp({
