@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     "@primevue/nuxt-module",
     "nuxt-svgo",
     "@nuxt/scripts",
+    "@nuxtjs/seo",
   ],
   primevue: {
     options: {
