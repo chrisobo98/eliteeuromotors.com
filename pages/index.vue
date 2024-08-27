@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white dark:bg-[#1d1d1d]">
-    <Sidenav />
+    <Sidenav class="hidden md:block" />
     <div class="relative bg-[#171717]">
       <HeroSection />
 
@@ -23,12 +23,16 @@
       <BrandsSlider class="py-12" />
     </div>
 
-    <div class="w-10/12 mx-auto xl:mt-64">
+    <div class="w-11/12 lg:w-10/12 mx-auto xl:mt-64">
       <ServicesSection id="services-section" />
       <!-- <FeaturedProducts /> -->
       <FamilyOwned />
       <PromoBanner id="promo-banner-section" />
+    </div>
+    <div class="w-full lg:w-10/12 mx-auto">
       <TestimonialSection id="testimonial-section" />
+    </div>
+    <div class="w-11/12 lg:w-10/12 mx-auto xl:mt-64">
       <GoogleMap />
     </div>
   </div>

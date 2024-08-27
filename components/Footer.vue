@@ -102,12 +102,19 @@
           <NuxtImg
             provider="cloudflare"
             loading="lazy"
-            src="50490653-5765-4163-6f7a-5c4e4a960400/public"
-            :alt="$t('home.footer.elite_euro_logo')"
-            class="rounded-lg w-4/6 h-full md:w-1/2 lg:w-1/4"
+            src="/50490653-5765-4163-6f7a-5c4e4a960400/public"
+            alt="Elite Euro Logo"
+            class="hidden dark:block rounded-lg w-4/6 h-full md:w-1/2 lg:w-1/4"
+          />
+          <NuxtImg
+            provider="cloudflare"
+            loading="lazy"
+            src="/35d4ffef-3a9e-4cc4-a5b6-86947beedc00/public"
+            alt="Elite Euro Logo"
+            class="dark:hidden rounded-lg w-4/6 h-full md:w-1/2 lg:w-1/4"
           />
 
-          <ul
+          <!-- <ul
             class="flex flex-wrap items-center gap-4 text-sm xl:justify-center"
           >
             <li v-for="policy in policies" :key="policy.text">
@@ -118,7 +125,7 @@
                 >{{ policy.text }}</a
               >
             </li>
-          </ul>
+          </ul> -->
 
           <p class="text-sm text-gray-500 dark:text-gray-400">
             {{ $t("home.footer.copyright") }}

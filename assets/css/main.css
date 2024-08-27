@@ -78,7 +78,7 @@ html, body {
 p, h1, h2, h3, h4, h5, h6, span, div {
   hyphens: auto;
   word-wrap: break-word;
-  word-break: break-word;
+  word-break: auto-phrase;
 }
 
 /* Custom font styles */

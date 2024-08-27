@@ -22,7 +22,7 @@
         <a
           href="https://maps.app.goo.gl/iZVsVauvrgdb2jUg6"
           target="_blank"
-          class="flex items-center hover:bg-black px-4 py-2 rounded-full"
+          class="flex items-center hover:bg-black hover:text-white px-4 py-2 rounded-full"
         >
           <svg
             class="w-5 h-5 mr-2"
@@ -44,7 +44,7 @@
         <a
           href="mailto:info@eliteeuromotors.com"
           target="_blank"
-          class="flex items-center hover:bg-black px-4 py-2 rounded-full"
+          class="flex items-center hover:bg-black hover:text-white px-4 py-2 rounded-full"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +70,7 @@
         <!-- Phone Number -->
         <a
           href="tel:+13215271563"
-          class="flex items-center hover:bg-black px-4 py-2 rounded-full"
+          class="flex items-center hover:bg-black hover:text-white px-4 py-2 rounded-full"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -109,7 +109,7 @@
           <LanguageSelector />
         </div>
 
-        <!-- Support Link -->
+        <!-- Support Link
         <NuxtLink href="#" class="flex items-center ml-auto md:ml-4">
           {{ $t("home.navbar.support") }}
           <svg
@@ -134,7 +134,7 @@
               />
             </g>
           </svg>
-        </NuxtLink>
+        </NuxtLink> -->
       </div>
     </div>
 
@@ -144,9 +144,16 @@
       <NuxtImg
         provider="cloudflare"
         loading="lazy"
-        :src="imageSrc"
+        src="/50490653-5765-4163-6f7a-5c4e4a960400/public"
         alt="Elite Euro Logo"
-        class="rounded-lg w-4/6 h-full md:w-1/2 lg:w-1/4"
+        class="hidden dark:block rounded-lg w-4/6 h-full md:w-1/2 lg:w-1/4"
+      />
+      <NuxtImg
+        provider="cloudflare"
+        loading="lazy"
+        src="/35d4ffef-3a9e-4cc4-a5b6-86947beedc00/public"
+        alt="Elite Euro Logo"
+        class="dark:hidden rounded-lg w-4/6 h-full md:w-1/2 lg:w-1/4"
       />
       <div class="flex items-center space-x-3 md:space-x-3">
         <!-- Hamburger Toggle Mobile -->
