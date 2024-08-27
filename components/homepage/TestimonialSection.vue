@@ -18,7 +18,7 @@
           <div
             v-for="(review, index) in reviews"
             :key="review.id"
-            :class="{ 'bg-red-100 dark:bg-red-700': selectedTab === index }"
+            :class="{ 'bg-gray-100 dark:bg-red-700': selectedTab === index }"
             class="tab p-4 cursor-pointer text-left rounded-lg mx-4 my-2 dark:border-gray-700"
             @click="selectTab(index)"
           >
@@ -83,9 +83,6 @@
             />
             <div class="space-y-0.5 font-medium dark:text-white text-left">
               <div>{{ reviews[selectedTab].name }}</div>
-              <div class="text-sm font-light text-gray-500 dark:text-gray-400">
-                {{ reviews[selectedTab].position }}
-              </div>
             </div>
           </figcaption>
         </div>
@@ -113,7 +110,6 @@ interface Review {
   stars: number;
   text: string;
   title: string;
-  position: string;
 }
 
 export default defineComponent({
@@ -130,8 +126,7 @@ export default defineComponent({
         date: "May 27, 2024",
         stars: 5,
         text: "Efficient, knowledgeable, clean, and trustworthy staff and establishment. This is where family owned businesses and experience make all the difference when getting your car serviced or repaired. Highly recommend and will continue to go to for my classic car needs.",
-        title: "Speechless with how easy this was to integrate",
-        position: "Developer at Open AI",
+        title: "Efficient, knowledgeable, clean, and trustworthy staff"
       },
       {
         id: "2",
@@ -141,8 +136,7 @@ export default defineComponent({
         date: "May 18, 2023",
         stars: 5,
         text: "This place gave me the peace of mind I needed about my vehicle. I had been having trouble with the AC and with stressed out about having to try and get it into the dealership and they took care of. It had me in and out in the same day and the pricing was very reasonable. I would recommend this place 100 million times over and over. Thank you all for your service.",
-        title: "Solid foundation for any project",
-        position: "Lead designer at Dropbox",
+        title: "This place gave me the peace of mind I needed about my vehicle"
       },
       {
         id: "3",
@@ -152,9 +146,8 @@ export default defineComponent({
         date: "December 30, 2022",
         stars: 5,
         text: "Went in for an AT solenoids replacement on my 2008 BMW 550i. Domingo was very honest and told me up front what could I expect from the work they did. Transmission issue was fixed. Happy customer.",
-        title: "Mindblowing workflow and variants",
-        position: "Software Engineer at Facebook",
-      },
+        title: "Domingo was very honest and told me up front what could I expect from the work they did"
+        },
       {
         id: "4",
         profileImg:
@@ -163,8 +156,7 @@ export default defineComponent({
         date: "December 7, 2022",
         stars: 5,
         text: "Efficient, honest, and straightforward about complete cost. Good job.",
-        title: "Efficient Collaborating",
-        position: "CTO at Google",
+        title: "Efficient, honest, and straightforward"
       },
       {
         id: "5",
@@ -174,8 +166,7 @@ export default defineComponent({
         date: "September 2, 2022",
         stars: 5,
         text: "I have been going to Elite Auto for many years. I have been driving my own cars for over 45 years. I have dealt with many auto repair entities over the years. Elite Auto is by far the most honorable, best performing place I have even experienced. In every way they are superior. Customer service is friendly and awesome. Actual work performed has ALWAYS been TOP NOTCH and NEVER A PROBLEM. On numerous occasions they have reminded me that service items were still under their warranty when I did not remember this at all. They always suggest ways and means of doing things that save me hundreds of dollars. They are about 60-70% lower cost than the Mercedes dealerships and 10x's more attentive. I cannot imagine anybody needing a Mercedes repaired going to anybody else than Elite. I am most thankful for you and your great service and always feel safe in your your hands. Thank you, Charles.",
-        title: "Efficient Collaborating",
-        position: "CTO at Google",
+        title: "best performing place I have even experienced."
       },
     ];
 
