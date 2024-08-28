@@ -1,7 +1,7 @@
 <template>
     <section class="flex-auto bg-white dark:bg-[#1d1d1d]">
         <BackgroundImage
-            backgroundImage="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/586040af-b4c2-42ef-3991-fce8dadd2200/public" />
+            backgroundImage="/9708b529-bedd-4d30-c137-b8349734da00/public" />
         <div class="w-11/12 md:w-9/12 mx-auto">
             <h2 class="text-4xl md:text-6xl text-center font-bold"> {{ $t("services.header") }}</h2>
             <p

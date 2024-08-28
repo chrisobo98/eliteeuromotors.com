@@ -3,9 +3,10 @@
     <div
       class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6"
     >
-      <img
+      <NuxtImg
         class="w-full rounded-xl"
-        src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/b0b2da56-af34-47c7-f074-9dfb67404800/public"
+        loading="lazy"
+        src="/b0b2da56-af34-47c7-f074-9dfb67404800/public"
         alt="dashboard image"
       />
       <div class="mt-4 md:mt-0">
@@ -36,9 +37,10 @@
           {{ $t("home.home.specialize_in_servicing_description") }}
         </p>
       </div>
-      <img
+      <NuxtImg
         class="w-full rounded-xl"
-        src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/dc660fdd-8cec-4f44-1820-bafc5c1d7e00/public"
+        loading="lazy"
+        src="/dc660fdd-8cec-4f44-1820-bafc5c1d7e00/public"
         alt="dashboard image"
       />
     </div>

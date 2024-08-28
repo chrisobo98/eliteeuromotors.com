@@ -1,7 +1,7 @@
 <template>
   <section class="bg-white dark:bg-[#1d1d1d]">
     <BackgroundImage
-      backgroundImage="https://eliteeuromotors.com/wp-content/uploads/2024/04/pexels-skylar-kang-6044744-scaled.jpg"
+    backgroundImage="/243fa033-2f3e-45e4-ee01-10645c53fe00/public"
     />
     <!-- About Us -->
     <div class="w-11/12 md:w-9/12 mx-auto">

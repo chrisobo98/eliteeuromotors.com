@@ -1,12 +1,12 @@
 <template>
   <div v-if="post" class="featured-post">
-    <img :src="post.image" alt="" class="rounded-lg">
+    <NuxtImg loading="lazy" :src="post.image" alt="" class="rounded-lg" />
     <div>
       <p class="text-red-600 text-2xl font-bold">{{ post.category }}</p>
       <h3 class="text-2xl">{{ post.title }}</h3>
       <p>{{ post.excerpt }}</p>
       <p class="author my-2">
-        <img :src="post.authorImage" alt="" />
+        <NuxtImg :src="post.authorImage" alt="" />
         {{ post.author }} - {{ formattedDate }}
       </p>
     </div>
@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed } from "vue";
 import type { Post } from "@/utils/types"; // Use type-only import
 
 interface Props {
@@ -24,18 +24,18 @@ interface Props {
 const props = defineProps<Props>();
 
 const formattedDate = computed(() => {
-  if (!props.post || !props.post.date) return 'Unknown Date';
-  
+  if (!props.post || !props.post.date) return "Unknown Date";
+
   const date = new Date(props.post.date);
-  
+
   if (isNaN(date.getTime())) {
-    return 'Invalid Date';
+    return "Invalid Date";
   }
-  
-  return date.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
+
+  return date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
   });
 });
 </script>

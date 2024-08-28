@@ -8,14 +8,14 @@
     <!-- Featured Products/Services -->
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:mb-12">
       <ServiceCard
-        imgSrc="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/b4636af8-73c7-4a5c-d435-3387fbb50500/public"
+        imgSrc="/b4636af8-73c7-4a5c-d435-3387fbb50500/public"
         imgAlt="General Inspections"
         :title="$t('home.home.general_inspections')"
         :description="$t('home.home.general_inspections_description')"
         overlayClass="bg-red-600 bg-opacity-80"
       />
       <ServiceCard
-        imgSrc="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/23e68b9c-7813-4b6c-9794-52a1d5194500/public"
+        imgSrc="/23e68b9c-7813-4b6c-9794-52a1d5194500/public"
         imgAlt="Regular Service"
         :title="$t('home.home.regular_service')"
         :description="$t('home.home.regular_service_description')"

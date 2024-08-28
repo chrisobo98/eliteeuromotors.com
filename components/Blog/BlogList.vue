@@ -6,9 +6,10 @@
       class="flex flex-col gap-y-5 text-primary"
     >
       <NuxtLink :href="`/blog/${post.slug}`">
-        <img
+        <NuxtImg
           :alt="post.title"
           :src="post.image"
+          loading="lazy"
           class="object-cover h-48 w-96 rounded-lg shadow-2xl"
         />
         <div class="flex h-full flex-col my-5">

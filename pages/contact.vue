@@ -1,6 +1,6 @@
 <template>
   <BackgroundImage
-    backgroundImage="https://eliteeuromotors.com/wp-content/uploads/2024/04/pexels-ono-kosuki-5647620-scaled.jpg"
+    backgroundImage="/f42d59bb-6667-4b8a-36e1-9fd06fbdc100/public"
   />
   <section class="bg-white dark:bg-[#1d1d1d]">
     <form @submit.prevent="handleSubmit" class="w-9/12 mx-auto rounded-lg">

@@ -5,10 +5,11 @@
     <div
       class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-12"
     >
-      <img
+      <NuxtImg
         class="object-cover my-12 mx-12 md:mx-2 mx-auto"
-        src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/7b0bd7e5-b353-4e56-1eff-5ad6ac333a00/public"
+        src="/7b0bd7e5-b353-4e56-1eff-5ad6ac333a00/public"
         alt="dashboard image"
+        loading="lazy"
       />
       <div class="mt-4 md:mt-0">
         <h2

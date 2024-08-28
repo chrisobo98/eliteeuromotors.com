@@ -1,7 +1,7 @@
 <template>
   <section class="bg-white dark:bg-[#1d1d1d]">
     <BackgroundImage
-      backgroundImage="https://eliteeuromotors.com/wp-content/uploads/2024/04/pexels-maria-geller-2127038-scaled.jpg"
+      backgroundImage="/a41f1742-7c6b-4b42-87ae-d41ffb03bb00/public"
     />
     <div class="w-11/12 md:w-9/12 mx-auto">
       <!-- We're hiring text -->

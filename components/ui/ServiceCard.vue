@@ -1,9 +1,10 @@
 <template>
   <div class="rounded-2xl">
     <a href="#">
-      <img
+      <NuxtImg
         :src="imgSrc"
         :alt="imgAlt"
+        loading="lazy"
         class="w-full h-48 object-cover rounded-t-2xl"
       />
     </a>

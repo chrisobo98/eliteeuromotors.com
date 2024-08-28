@@ -1,7 +1,7 @@
 <template>
   <section class="space-y-4 bg-white dark:bg-[#1d1d1d]">
     <BackgroundImage
-      backgroundImage="https://eliteeuromotors.com/wp-content/uploads/2024/04/AdobeStock_212476202-scaled.jpeg"
+      backgroundImage="/38bd6a5b-9d5d-403a-dc49-7bda76301200/public"
     />
     <div class="w-11/12 md:w-9/12 mx-auto">
       <h2 class="text-4xl md:text-6xl text-center">{{ $t("blog.header") }}</h2>
