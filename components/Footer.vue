@@ -68,6 +68,7 @@
                 <NuxtLink
                   to="https://www.facebook.com/eliteeuromotors"
                   target="_blank"
+                  aria-label="Visit our Elite Euro Motors Facebook Page"
                   class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
                 >
                   <svg
