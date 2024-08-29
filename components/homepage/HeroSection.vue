@@ -7,12 +7,19 @@
     <div class="absolute inset-0">
       <video
         src="/static/background-video.mp4"
-        class="w-full h-full object-cover"
+        class="w-full h-full object-cover hidden md:block"
         autoplay
         loop
         muted
       ></video>
-      <div class="absolute inset-0 bg-black opacity-60"></div>
+      <NuxtImg
+        provider="cloudflare"
+        loading="lazy"
+        src="/5a8a200d-0db0-4389-c32e-072e4e6ff800/public"
+        alt="Elite Euro Logo"
+        class="w-full h-full object-cover md:hidden"
+      />
+      <div class="absolute inset-0 bg-black opacity-50"></div>
     </div>
 
     <div
