@@ -7,36 +7,32 @@
       >
         <!-- Items Start -->
         <div class="items-start gap-6 md:gap-8 lg:flex 2xl:gap-24">
-          <div
-            v-for="section in sections"
-            :key="section.title"
-            class="min-w-0 flex-1 my-3 mx-3"
-          >
-            <h3 class="mb-4 text-2xl font-bold uppercase">
-              {{ section.title }}
-            </h3>
-            <ul class="space-y-3">
-              <li v-for="link in section.links" :key="link.text">
-                <NuxtLink
-                  :href="localePath(link.href)"
-                  :title="link.title"
-                  class="dark:hover:text-white"
-                  >{{ link.text }}</NuxtLink
-                >
-              </li>
-            </ul>
-          </div>
           <!-- Email Section -->
           <div class="mt-6 w-full md:mt-8 lg:mt-0 lg:max-w-lg">
-            <div class="space-y-5 rounded-lg bg-gray-50 p-6 dark:bg-gray-700">
-              <NuxtLink
+            <div class="space-y-5 rounded-lg p-6">
+              <NuxtImg
+                provider="cloudflare"
+                loading="lazy"
+                src="/50490653-5765-4163-6f7a-5c4e4a960400/public"
+                alt="Elite Euro Logo"
+                class="hidden dark:block w-4/6 h-full md:w-1/2 lg:w-3/4"
+              />
+              <NuxtImg
+                provider="cloudflare"
+                loading="lazy"
+                src="/35d4ffef-3a9e-4cc4-a5b6-86947beedc00/public"
+                alt="Elite Euro Logo"
+                class="dark:hidden w-4/6 h-full md:w-1/2 lg:w-3/4"
+              />
+              <p>As a family-owned and operated business, we take great pride in serving our valued customers with exceptional automotive solutions.</p>
+              <!-- <NuxtLink
                 :href="localePath('/login')"
                 title="Login or Sign Up"
                 class="text-base font-medium text-red-700 underline hover:no-underline dark:text-red-500"
               >
                 {{ $t("home.footer.sign_in_or_create_account") }}
-              </NuxtLink>
-
+              </NuxtLink> -->
+              <!-- 
               <hr class="border-gray-200 dark:border-gray-600" />
 
               <form action="#">
@@ -58,15 +54,15 @@
                   <div>
                     <button
                       type="submit"
+                      title="Email Subscribe"
+                      aria-label="Email Subscribe"
                       class="w-full mt-4 cursor-pointer border border-gray-500 rounded-lg bg-red-700 px-5 py-3 text-center text-sm font-medium text-white hover:bg-red-600 focus:ring-4 focus:ring-red-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800"
                     >
                       {{ $t("home.footer.subscribe") }}
                     </button>
                   </div>
                 </div>
-              </form>
-
-              <hr class="border-gray-200 dark:border-gray-600" />
+              </form> -->
 
               <div class="flex space-x-4">
                 <NuxtLink
@@ -91,6 +87,25 @@
               </div>
             </div>
           </div>
+          <div
+            v-for="section in sections"
+            :key="section.title"
+            class="min-w-0 flex-1 my-3 mx-3"
+          >
+            <h3 class="mb-4 text-2xl font-bold uppercase">
+              {{ section.title }}
+            </h3>
+            <ul class="space-y-3">
+              <li v-for="link in section.links" :key="link.text">
+                <NuxtLink
+                  :href="localePath(link.href)"
+                  :title="link.title"
+                  class="dark:hover:text-white"
+                  >{{ link.text }}</NuxtLink
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
 
@@ -99,21 +114,6 @@
         <div
           class="gap-4 space-y-5 xl:flex xl:items-center xl:justify-between xl:space-y-0"
         >
-          <NuxtImg
-            provider="cloudflare"
-            loading="lazy"
-            src="/50490653-5765-4163-6f7a-5c4e4a960400/public"
-            alt="Elite Euro Logo"
-            class="hidden dark:block rounded-lg w-4/6 h-full md:w-1/2 lg:w-1/4"
-          />
-          <NuxtImg
-            provider="cloudflare"
-            loading="lazy"
-            src="/35d4ffef-3a9e-4cc4-a5b6-86947beedc00/public"
-            alt="Elite Euro Logo"
-            class="dark:hidden rounded-lg w-4/6 h-full md:w-1/2 lg:w-1/4"
-          />
-
           <!-- <ul
             class="flex flex-wrap items-center gap-4 text-sm xl:justify-center"
           >

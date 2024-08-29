@@ -16,7 +16,7 @@ export default defineI18nConfig(() => ({
           popular_products_services: "Popular Products & Services",
           general_inspections: "General Inspections",
           general_inspections_description: "At Elite Euro Motors, we offer a comprehensive range of top-tier automotive services and products tailored to European vehicles. From routine maintenance and inspections to specialized repairs and high-quality OEM and aftermarket parts, our team ensures your luxury car receives the expert care it deserves. Explore our offerings and experience why we're Ocoee's trusted choice for European auto care.",
-          read_more: "Read more",
+          read_more: "View all services",
           regular_service: "Regular Service",
           regular_service_description: "Ensure your European car stays in peak condition with our regular service packages at Elite Euro Motors. Our experienced technicians provide meticulous care, using state-of-the-art diagnostic tools and premium parts to maintain your vehicle's performance and reliability. Whether it's an oil change, brake inspection, or comprehensive tune-up, our regular service keeps your car running smoothly, prolonging its life and protecting your investment.",
           hardware: "Hardware",
@@ -79,7 +79,7 @@ export default defineI18nConfig(() => ({
           blog: "Blog",
           account: "Account",
           support: "Support",
-          banner_text: "🔧 Oil Changes only $99 all Summer 2024 for a limited time ⚙️"
+          banner_text: "🔧 Oil Changes on ALL models up to 8L only $129 all Summer 2024 for a limited time ⚙️"
         },
         footer: {
           company: "Company",
@@ -453,7 +453,7 @@ export default defineI18nConfig(() => ({
           popular_products_services: "Productos y Servicios Populares",
           general_inspections: "Inspecciones Generales",
           general_inspections_description: "En Elite Euro Motors, ofrecemos una gama completa de servicios y productos automotrices de primera calidad, especialmente diseñados para vehículos europeos. Desde el mantenimiento rutinario y las inspecciones hasta reparaciones especializadas y piezas OEM y aftermarket de alta calidad, nuestro equipo garantiza que su automóvil de lujo reciba el cuidado experto que merece. Explore nuestras ofertas y descubra por qué somos la opción de confianza en Ocoee para el cuidado de autos europeos.",
-          read_more: "Leer más",
+          read_more: "Ver todos nuestros servicios",
           regular_service: "Servicio Regular",
           regular_service_description: "Asegúrese de que su automóvil europeo se mantenga en condiciones óptimas con nuestros paquetes de servicio regular en Elite Euro Motors. Nuestros técnicos experimentados brindan un cuidado meticuloso, utilizando herramientas de diagnóstico de última generación y piezas de primera calidad para mantener el rendimiento y la fiabilidad de su vehículo. Ya sea un cambio de aceite, una inspección de frenos o una puesta a punto completa, nuestro servicio regular mantiene su automóvil funcionando sin problemas, prolongando su vida útil y protegiendo su inversión.",
           hardware: "Componentes",
@@ -510,7 +510,7 @@ export default defineI18nConfig(() => ({
           blog: "Blog",
           account: "Cuenta",
           support: "Apoyo",
-          banner_text: "🔧 Cambios de aceite solo $99 todo el verano de 2024 por tiempo limitado ⚙️"
+          banner_text: "🔧 Cambios de aceite solo de todos los modelos asta 8L solo $129 todo el verano de 2024 por tiempo limitado ⚙️"
         },       
         footer: {
           company: "Compañía",

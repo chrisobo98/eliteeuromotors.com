@@ -1,6 +1,6 @@
 <template>
   <section
-  id="hero-section"
+    id="hero-section"
     class="relative bg-white dark:bg-[#171717] h-screen flex items-center justify-center overflow-hidden"
   >
     <!-- Video Background -->
@@ -21,8 +21,8 @@
       <!-- Oil Change span -->
       <NuxtLink
         :to="localePath('/maintenance')"
+        aria-label="Go to the maintenance page to schedule an appointment today"
         class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
-        role="alert"
       >
         <span
           class="text-xs bg-red-600 rounded-full text-white px-4 py-1.5 mr-3"
@@ -93,6 +93,5 @@
 </template>
 
 <script setup lang="ts">
-
 const localePath = useLocalePath();
 </script>

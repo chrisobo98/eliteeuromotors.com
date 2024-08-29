@@ -50,6 +50,7 @@ import PromoBanner from "../components/homepage/PromoBanner.vue";
 // import FeaturedProducts from '~/components/Products/FeaturedProducts.vue'
 
 import Sidenav from "../components/effects/Sidenav.vue";
+
 </script>
 
 <style scoped>

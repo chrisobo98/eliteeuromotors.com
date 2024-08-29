@@ -2,6 +2,7 @@
     <div class="bg-white dark:bg-[#1d1d1d] flex justify-between items-center">
       <iframe
         :src="mapSrc"
+        title="Elite Euro Location on Google Maps"
         class="w-full"
         height="450"
         style="border-radius:10px;"
