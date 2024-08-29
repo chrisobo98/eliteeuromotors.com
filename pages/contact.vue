@@ -226,12 +226,18 @@ const handleSubmit = () => {
     details: form.value.details,
   };
 
+  const config = useRuntimeConfig();
+
+  const EmailJsServiceID = config.public.EmailJsServiceID;
+  const EmailJsTemplateID = config.public.EmailJsTemplateID;
+  const EmailJsUserID = config.public.EmailJsUserID;
+
   emailjs
     .send(
-      "service_xzmaqly", // Replace with your EmailJS Service ID
-      "template_ycrptpl", // Replace with your EmailJS Template ID
+      EmailJsServiceID, // Replace with your EmailJS Service ID
+      EmailJsTemplateID, // Replace with your EmailJS Template ID
       templateParams,
-      "URSQb8MOeSJGnLiuH" // Replace with your EmailJS User ID
+      EmailJsUserID // Replace with your EmailJS User ID
     )
     .then(
       (response) => {
@@ -267,7 +273,6 @@ const clearForm = () => {
   };
 };
 </script>
-
 
 <style scoped>
 /* No additional styles needed as Tailwind handles everything */

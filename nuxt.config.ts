@@ -27,6 +27,9 @@ export default defineNuxtConfig({
       VIN_HOST: process.env.VIN_HOST,
       supabaseUrl: process.env.SUPABASE_URL,
       supabaseKey: process.env.SUPABASE_KEY,
+      EmailJsServiceID: process.env.EMAIL_JS_SERVICE_ID,
+      EmailJsTemplateID: process.env.EMAIL_JS_TEMPLATE_ID,
+      EmailJsUserID: process.env.EMAIL_JS_USER_ID
     },
   },
 
