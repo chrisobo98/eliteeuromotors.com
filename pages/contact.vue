@@ -228,7 +228,7 @@ const handleSubmit = () => {
 
   emailjs
     .send(
-      "service_imdxal6", // Replace with your EmailJS Service ID
+      "service_xzmaqly", // Replace with your EmailJS Service ID
       "template_ycrptpl", // Replace with your EmailJS Template ID
       templateParams,
       "URSQb8MOeSJGnLiuH" // Replace with your EmailJS User ID
