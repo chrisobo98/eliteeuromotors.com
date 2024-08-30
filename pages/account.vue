@@ -12,10 +12,28 @@
             class="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-4 text-center sm:text-left"
           >
             <img
-              class="inline-block h-24 w-24 rounded-full ring-2 ring-white mx-auto sm:mx-0"
-              src="https://i.ibb.co/TLxgMwW/T03-E1-AWDP-UF2-JJNFRS-f53e19ccd891-512.jpg"
+              v-if="personalInfo.avatar_url"
+              class="inline-block h-20 w-20 rounded-full ring-2 ring-white mx-auto sm:mx-0"
+              :src="personalInfo.avatar_url"
               alt=""
             />
+            <div
+              v-else
+              class="relative h-10 w-10 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600"
+            >
+              <svg
+                class="absolute w-12 h-12 text-gray-400 -left-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </div>
             <div class="mt-4 sm:mt-0">
               <h2 class="text-xl font-semibold">{{ personalInfo.fullName }}</h2>
               <p>{{ personalInfo.email }}</p>
@@ -113,25 +131,28 @@ const supabase = useSupabaseClient();
 const user = useSupabaseUser().value;
 
 useHead({
-  title: 'Your Account | Manage Your Elite Euro Motors Profile',
+  title: "Your Account | Manage Your Elite Euro Motors Profile",
   meta: [
     {
-      name: 'description',
-      content: 'Manage your Elite Euro Motors account, track your vehicle service history, and update your profile information to ensure seamless service experiences.'
+      name: "description",
+      content:
+        "Manage your Elite Euro Motors account, track your vehicle service history, and update your profile information to ensure seamless service experiences.",
     },
     {
-      property: 'og:title',
-      content: 'Manage Your Elite Euro Motors Account'
+      property: "og:title",
+      content: "Manage Your Elite Euro Motors Account",
     },
     {
-      property: 'og:description',
-      content: 'Access and manage your Elite Euro Motors account, including service history, profile updates, and more for a tailored auto care experience.'
+      property: "og:description",
+      content:
+        "Access and manage your Elite Euro Motors account, including service history, profile updates, and more for a tailored auto care experience.",
     },
     {
-      property: 'og:image',
-      content: 'https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/9cf2d13c-05cf-406a-8710-a496be9fb400/public'
-    }
-  ]
+      property: "og:image",
+      content:
+        "https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/9cf2d13c-05cf-406a-8710-a496be9fb400/public",
+    },
+  ],
 });
 
 const editMode = ref(false);

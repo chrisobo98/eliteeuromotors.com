@@ -33,7 +33,7 @@
                   {{ review.name }}
                 </div>
                 <div
-                  class="date text-sm font-light text-gray-500 dark:text-gray-300"
+                  class="date text-sm font-light text-gray-700 dark:text-white"
                 >
                   {{ review.date }}
                 </div>
