@@ -6,6 +6,7 @@
     <!-- Video Background -->
     <div class="absolute inset-0">
       <video
+        v-if="showVideo"
         src="/static/background-video.mp4"
         class="w-full h-full object-cover hidden md:block"
         autoplay
@@ -101,5 +102,14 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted } from 'vue';
+
+const showVideo = ref(false);
 const localePath = useLocalePath();
+
+onMounted(() => {
+  if (window.innerWidth >= 768) {
+    showVideo.value = true;
+  }
+});
 </script>
