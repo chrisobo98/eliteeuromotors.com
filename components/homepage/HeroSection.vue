@@ -12,9 +12,10 @@
         loop
         muted
       ></video>
+      <!-- This was the Largest Contentful Paint Google didn't like lazy loading -->
+      <!-- Above-the-fold images that are lazily loaded render later in the page lifecycle, which can delay the largest contentful paint. -->
       <NuxtImg
         provider="cloudflare"
-        loading="lazy"
         src="/5a8a200d-0db0-4389-c32e-072e4e6ff800/public"
         alt="Elite Euro Logo"
         class="w-full h-full object-cover md:hidden"
