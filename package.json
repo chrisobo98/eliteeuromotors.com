@@ -33,6 +33,7 @@
     "flowbite": "^2.4.1",
     "gsap": "^3.12.5",
     "nuxt": "^3.11.2",
+    "nuxt-gtag": "^3.0.1",
     "nuxt-primevue": "^3.0.0",
     "nuxt-svgo": "^4.0.3",
     "pinia": "^2.2.1",

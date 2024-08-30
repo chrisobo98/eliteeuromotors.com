@@ -12,6 +12,7 @@ export default defineNuxtConfig({
     "nuxt-svgo",
     "@nuxt/scripts",
     "@nuxtjs/seo",
+    'nuxt-gtag',
   ],
   primevue: {
     options: {
@@ -20,9 +21,12 @@ export default defineNuxtConfig({
       },
     },
   },
+  gtag: {
+    id: 'G-X1SSD7Q4G7',
+  },
   runtimeConfig: {
     public: {
-      gtagId: "G-3CC4904P02", // Replace with your Google Analytics ID
+      gtagId: "G-X1SSD7Q4G7", // Replace with your Google Analytics ID
       VIN_KEY: process.env.VIN_KEY,
       VIN_HOST: process.env.VIN_HOST,
       supabaseUrl: process.env.SUPABASE_URL,
