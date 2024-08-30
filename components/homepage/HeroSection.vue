@@ -5,14 +5,13 @@
   >
     <!-- Video Background -->
     <div class="absolute inset-0">
-      <video
+      <iframe
         v-if="showVideo"
-        src="/static/background-video.mp4"
-        class="w-full h-full object-cover hidden md:block"
-        autoplay
-        loop
-        muted
-      ></video>
+        src="https://customer-3jpmbqzox4lyryrr.cloudflarestream.com/9b84fcbf00b7a6ed2df9c051c004ef3a/iframe?muted=true&preload=true&loop=true&autoplay=true&poster=https%3A%2F%2Fcustomer-3jpmbqzox4lyryrr.cloudflarestream.com%2F9b84fcbf00b7a6ed2df9c051c004ef3a%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
+        class="w-[1920px] h-[1080px] object-cover hidden md:block"
+        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+        allowfullscreen="true"
+      ></iframe>
       <!-- This was the Largest Contentful Paint Google didn't like lazy loading -->
       <!-- Above-the-fold images that are lazily loaded render later in the page lifecycle, which can delay the largest contentful paint. -->
       <NuxtImg
@@ -102,7 +101,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted } from "vue";
 
 const showVideo = ref(false);
 const localePath = useLocalePath();
