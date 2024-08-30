@@ -70,4 +70,27 @@
 <script setup lang="ts">
 import ServiceHistoryCard from "../components/Dashboard/ServiceHistoryCard.vue";
 import VehiclePerformanceCard from "../components/Dashboard/VehiclePerformanceCard.vue";
+
+useHead({
+  title: 'My Vehicle | Coming Soon',
+  meta: [
+    {
+      name: 'description',
+      content: 'Access detailed information about your vehicle at Elite Euro Motors. Track maintenance history, view upcoming services, and manage your car\'s needs with ease.'
+    },
+    {
+      property: 'og:title',
+      content: 'Manage Your Vehicle at Elite Euro Motors'
+    },
+    {
+      property: 'og:description',
+      content: 'Keep your vehicle in top condition with Elite Euro Motors. Manage and track your car\'s maintenance history and upcoming services.'
+    },
+    {
+      property: 'og:image',
+      content: 'https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/184e2808-840e-4dd0-7b5a-9358a9466f00/public'
+    }
+  ]
+});
+
 </script>

@@ -48,9 +48,18 @@ import TestimonialSection from "../components/homepage/TestimonialSection.vue";
 import PromoBanner from "../components/homepage/PromoBanner.vue";
 
 // import FeaturedProducts from '~/components/Products/FeaturedProducts.vue'
-
 import Sidenav from "../components/effects/Sidenav.vue";
 
+useHead({
+  title: 'Home | European Auto Repair & Service',
+  // This will use the global template: "Home - Elite Euro Motors"
+  meta: [
+    {
+      name: 'description',
+      content: 'Welcome to Elite Euro Motors, your premier destination for European auto repairs and services.'
+    }
+  ]
+});
 </script>
 
 <style scoped>

@@ -19,6 +19,28 @@ const supabase = useSupabaseClient();
 const router = useRouter();
 const localePath = useLocalePath();
 
+useHead({
+  title: 'Register | Create Your Elite Euro Motors Account',
+  meta: [
+    {
+      name: 'description',
+      content: 'Create your Elite Euro Motors account to easily manage your vehicle services, track maintenance history, and stay connected with our expert team. Join us today!'
+    },
+    {
+      property: 'og:title',
+      content: 'Register for Your Elite Euro Motors Account'
+    },
+    {
+      property: 'og:description',
+      content: 'Join Elite Euro Motors and create an account to access personalized vehicle management, track services, and receive updates tailored to your car’s needs.'
+    },
+    {
+      property: 'og:image',
+      content: 'https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/9cf2d13c-05cf-406a-8710-a496be9fb400/public'
+    }
+  ]
+});
+
 async function signUpNewUser() {
   const { data, error } = await supabase.auth.signUp({
     email: email.value,

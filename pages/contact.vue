@@ -110,6 +110,28 @@ import { useI18n } from "vue-i18n";
 
 const { t } = useI18n();
 
+useHead({
+  title: 'Contact Us | Get in Touch with Elite Euro Motors',
+  meta: [
+    {
+      name: 'description',
+      content: 'Need assistance? Contact Elite Euro Motors in Ocoee, FL for expert European auto care. Reach out to schedule an appointment, ask a question, or learn more about our services.'
+    },
+    {
+      property: 'og:title',
+      content: 'Contact Elite Euro Motors'
+    },
+    {
+      property: 'og:description',
+      content: 'Get in touch with Elite Euro Motors in Ocoee, FL for all your European auto service needs. Our team is here to assist you.'
+    },
+    {
+      property: 'og:image',
+      content: 'https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/7e16e5c3-584c-4067-14e1-ee943527f300/public'
+    }
+  ]
+});
+
 interface Field {
   id: keyof FormData;
   label: string;

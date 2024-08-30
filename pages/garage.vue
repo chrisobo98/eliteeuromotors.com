@@ -8,16 +8,17 @@
       <div class="grid grid-cols-1 lg:grid-cols-3">
         <!-- Vehicle Model and VIN Entry -->
         <BaseCard class="space-y-4 col-span-1">
-          <h2 class="text-lg font-semibold">{{ $t("garagePage.add_vehicle") }}</h2>
+          <h2 class="text-lg font-semibold">
+            {{ $t("garagePage.add_vehicle") }}
+          </h2>
           <div class="grid grid-cols-1 sm:grid-cols-3">
             <InputText
               :placeholder="$t('garagePage.vehicle_vin')"
               v-model="vehicleVIN"
               class="col-span-3"
             />
-            <BaseButton @click="checkVIN" class="col-span-3 sm:col-start-2"
-              >        {{ $t("garagePage.check_vin") }}
-
+            <BaseButton @click="checkVIN" class="col-span-3 sm:col-start-2">
+              {{ $t("garagePage.check_vin") }}
             </BaseButton>
           </div>
           <img
@@ -29,21 +30,33 @@
 
         <!-- Manually Add Vehicle Details -->
         <BaseCard class="space-y-4 col-span-1 lg:col-span-2">
-          <h2 class="text-lg font-semibold"> {{ $t("garagePage.vehicle_details") }}
-</h2>
+          <h2 class="text-lg font-semibold">
+            {{ $t("garagePage.vehicle_details") }}
+          </h2>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <InputText :placeholder="$t('garagePage.make')" v-model="vehicleDetails.Make" />
-            <InputText :placeholder="$t('garagePage.model')" v-model="vehicleDetails.Model" />
-            <InputText :placeholder="$t('garagePage.year')" v-model="vehicleDetails.ModelYear" />
-            <BaseButton @click="saveVehicle" class="md:col-span-2"
-              >{{ $t("garagePage.save_vehicle") }}</BaseButton
-            >
+            <InputText
+              :placeholder="$t('garagePage.make')"
+              v-model="vehicleDetails.Make"
+            />
+            <InputText
+              :placeholder="$t('garagePage.model')"
+              v-model="vehicleDetails.Model"
+            />
+            <InputText
+              :placeholder="$t('garagePage.year')"
+              v-model="vehicleDetails.ModelYear"
+            />
+            <BaseButton @click="saveVehicle" class="md:col-span-2">{{
+              $t("garagePage.save_vehicle")
+            }}</BaseButton>
           </div>
         </BaseCard>
 
         <!-- Existing Vehicles List -->
         <BaseCard class="space-y-4 col-span-1 lg:col-span-3">
-          <h2 class="text-lg font-semibold mb-4">{{ $t("garagePage.existing_vehicles") }}</h2>
+          <h2 class="text-lg font-semibold mb-4">
+            {{ $t("garagePage.existing_vehicles") }}
+          </h2>
           <ul>
             <li
               v-for="vehicle in vehicles"
@@ -93,9 +106,9 @@
           :style="{ width: '25rem' }"
           :header="$t('confirmDelete.confirm_delete')"
         >
-          <span class="p-text-secondary block mb-5"
-            >{{ $t("confirmDelete.type_delete_to_confirm") }}</span
-          >
+          <span class="p-text-secondary block mb-5">{{
+            $t("confirmDelete.type_delete_to_confirm")
+          }}</span>
           <div class="flex align-items-center gap-3 mb-3">
             <InputText v-model="deleteConfirmationText" class="flex-auto" />
           </div>
@@ -109,7 +122,7 @@
                 @click="cancelDelete"
               ></Button>
               <Button
-              :label="$t('confirmDelete.delete')"
+                :label="$t('confirmDelete.delete')"
                 type="button"
                 :disabled="deleteConfirmationText.toLowerCase() !== 'delete'"
                 @click="performDelete"
@@ -141,6 +154,31 @@ const vehicleToDelete = ref(null);
 const vehicles = ref([]);
 const vehicleVIN = ref("");
 const vinValid = ref(false);
+
+useHead({
+  title: "Your Garage | Manage Your Vehicles at Elite Euro Motors",
+  meta: [
+    {
+      name: "description",
+      content:
+        "Access and manage your vehicle information with Elite Euro Motors. Keep track of service history, schedule maintenance, and ensure your European car receives the best care.",
+    },
+    {
+      property: "og:title",
+      content: "Manage Your Vehicles at Elite Euro Motors",
+    },
+    {
+      property: "og:description",
+      content:
+        "Keep your European vehicle in top condition with Elite Euro Motors. Manage your garage, track service history, and schedule maintenance with ease.",
+    },
+    {
+      property: "og:image",
+      content:
+        "https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/184e2808-840e-4dd0-7b5a-9358a9466f00/public",
+    },
+  ],
+});
 
 const vehicleDetails = reactive({
   make: "",

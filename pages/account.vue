@@ -112,6 +112,28 @@ import { ref, reactive, onMounted } from "vue";
 const supabase = useSupabaseClient();
 const user = useSupabaseUser().value;
 
+useHead({
+  title: 'Your Account | Manage Your Elite Euro Motors Profile',
+  meta: [
+    {
+      name: 'description',
+      content: 'Manage your Elite Euro Motors account, track your vehicle service history, and update your profile information to ensure seamless service experiences.'
+    },
+    {
+      property: 'og:title',
+      content: 'Manage Your Elite Euro Motors Account'
+    },
+    {
+      property: 'og:description',
+      content: 'Access and manage your Elite Euro Motors account, including service history, profile updates, and more for a tailored auto care experience.'
+    },
+    {
+      property: 'og:image',
+      content: 'https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/9cf2d13c-05cf-406a-8710-a496be9fb400/public'
+    }
+  ]
+});
+
 const editMode = ref(false);
 const personalInfo = reactive({
   // Assume these are bound to form inputs

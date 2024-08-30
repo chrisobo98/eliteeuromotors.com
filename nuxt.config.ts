@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     "nuxt-svgo",
     "@nuxt/scripts",
     "@nuxtjs/seo",
-    'nuxt-gtag',
+    "nuxt-gtag",
   ],
   primevue: {
     options: {
@@ -22,7 +22,14 @@ export default defineNuxtConfig({
     },
   },
   gtag: {
-    id: 'G-X1SSD7Q4G7',
+    id: "G-X1SSD7Q4G7",
+  },
+  seo: {
+    // Disable fallback title if not needed
+    fallbackTitle: false,
+
+    // Ensure each page has a unique title
+    automaticDefaults: false,
   },
   runtimeConfig: {
     public: {
@@ -33,7 +40,7 @@ export default defineNuxtConfig({
       supabaseKey: process.env.SUPABASE_KEY,
       EmailJsServiceID: process.env.EMAIL_JS_SERVICE_ID,
       EmailJsTemplateID: process.env.EMAIL_JS_TEMPLATE_ID,
-      EmailJsUserID: process.env.EMAIL_JS_USER_ID
+      EmailJsUserID: process.env.EMAIL_JS_USER_ID,
     },
   },
 
@@ -57,7 +64,7 @@ export default defineNuxtConfig({
 
   css: ["~/assets/css/main.css"],
   supabase: {
-    redirect: false
+    redirect: false,
   },
 
   postcss: {
@@ -70,6 +77,12 @@ export default defineNuxtConfig({
 
   app: {
     head: {
+      // Global title template for all pages
+      titleTemplate: "%s - Elite Euro Motors",
+      // Custom separator
+      templateParams: {
+        separator: "-", // You can choose your preferred separator here
+      },
       htmlAttrs: {
         lang: "en",
       },

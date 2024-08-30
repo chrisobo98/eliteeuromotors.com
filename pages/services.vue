@@ -1,22 +1,18 @@
 <template>
     <section class="flex-auto bg-white dark:bg-[#1d1d1d]">
-        <BackgroundImage
-            backgroundImage="/9708b529-bedd-4d30-c137-b8349734da00/public" />
+        <BackgroundImage backgroundImage="/9708b529-bedd-4d30-c137-b8349734da00/public" />
         <div class="w-11/12 md:w-9/12 mx-auto">
-            <h2 class="text-4xl md:text-6xl text-center font-bold"> {{ $t("services.header") }}</h2>
-            <p
-                class="text-center py-4 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
-                {{ $t("services.description") }}
+            <h2 class="text-4xl md:text-6xl text-center font-bold">{{ t('services.header') }}</h2>
+            <p class="text-center py-4 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+                {{ t('services.description') }}
             </p>
+            
             <div class="gap-16 items-center py-8 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 lg:py-16 lg:px-6">
                 <div class="font-light text-gray-500 sm:text-lg dark:text-gray-400">
-                    <h2
-                        class="mb-4 text-4xl text-center md:text-left tracking-tight font-extrabold text-gray-900 dark:text-white">
-                        {{ $t("services.comprehensive_auto_care.header") }}
+                    <h2 class="mb-4 text-4xl text-center md:text-left tracking-tight font-extrabold text-gray-900 dark:text-white">
+                        {{ t('services.comprehensive_auto_care.header') }}
                     </h2>
-                    <p class="mb-4">
-                        {{ $t("services.comprehensive_auto_care.description") }}
-                    </p>
+                    <p class="mb-4">{{ t('services.comprehensive_auto_care.description') }}</p>
                 </div>
                 <div class="grid grid-cols-2 gap-4 mt-8">
                     <img class="w-full rounded-lg"
@@ -27,7 +23,8 @@
                         alt="office content 2" />
                 </div>
             </div>
-            <!-- "Services" -->
+
+            <!-- Services Section -->
             <div class="mx-auto w-full">
                 <div class="relative">
                     <div class="mx-auto">
@@ -74,18 +71,40 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import BackgroundImage from "../components/ui/BackgroundImage.vue";
+import BackgroundImage from '../components/ui/BackgroundImage.vue';
+
 const { t } = useI18n();
+
+useHead({
+title: 'Services | Our Comprehensive Auto Services',
+  meta: [
+    {
+      name: 'description',
+      content: 'Explore our comprehensive auto care services at Elite Euro Motors. We specialize in providing top-notch maintenance and repair services for European vehicles, including BMW, Mercedes, Audi, and more.'
+    },
+    {
+      property: 'og:title',
+      content: 'Our Comprehensive Auto Services'
+    },
+    {
+      property: 'og:description',
+      content: 'At Elite Euro Motors, we offer a wide range of auto services, from engine oil changes to brake repairs, ensuring your vehicle receives the care it deserves.'
+    },
+    {
+      property: 'og:image',
+      content: 'https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/7e16e5c3-584c-4067-14e1-ee943527f300/public'
+    }
+  ]
+});
 
 const articles = ref([
     {
-        title: t("services.flex_service.header"),
-        link: "#",
-        icon: "https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/e07615dd-1cd8-4582-3a7c-f2d89ca94400/public",
-        dateFormatted: "September 5, 2022",
-        description: t("services.flex_service.description"),
+        title: t('services.flex_service.header'),
+        link: '#',
+        icon: 'https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/e07615dd-1cd8-4582-3a7c-f2d89ca94400/public',
+        description: t('services.flex_service.description'),
         services: [
             t("services.services_list.engine_oil_change"),
             t("services.services_list.engine_filter_replacement"),
@@ -115,11 +134,10 @@ const articles = ref([
         ],
     },
     {
-        title: t("services.brake_pads_rotors_fluids_shocks.header"),
-        link: "#",
-        icon: "https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/123d3bf2-43fd-44fa-1685-859eb6474e00/public",
-        dateFormatted: "September 5, 2022",
-        description: t("services.brake_pads_rotors_fluids_shocks.description"),
+        title: t('services.brake_pads_rotors_fluids_shocks.header'),
+        link: '#',
+        icon: 'https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/123d3bf2-43fd-44fa-1685-859eb6474e00/public',
+        description: t('services.brake_pads_rotors_fluids_shocks.description'),
         services: [
             t("services.brake_pads_rotors_fluids_and_shocks.tire_replacement"),
             t("services.brake_pads_rotors_fluids_and_shocks.brake_pad_replacement"),
@@ -145,11 +163,10 @@ const articles = ref([
         ],
     },
     {
-        title: t("services.general_repairs_tune_ups_oil_changes.header"),
-        link: "#",
-        icon: "https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/9cf2d13c-05cf-406a-8710-a496be9fb400/public",
-        dateFormatted: "September 5, 2022",
-        description: t("services.general_repairs_tune_ups_oil_changes.description"),
+        title: t('services.general_repairs_tune_ups_oil_changes.header'),
+        link: '#',
+        icon: 'https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/9cf2d13c-05cf-406a-8710-a496be9fb400/public',
+        description: t('services.general_repairs_tune_ups_oil_changes.description'),
         services: [
             t("services.general_repairs_tune_ups_oil_changes.diagnostic_services"),
             t("services.general_repairs_tune_ups_oil_changes.engine_tune_ups"),

@@ -115,4 +115,27 @@
 import BaseButton from "../components/ui/BaseButton.vue";
 import BackgroundImage from "../components/ui/BackgroundImage.vue";
 import GoogleMap from '../components/homepage/GoogleMap.vue'
+
+useHead({
+  title: 'Careers | Join the Elite Euro Motors Team',
+  meta: [
+    {
+      name: 'description',
+      content: 'Explore exciting career opportunities at Elite Euro Motors. Join our team of experts dedicated to providing top-tier European auto care in Ocoee, FL.'
+    },
+    {
+      property: 'og:title',
+      content: 'Careers at Elite Euro Motors'
+    },
+    {
+      property: 'og:description',
+      content: 'Looking for a rewarding career in European auto care? Join Elite Euro Motors and become part of a team committed to excellence in Ocoee, FL.'
+    },
+    {
+      property: 'og:image',
+      content: 'https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/123d3bf2-43fd-44fa-1685-859eb6474e00/public'
+    }
+  ]
+});
+
 </script>

@@ -92,6 +92,40 @@ const route = useRoute();
 const { getPostBySlug } = useBlogData();
 const post = ref<Post | null>(null);
 
+watch(post, (newPost) => {
+  if (newPost) {
+    useHead({
+      title: `${newPost.title.substring(0, 47)}...`,
+      meta: [
+        {
+          name: 'description',
+          content: newPost.excerpt || 'Read the latest insights and tips on European vehicle maintenance and care from Elite Euro Motors.'
+        },
+        {
+          property: 'og:title',
+          content: newPost.title
+        },
+        {
+          property: 'og:description',
+          content: newPost.excerpt || 'Stay updated with the latest news and expert advice on European vehicles at the Elite Euro Motors Blog.'
+        },
+        {
+          property: 'og:image',
+          content: newPost.image || 'https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/7e16e5c3-584c-4067-14e1-ee943527f300/public'
+        },
+        {
+          property: 'og:type',
+          content: 'article'
+        },
+        {
+          property: 'og:url',
+          content: `https://eliteeuromotors.com/blog/${route.params.slug}`
+        }
+      ]
+    });
+  }
+});
+
 onMounted(() => {
   const slug = route.params.slug as string;
   post.value = getPostBySlug(slug);

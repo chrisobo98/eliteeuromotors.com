@@ -59,6 +59,28 @@ import BlogList from "@/components/Blog/BlogList.vue";
 import FeaturedPost from "@/components/Blog/FeaturedPost.vue";
 import { useBlogData } from "@/composables/useBlogData";
 
+useHead({
+  title: 'Auto News & Tips | Elite Euro Motors Blog',
+  meta: [
+    {
+      name: 'description',
+      content: 'Stay informed with the latest auto news, maintenance tips, and expert advice on European vehicles. Explore our blog at Elite Euro Motors for valuable insights and updates.'
+    },
+    {
+      property: 'og:title',
+      content: 'Elite Euro Motors Blog - Auto News & Tips'
+    },
+    {
+      property: 'og:description',
+      content: 'Discover expert advice, maintenance tips, and the latest news on European vehicles at the Elite Euro Motors blog. Keep your car in top shape with our valuable insights.'
+    },
+    {
+      property: 'og:image',
+      content: 'https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/7e16e5c3-584c-4067-14e1-ee943527f300/public'
+    }
+  ]
+});
+
 const { posts } = useBlogData();
 
 const selectedCategory = ref("All");

@@ -212,6 +212,28 @@
 <script lang="ts" setup>
 import BackgroundImage from "../components/ui/BackgroundImage.vue";
 
+useHead({
+  title: 'About Us | Expert European Auto Care in Ocoee, FL',
+  meta: [
+    {
+      name: 'description',
+      content: 'Learn about Elite Euro Motors, your trusted partner for expert European auto care in Ocoee, FL. Discover our commitment to providing exceptional service for BMW, Mercedes, Audi, and other European vehicles.'
+    },
+    {
+      property: 'og:title',
+      content: 'About Elite Euro Motors - Expert European Auto Care'
+    },
+    {
+      property: 'og:description',
+      content: 'At Elite Euro Motors, we specialize in providing top-quality auto care for European vehicles. Learn more about our dedication to exceptional service in Ocoee, FL.'
+    },
+    {
+      property: 'og:image',
+      content: 'https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/123d3bf2-43fd-44fa-1685-859eb6474e00/public'
+    }
+  ]
+});
+
 const images = [
   {
     src: "https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/3a586acb-8b2a-4c26-e0a6-defd653dd800/public",

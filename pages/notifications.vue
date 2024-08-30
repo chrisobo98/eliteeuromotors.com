@@ -80,6 +80,28 @@ const notifications = ref([]);
 const supabase = useSupabaseClient();
 const user = useSupabaseUser().value;
 
+useHead({
+  title: 'Notifications | Stay Updated with Elite Euro Motors',
+  meta: [
+    {
+      name: 'description',
+      content: 'Stay informed about your vehicle’s maintenance and service updates with notifications from Elite Euro Motors. Never miss an important update about your car.'
+    },
+    {
+      property: 'og:title',
+      content: 'Vehicle Notifications from Elite Euro Motors'
+    },
+    {
+      property: 'og:description',
+      content: 'Receive timely notifications about your vehicle’s maintenance, service reminders, and more from Elite Euro Motors. Keep your car in top condition.'
+    },
+    {
+      property: 'og:image',
+      content: 'https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/9cf2d13c-05cf-406a-8710-a496be9fb400/public'
+    }
+  ]
+});
+
 onMounted(async () => {
   if (user) {
     await fetchNotifications();
