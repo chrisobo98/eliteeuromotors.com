@@ -10,11 +10,11 @@
     </a>
     <div class="my-5">
       <a href="#">
-        <h5
+        <h3
           class="mb-2 text-4xl font-bold tracking-tight text-gray-900 dark:text-white"
         >
           {{ title }}
-        </h5>
+        </h3>
       </a>
       <p class="font-light text-gray-500 sm:text-lg dark:text-gray-400 my-4">
         {{ description }}

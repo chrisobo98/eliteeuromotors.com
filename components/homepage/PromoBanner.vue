@@ -1,6 +1,6 @@
 <template>
   <section
-    class="bg-white border border-gray-700 dark:bg-black rounded-xl shadow-xl my-12"
+    class="bg-white border border-gray-200 dark:border-gray-700 dark:bg-black rounded-xl my-12"
   >
     <div
       class="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-12"
@@ -12,11 +12,11 @@
         loading="lazy"
       />
       <div class="mt-4 md:mt-0">
-        <h2
+        <h3
           class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white"
         >
           {{ $t("home.home.unlock_full_potential") }}
-        </h2>
+        </h3>
         <p class="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">
           {{ $t("home.home.unlock_description") }}
         </p>

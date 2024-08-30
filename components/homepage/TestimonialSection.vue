@@ -2,11 +2,11 @@
   <section class="bg-white dark:bg-[#1d1d1d]">
     <div class="py-8 px-4 mx-auto text-center">
       <div class="mx-auto">
-        <h2
+        <h3
           class="mb-4 text-4xl md:text-5xl text-center tracking-tight font-extrabold text-gray-900 dark:text-white"
         >
           {{ $t("home.home.testimonials") }}
-        </h2>
+        </h3>
         <p
           class="mb-8 font-light text-gray-500 lg:mb-16 sm:text-xl dark:text-gray-400"
         >
@@ -64,9 +64,9 @@
           <blockquote
             class="mx-auto max-w-2xl text-gray-500 dark:text-gray-400"
           >
-            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+            <h4 class="text-3xl font-semibold text-gray-900 dark:text-white">
               {{ reviews[selectedTab].title }}
-            </h3>
+            </h4>
             <p
               v-for="(paragraph, i) in reviews[selectedTab].text.split('\n')"
               :key="i"
