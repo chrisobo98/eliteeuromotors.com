@@ -1,111 +1,31 @@
 <template>
   <section>
-    <!-- Slider Section -->
-    <div
-      class="px-4 mx-auto text-center md:max-w-screen-md lg:max-w-screen-lg lg:px-20"
-    >
-
+    <div class="slider-container">
       <p class="uppercase sm:text-lg text-gray-600 dark:text-gray-300 my-4">
         {{ $t("home.home.servicing_since_2007") }}
       </p>
       <div class="slider">
         <div class="slide-track">
-          <div class="slide">
-            <img
-              src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/278a51e2-5d13-4ffc-b330-772269890800/public"
-              height="auto"
-              width="250"
-              alt=""
+          <div v-for="(image, index) in images" :key="index" class="slide">
+            <NuxtImg
+              provider="cloudflare"
+              :src="image"
+              class="h-[130px] w-auto"
+              alt="logo"
             />
           </div>
-          <div class="slide">
-            <img
-              style="padding-left: 80px"
-              src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/75c38cae-35ed-451a-970b-a3ad1eb3f400/public"
-              height="100"
-              width="250"
-              alt=""
-            />
-          </div>
-          <div class="slide">
-            <img
-              style="padding-left: 80px"
-              src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/ba3c4279-cbbe-4f71-2d4a-fae155965f00/public"
-              height="50"
-              width="250"
-              alt=""
-            />
-          </div>
-          <div class="slide">
-            <img
-              style="margin-left: 50px"
-              src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/25c54c18-c29c-4ed7-0297-08b97f130c00/public"
-              height="auto"
-              width="250"
-              alt=""
-            />
-          </div>
-          <div class="slide">
-            <img
-              style="margin-left: 80px"
-              src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/553d47af-fc45-492b-58c8-61ac53912900/public"
-              height="100"
-              width="250"
-              alt=""
-            />
-          </div>
-          <div class="slide">
-            <img
-              style="margin-left: 80px"
-              src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/278a51e2-5d13-4ffc-b330-772269890800/public"
-              height="100"
-              width="250"
-              alt=""
-            />
-          </div>
-          <div class="slide">
-            <img
-              style="margin-left: 140px"
-              src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/75c38cae-35ed-451a-970b-a3ad1eb3f400/public"
-              height="100"
-              width="150"
-              alt=""
-            />
-          </div>
-          <div class="slide">
-            <img
-              style="margin-left: 100px"
-              src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/ba3c4279-cbbe-4f71-2d4a-fae155965f00/public"
-              height="50"
-              width="150"
-              alt=""
-            />
-          </div>
-          <div class="slide">
-            <img
-              style="margin-left: 50px"
-              src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/25c54c18-c29c-4ed7-0297-08b97f130c00/public"
-              height="auto"
-              width="250"
-              alt=""
-            />
-          </div>
-          <div class="slide">
-            <img
-              style="margin-left: 80px"
-              src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/553d47af-fc45-492b-58c8-61ac53912900/public"
-              height="100"
-              width="250"
-              alt=""
-            />
-          </div>
-          <div class="slide">
-            <img
-              style="margin-left: 80px"
-              src="https://imagedelivery.net/Fe3MnThb4g2VRIhXmqnFdw/278a51e2-5d13-4ffc-b330-772269890800/public"
-              height="100"
-              width="250"
-              alt=""
+          <!-- Duplicate the images to create an infinite scroll effect -->
+          <div
+            v-for="(image, index) in images"
+            :key="`duplicate-${index}`"
+            class="slide"
+          >
+            <NuxtImg
+              provider="cloudflare"
+              loading="lazy"
+              :src="image"
+              class="h-[130px] w-auto"
+              alt="logo"
             />
           </div>
         </div>
@@ -114,37 +34,41 @@
   </section>
 </template>
 
+<script setup lang="ts">
+const images = [
+  "/278a51e2-5d13-4ffc-b330-772269890800/public",
+  "/75c38cae-35ed-451a-970b-a3ad1eb3f400/public",
+  "/ba3c4279-cbbe-4f71-2d4a-fae155965f00/public",
+  "/25c54c18-c29c-4ed7-0297-08b97f130c00/public",
+  "/553d47af-fc45-492b-58c8-61ac53912900/public",
+];
+</script>
+
 <style scoped>
-/* body {
-  align-items: center;
-  background: #e3e3e3;
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-} */
 @keyframes scroll {
   0% {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(calc(-250px * 7));
+    transform: translateX(
+      calc(-250px * 5)
+    ); /* Adjust based on the number of images */
   }
 }
-.slider {
-  /*   background: white;
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125); */
-  height: 150px;
+.slider-container {
+  text-align: center;
   margin: auto;
+}
+.slider {
+  height: 150px;
   margin-top: 20px;
   overflow: hidden;
   position: relative;
-  width: auto;
 }
 .slider::before,
 .slider::after {
-  /*   background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%); */
   content: "";
-  height: 100px;
+  height: 150px;
   position: absolute;
   width: 200px;
   z-index: 2;
@@ -158,14 +82,15 @@
   left: 0;
   top: 0;
 }
-.slider .slide-track {
-  animation: scroll 40s linear infinite;
+.slide-track {
   display: flex;
-  width: calc(250px * 14);
+  animation: scroll 40s linear infinite;
 }
-.slider .slide {
-  height: 100px;
-  width: 250px;
+.slide {
+  flex: 0 0 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding-left: 20px;
 }
 </style>
