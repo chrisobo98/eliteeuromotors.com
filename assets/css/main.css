@@ -3,33 +3,8 @@
 @import "tailwindcss/utilities";
 @import "flowbite";
 
-/* Import Typekit Fonts with font-display: swap */
-@font-face {
-  font-family: 'Metrophobic';
-  src: url('https://use.typekit.net/rpb6jlf.woff2') format('woff2'),
-       url('https://use.typekit.net/rpb6jlf.woff') format('woff');
-  font-display: swap;
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ethnocentric';
-  src: url('path-to-ethnocentric.woff2') format('woff2'),
-       url('path-to-ethnocentric.woff') format('woff');
-  font-display: swap;
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'jaf-bernino-sans-comp';
-  src: url('path-to-bernino-sans-comp.woff2') format('woff2'),
-       url('path-to-bernino-sans-comp.woff') format('woff');
-  font-display: swap;
-  font-weight: normal;
-  font-style: normal;
-}
+/* Import Typekit Fonts */
+@import url("https://use.typekit.net/rpb6jlf.css");
 
 /* Set global styles */
 body {
@@ -37,7 +12,8 @@ body {
   color: #1d1d1d; /* Default light mode text color */
   margin: 0;
   padding: 0;
-  font-family: "Metrophobic", sans-serif; /* Default font for body text */
+  font-family: "Metrophobic", Arial, sans-serif; /* Default font for body text with fallback */
+  font-display: swap; /* Ensure font-display swap */
   scrollbar-width: thin;
   scrollbar-color: #ee0405 transparent; /* Thumb color and track color for Firefox */
   overflow-x: hidden; /* Prevent horizontal overflow */
@@ -46,27 +22,6 @@ body {
 html {
   scroll-behavior: smooth;
   overflow-x: hidden; /* Prevent horizontal overflow */
-}
-
-/* From http://lea.verou.me/css3patterns/ */
-/* Playing with CSS */
-.carbon-fibers {
-  background: linear-gradient(27deg, #151515 2px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 2px, transparent 5px) 2px 0px,
-    linear-gradient(27deg, #222 2px, transparent 5px) 0px 2px,
-    linear-gradient(207deg, #222 2px, transparent 5px) 2px 5px,
-    linear-gradient(90deg, #1b1b1b 2px, transparent 10px),
-    linear-gradient(
-      #1d1d1d 25%,
-      #1a1a1a 25%,
-      #1a1a1a 50%,
-      transparent 50%,
-      transparent 75%,
-      #242424 75%,
-      #242424
-    );
-  background-color: #131313;
-  background-size: 20px 20px;
 }
 
 /* assets/css/global.css */
@@ -120,5 +75,5 @@ h6 {
 
 p,
 span {
-  font-family: "Metrophobic", sans-serif;
+  font-family: "Metrophobic", Arial, sans-serif; /* Metrophobic with fallback to Arial */
 }
