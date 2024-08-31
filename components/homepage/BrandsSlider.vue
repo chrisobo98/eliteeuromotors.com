@@ -9,6 +9,7 @@
           <div v-for="(image, index) in images" :key="index" class="slide">
             <NuxtImg
               provider="cloudflare"
+              loading="lazy"
               :src="image"
               class="h-[130px] w-auto"
               alt="logo"
