@@ -10,13 +10,13 @@
       <NuxtImg
         provider="cloudflare"
         src="/5a8a200d-0db0-4389-c32e-072e4e6ff800/public"
-        alt="Elite Euro Logo"
+        alt="Elite Euro Mobile Background"
         class="w-full h-full object-cover lg:hidden"
       />
       <NuxtImg
         provider="cloudflare"
         src="/02107829-1f89-45e4-2ee1-58da24dc6800/public"
-        alt="Elite Euro Logo"
+        alt="Elite Euro Background"
         class="w-full h-full object-cover hidden lg:block"
       />
       <div class="absolute inset-0 bg-black opacity-65"></div>
