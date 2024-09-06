@@ -3,29 +3,27 @@
     id="hero-section"
     class="relative bg-white dark:bg-[#171717] h-screen flex items-center justify-center overflow-hidden"
   >
-    <!-- Video Background -->
+    <!-- Background -->
     <div class="absolute inset-0">
-      <iframe
-        v-if="showVideo"
-        src="https://customer-3jpmbqzox4lyryrr.cloudflarestream.com/9b84fcbf00b7a6ed2df9c051c004ef3a/iframe?muted=true&preload=true&loop=true&autoplay=true&poster=https%3A%2F%2Fcustomer-3jpmbqzox4lyryrr.cloudflarestream.com%2F9b84fcbf00b7a6ed2df9c051c004ef3a%2Fthumbnails%2Fthumbnail.jpg%3Ftime%3D%26height%3D600"
-        class="w-[1920px] h-[1080px] object-cover hidden md:block"
-        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-        allowfullscreen="true"
-      ></iframe>
       <!-- This was the Largest Contentful Paint Google didn't like lazy loading -->
       <!-- Above-the-fold images that are lazily loaded render later in the page lifecycle, which can delay the largest contentful paint. -->
       <NuxtImg
         provider="cloudflare"
         src="/5a8a200d-0db0-4389-c32e-072e4e6ff800/public"
         alt="Elite Euro Logo"
-        class="w-full h-full object-cover md:hidden"
+        class="w-full h-full object-cover lg:hidden"
       />
-      <div class="absolute inset-0 bg-black opacity-50"></div>
+      <NuxtImg
+        provider="cloudflare"
+        src="/02107829-1f89-45e4-2ee1-58da24dc6800/public"
+        alt="Elite Euro Logo"
+        class="w-full h-full object-cover hidden lg:block"
+      />
+      <div class="absolute inset-0 bg-black opacity-65"></div>
     </div>
 
-    <div
-      class="relative z-10 py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-12"
-    >
+    <!-- Text and Headers -->
+    <div class="relative xl:ml-60 mb-32 lg:ml-20 mx-16">
       <!-- Oil Change span -->
       <NuxtLink
         :to="localePath('/maintenance')"
@@ -61,19 +59,17 @@
         {{ $t("home.home.elite_euro_motors") }}
       </h1>
       <h2 class="text-2xl text-white">{{ $t("home.home.ocoee_premier") }}</h2>
-      <p
-        class="mb-8 text-lg font-normal text-gray-200 lg:text-xl sm:px-16 xl:px-48"
-      >
+      <p class="mb-8 text-lg font-normal text-gray-200 lg:text-xl">
         {{ $t("home.home.nestled_in_florida") }}
       </p>
 
       <!-- Appointment and account buttons -->
       <div
-        class="flex flex-col mx-5 md:mx-0 mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
+        class="flex flex-col md:mx-0 mb-8 lg:mb-16 space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4"
       >
         <NuxtLink
           :to="localePath('/contact')"
-          class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 dark:focus:ring-red-900"
+          class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-white text-center text-gray-900 bg-red-700 rounded-lg border border-red-600 hover:bg-black focus:ring-4 focus:ring-red-500 dark:text-white"
         >
           {{ $t("home.home.schedule_appointment") }}
           <svg
@@ -96,6 +92,26 @@
           {{ $t("home.home.create_account") }}
         </NuxtLink>
       </div>
+      <NuxtImg
+        provider="cloudflare"
+        src="/293c2a4c-fd01-48f2-9d19-a840e314cc00/public"
+        alt="Elite Euro Certs Banner"
+        class="rounded-3xl hidden md:block lg:-mt-10 md:h-20 lg:h-30 w-auto border border-red-800"
+      />
+    </div>
+    <!-- Hero Image and Media -->
+    <div class="hidden lg:flex relative xl:mx-12 lg:mx-6">
+      <div
+        class="absolute bg-red-800 md:w-28 md:h-28 lg:w-38 lg:h-38 rounded-full top-0 right-0 transform -translate-x-16 -translate-y-16"
+      ></div>
+      <div
+        class="absolute bg-red-500 md:mb-12 md:w-12 md:h-12 lg:w-15 lg:h-15 rounded-full bottom-20 left-0 transform translate-x-16 translate-y-16"
+      ></div>
+      <NuxtImg
+        src="/4d65d75d-caad-449e-a45b-5ba548471300/public"
+        alt="Hero Image"
+        class="w-[1520px] h-auto md:mb-24"
+      />
     </div>
   </section>
 </template>
