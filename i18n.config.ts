@@ -126,6 +126,11 @@ export default defineI18nConfig(() => ({
           other_details: "Leave additional details or questions...",
           other_details_header: "Additional Details",
           submit: "Submit"
+        },
+        confirmation: {
+          success: "Your message has been sent!",
+          description: "We will get back to you as soon as possible.",
+          back_home: "Back to Home"
         }
       },
       services: {
@@ -558,6 +563,11 @@ export default defineI18nConfig(() => ({
           other_details_header: "Detalles Adicionales",
           submit: "Entregar"
         }, 
+        confirmation: {
+          success: "¡Tu mensaje ha sido enviado!",
+          description: "Nos pondremos en contacto contigo lo antes posible.",
+          back_home: "Volver al inicio"
+        }
       },
       services: {
         header: "Nuestros Servicios",

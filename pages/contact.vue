@@ -108,7 +108,9 @@ import BackgroundImage from "@/components/ui/BackgroundImage.vue";
 import Notification from "@/components/effects/MessageSentNotification.vue";
 import { useI18n } from "vue-i18n";
 
+const router = useRouter();
 const { t } = useI18n();
+const localePath = useLocalePath();
 
 useHead({
   title: 'Contact Us | Get in Touch with Elite Euro Motors',
@@ -262,7 +264,7 @@ const handleSubmit = () => {
       EmailJsUserID // Replace with your EmailJS User ID
     )
     .then(
-      (response) => {
+      async (response) => {
         loading.value = false;
         notification.value = {
           show: true,
@@ -270,6 +272,8 @@ const handleSubmit = () => {
           type: "success",
         };
         clearForm();
+
+        await router.push(localePath("/contact-confirmation"));
       },
       (error) => {
         loading.value = false;
