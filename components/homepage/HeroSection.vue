@@ -23,7 +23,7 @@
     </div>
 
     <!-- Text and Headers -->
-    <div class="relative xl:ml-60 mb-32 lg:ml-20 mx-16">
+    <div class="relative xl:ml-60 md:mb-32 lg:ml-20 md:mx-16 mx-4">
       <!-- Oil Change span -->
       <NuxtLink
         :to="localePath('/maintenance')"
