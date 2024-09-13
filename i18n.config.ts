@@ -79,7 +79,7 @@ export default defineI18nConfig(() => ({
           blog: "Blog",
           account: "Account",
           support: "Support",
-          banner_text: "🔧 Oil Changes on ALL models up to 8L only $129 all Summer 2024 for a limited time ⚙️"
+          banner_text: "🔧 Oil Changes on ALL models 25% off. Mention the code EUROFALL. Offer valid through Fall 2024. 🍂⚙️"
         },
         footer: {
           company: "Company",
@@ -515,7 +515,7 @@ export default defineI18nConfig(() => ({
           blog: "Blog",
           account: "Cuenta",
           support: "Apoyo",
-          banner_text: "🔧 Cambios de aceite solo de todos los modelos asta 8L solo $129 todo el verano de 2024 por tiempo limitado ⚙️"
+          banner_text: "🔧 Cambios de aceite en TODOS los modelos con 25% de descuento. Menciona el código EUROFALL. Oferta válida hasta el fin de otoño del 2024. 🍂⚙️"
         },       
         footer: {
           company: "Compañía",
