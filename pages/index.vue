@@ -27,7 +27,6 @@
       <ServicesSection id="services-section" />
       <!-- <FeaturedProducts /> -->
       <FamilyOwned />
-      <PromoBanner id="promo-banner-section" />
     </div>
     <div class="w-full lg:w-10/12 mx-auto">
       <TestimonialSection id="testimonial-section" />
@@ -45,7 +44,6 @@ import ServicesSection from "../components/homepage/ServicesSection.vue";
 import GoogleMap from "../components/homepage/GoogleMap.vue";
 import FamilyOwned from "../components/homepage/FamilyOwned.vue";
 import TestimonialSection from "../components/homepage/TestimonialSection.vue";
-import PromoBanner from "../components/homepage/PromoBanner.vue";
 
 // import FeaturedProducts from '~/components/Products/FeaturedProducts.vue'
 import Sidenav from "../components/effects/Sidenav.vue";

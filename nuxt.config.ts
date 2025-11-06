@@ -7,7 +7,6 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@dargmuesli/nuxt-cookie-control",
     "@nuxt/eslint",
-    "@nuxtjs/supabase",
     "@primevue/nuxt-module",
     "nuxt-svgo",
     "@nuxt/scripts",
@@ -36,8 +35,6 @@ export default defineNuxtConfig({
       gtagId: "G-X1SSD7Q4G7", // Replace with your Google Analytics ID
       VIN_KEY: process.env.VIN_KEY,
       VIN_HOST: process.env.VIN_HOST,
-      supabaseUrl: process.env.SUPABASE_URL,
-      supabaseKey: process.env.SUPABASE_KEY,
       EmailJsServiceID: process.env.EMAIL_JS_SERVICE_ID,
       EmailJsTemplateID: process.env.EMAIL_JS_TEMPLATE_ID,
       EmailJsUserID: process.env.EMAIL_JS_USER_ID,
@@ -63,9 +60,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   css: ["~/assets/css/main.css"],
-  supabase: {
-    redirect: false,
-  },
 
   postcss: {
     plugins: {

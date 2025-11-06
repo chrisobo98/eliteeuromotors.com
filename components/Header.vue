@@ -3,13 +3,6 @@
     :class="{ 'header-scrolled': scrolled }"
     class="main-header bg-[#ffffff] dark:bg-[#1d1d1d]"
   >
-    <!-- Announcement Banner -->
-    <div
-      class="dark:bg-black bg-gray-300 text-center dark:text-white py-2 border-b border-gray-400 dark:border-red-600"
-    >
-      <p class="mx-3">{{ $t("home.navbar.banner_text") }}</p>
-    </div>
-
     <!-- Top Navigation -->
     <div
       class="flex flex-wrap justify-between items-center px-4 py-2 border-b border-gray-700"
@@ -103,8 +96,6 @@
         class="flex items-center justify-between w-full mt-2 md:mt-0 md:w-auto md:ml-2"
       >
         <div class="flex items-center space-x-4">
-          <NotificationsDropdown />
-          <YourGarageDropdown />
           <DarkModeSwitcher @update:isDark="handleDarkModeUpdate" />
           <LanguageSelector />
         </div>
@@ -220,11 +211,6 @@
             href="/blog"
             :text="$t('home.navbar.blog')"
           />
-          <NavLink
-            class="nav-item-bounce delay-500"
-            href="/account"
-            :text="$t('home.navbar.account')"
-          />
 
           <!-- Appointment Button Mobile -->
           <NuxtLink
@@ -242,10 +228,8 @@
 <script lang="ts">
 import { ref, reactive, onMounted, onUnmounted } from "vue";
 import { defineComponent } from "vue";
-import YourGarageDropdown from "~/components/ui/YourGarageDropdown.vue";
 import LanguageSelector from "~/components/ui/LanguageSelector.vue";
 import DarkModeSwitcher from "~/components/effects/DarkModeSwitcher.vue";
-import NotificationsDropdown from "~/components/Notifications/NotificationsDropdown.vue";
 import NavLink from "~/components/ui/NavLink.vue";
 import DropdownItem from "~/components/ui/DropdownItem.vue";
 
@@ -255,7 +239,6 @@ export default defineComponent({
     DarkModeSwitcher,
     NavLink,
     DropdownItem,
-    YourGarageDropdown,
   },
   setup() {
     const localePath = useLocalePath();

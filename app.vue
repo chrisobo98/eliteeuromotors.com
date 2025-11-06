@@ -1,19 +1,16 @@
 <template>
   <CookieControl locale="en" />
 
-  <!-- Only show Header and Footer if the route is not a login or register page -->
-  <Header v-if="!isAuthRoute" />
+  <Header />
 
   <NuxtPage />
 
-  <Footer id="footer-section" v-if="!isAuthRoute" />
+  <Footer id="footer-section" />
 </template>
 
 <script setup lang="ts">
 import Header from "~/components/Header.vue";
 import Footer from "~/components/Footer.vue";
-import { useRoute } from "vue-router";
-import { computed } from "vue";
 
 useSeoMeta({
   title: "Elite Euro Motors - European Auto Specialists",
@@ -36,13 +33,6 @@ useSeoMeta({
   ogImageHeight: "630",
   ogImageAlt: "Elite Euro Motors - European Auto Specialists",
   ogLocaleAlternate: ["es_ES"],
-});
-
-const route = useRoute();
-
-const isAuthRoute = computed(() => {
-  const authRoutes = ["/login", "/register", "/es/login", "/es/register"];
-  return authRoutes.includes(route.path);
 });
 </script>
 

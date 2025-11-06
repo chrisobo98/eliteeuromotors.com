@@ -166,36 +166,6 @@ const sections = computed(() => [
       // { text: t("home.footer.get_coupon"), href:localePath('/about'), title: t("home.footer.get_coupon") },
     ],
   },
-  {
-    title: t("home.footer.your_garage"),
-    links: [
-      {
-        text: t("home.footer.my_vehicle"),
-        href: localePath("/my-vehicle"),
-        title: t("home.footer.my_vehicle"),
-      },
-      {
-        text: t("home.footer.maintenance"),
-        href: localePath("/maintenance"),
-        title: t("home.footer.maintenance"),
-      },
-      {
-        text: t("home.footer.notifications"),
-        href: localePath("/notifications"),
-        title: t("home.footer.notifications"),
-      },
-      {
-        text: t("home.footer.profile"),
-        href: localePath("/account"),
-        title: t("home.footer.profile"),
-      },
-      {
-        text: t("home.footer.garage"),
-        href: localePath("/garage"),
-        title: t("home.footer.garage"),
-      },
-    ],
-  },
 ]);
 
 const policies = computed(() => [
