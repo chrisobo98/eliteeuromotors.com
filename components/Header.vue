@@ -35,7 +35,7 @@
 
         <!-- Email -->
         <a
-          href="mailto:info@eliteeuromotors.com"
+          href="mailto:eliteeuromotor@gmail.com"
           target="_blank"
           class="flex items-center hover:bg-black hover:text-white px-4 py-2 rounded-full"
         >
@@ -56,7 +56,7 @@
               d="M14.122,12.546l9.134-9.135A4.986,4.986,0,0,0,19,1H5A4.986,4.986,0,0,0,.744,3.411l9.134,9.135A3.007,3.007,0,0,0,14.122,12.546Z"
             />
           </svg>
-          <span class="hidden md:block">info@eliteeuromotors.com</span>
+          <span class="hidden md:block">eliteeuromotor@gmail.com</span>
           <span class="md:hidden">Email</span>
         </a>
 
