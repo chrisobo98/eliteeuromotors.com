@@ -70,9 +70,9 @@ export default defineI18nConfig(() => ({
           view_all: "View all",
         },
         navbar: {
-          appointment: "Set up Appointment",
+          appointment: "Set Up Appointment",
           home: "Home",
-          contact: "Contact",
+          contact: "Set Up Appointment",
           services: "Services",
           about: "About",
           careers: "Careers",
@@ -107,8 +107,8 @@ export default defineI18nConfig(() => ({
       },
       contact: {
         contact: {
-          header: "Contact Us",
-          description: "Have a question about your vehicle? Need to schedule an appointment or get a quote? We're here to help! Fill out the contact form below, and one of our expert technicians will get back to you promptly. Whether you're experiencing issues with your car or just need routine maintenance, we're dedicated to providing top-notch service and ensuring your European vehicle runs smoothly.",
+          header: "Set Up Appointment",
+          description: "Tell us about your vehicle and the service you need using the form below. This is a service request, not a confirmed appointment. Our team will contact you to confirm scheduling.",
           name: "Your Name",
           name_header: "Name",
           email: "name.example.com",
@@ -508,7 +508,7 @@ export default defineI18nConfig(() => ({
         navbar: {
           appointment: "Programar una Cita",
           home: "Inicio",
-          contact: "Contacto",
+          contact: "Programar una Cita",
           services: "Servicios",
           about: "Sobre Nosotros",
           careers: "Empleo",
@@ -543,8 +543,8 @@ export default defineI18nConfig(() => ({
       },
       contact: {
         contact: {
-          header: "Contácto",
-          description: "¿Tienes alguna pregunta sobre tu vehículo? ¿Necesitas programar una cita o obtener una cotización? ¡Estamos aquí para ayudarte! Llena el formulario de contacto a continuación, y uno de nuestros técnicos expertos te responderá de inmediato.",
+          header: "Programar una Cita",
+          description: "Cuéntanos sobre tu vehículo y el servicio que necesitas usando el formulario. Esta es una solicitud de servicio, no una cita confirmada. Nuestro equipo se comunicará contigo para confirmar la fecha y hora.",
           name: "Tu Nombre",
           name_header: "Nombre",
           email: "nombre.ejemplo.com",
